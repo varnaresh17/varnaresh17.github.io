@@ -1,0 +1,830 @@
+{
+  "areas": {
+    "glasses": "Glasses",
+    "polymers": "Polymers & Composites",
+    "crystals": "Crystals & Phosphors",
+    "scintillators": "X-ray Scintillators",
+    "perovskites": "Perovskite Nanomaterials",
+    "mxenes": "MAX Phases & MXenes",
+    "photonics": "Photonics & Patterning",
+    "other": "Biosensors & Water Treatment",
+    "general": "Materials Science & Characterization"
+  },
+  "papers": [
+    {
+      "id": "p01",
+      "index": 0,
+      "title": "Nitride MXenes Beyond Carbides: Bridging the Gap Between Computational Prediction and Experimental Realization",
+      "citation": "V. Naresh, M. Soroush, Nitride MXenes Beyond Carbides: Bridging the Gap Between Computational Prediction and Experimental Realization, Advanced Functional Materials 36 (2026), e78575. DOI: 10.1002/adfm.78575.",
+      "year": "2026",
+      "url": "https://doi.org/10.1002/adfm.78575",
+      "areas": [
+        "mxenes"
+      ],
+      "type": "journal",
+      "publisherUrl": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.78575"
+    },
+    {
+      "id": "p02",
+      "index": 1,
+      "title": "Defect Passivation via Dual-Ligand Surface Modification for Bright and Stable Blue Emission in CsPbBr3 Nanoplatelets",
+      "citation": "V. Naresh, J. L. Velpugonda, A. Kala, M. Yerich, D. Jones, Z. Xing, N. Sharvirala, A. Majumdar, L.Y. Lin, Defect Passivation via Dual-Ligand Surface Modification for Bright and Stable Blue Emission in CsPbBr3 Nanoplatelets, Adv. Opt. Mater. 2025, e01375; DOI.",
+      "year": "2025",
+      "url": "https://doi.org/10.1002/adom.202501375",
+      "areas": [
+        "perovskites"
+      ],
+      "type": "journal",
+      "story": "p02"
+    },
+    {
+      "id": "p03",
+      "index": 2,
+      "title": "Free Space Few-Photon Nonlinearity in Critically Coupled Polaritonic Metasurfaces",
+      "citation": "J. Fang, A. Kala, R. Johnson, D. Sharp, R. Chen, C. Chang, C. Munley, J. Fröch, V. Naresh, A. Tang, A. Manna, V. Tara, B. Datta, Z. Zhou, D. Ginger, V. Menon, L.Y. Lin, A. Majumdar, Free Space Few-Photon Nonlinearity in Critically Coupled Polaritonic Metasurfaces, Nat. Commun. 16 (2025) 10099; DOI.",
+      "year": "2025",
+      "url": "https://doi.org/10.1038/s41467-025-65088-1",
+      "areas": [
+        "photonics",
+        "perovskites"
+      ],
+      "type": "journal",
+      "story": "p03"
+    },
+    {
+      "id": "p04",
+      "index": 3,
+      "title": "A Universal High-Resolution Micro-Patterning Technique for Solution-Processed Materials",
+      "citation": "J.L. Velpugonda, V. Naresh, Y. Matthew, and L.Y. Lin, A Universal High-Resolution Micro-Patterning Technique for Solution-Processed Materials, Light: Adv. Manuf. 6 (2025) 228-235; DOI.",
+      "year": "2025",
+      "url": "https://doi.org/10.37188/lam.2025.015",
+      "areas": [
+        "photonics"
+      ],
+      "type": "journal",
+      "story": "p04"
+    },
+    {
+      "id": "p05",
+      "index": 4,
+      "title": "In Situ Synthesis of Br‐Rich CsPbBr3 Nanoplatelets: Enhanced Stability and High PLQY for Wide Color Gamut Displays",
+      "citation": "V. Naresh, J.L. Velpugonda, N. Lee, S.H. Nah, L.Y. Lin, In Situ Synthesis of Br‐Rich CsPbBr3 Nanoplatelets: Enhanced Stability and High PLQY for Wide Color Gamut Displays, Adv. Funct. Mater., 35 (2024) 2413320; DOI.",
+      "year": "2024",
+      "url": "https://doi.org/10.1002/adfm.202413320",
+      "areas": [
+        "perovskites"
+      ],
+      "type": "journal",
+      "story": "p05"
+    },
+    {
+      "id": "p06",
+      "index": 5,
+      "title": "Cs2NaGdCl6:Tb3+ — A Highly Luminescent Rare-Earth Double Perovskite Scintillator for Low-Dose X-ray Detection and Imaging",
+      "citation": "V. Naresh, P.R. Cha, and N. Lee, Cs2NaGdCl6:Tb3+─A Highly Luminescent Rare-Earth Double Perovskite Scintillator for Low-Dose X-ray Detection and Imaging, ACS Appl. Mater. Interfaces 16 (2024) 19068-80; DOI.",
+      "year": "2024",
+      "url": "https://doi.org/10.1021/acsami.3c17301",
+      "areas": [
+        "scintillators",
+        "perovskites",
+        "crystals"
+      ],
+      "type": "journal",
+      "story": "p06"
+    },
+    {
+      "id": "p07",
+      "index": 6,
+      "title": "Scintillation Performance of Mn(II)-Doped Cs2NaBiCl6 Double Perovskite Nanocrystals for X-ray Imaging Applications",
+      "citation": "V. Naresh, R. Ramaraghavulu, Kiran Gupta, P.R. Cha, and N. Lee, Scintillation Performance of Mn (II)-doped Cs2NaBiCl6 Double Perovskite Nanocrystals for X-ray imaging applications, Adv. Opt. Mater., 12 (2024) 2301868; DOI.",
+      "year": "2024",
+      "url": "https://doi.org/10.1002/adom.202301868",
+      "areas": [
+        "scintillators",
+        "perovskites",
+        "polymers"
+      ],
+      "type": "journal",
+      "story": "p07"
+    },
+    {
+      "id": "p08",
+      "index": 7,
+      "title": "Compositional Engineering of ZnBr2-Doped CsPbBr3 Perovskite Nanocrystals: Insights into Structure Transformation, Optical Performance, and Charge-Carrier Dynamics",
+      "citation": "V. Naresh, Kiran Gupta, P.R. Cha, and N. Lee, Compositional engineering of ZnBr2-doped CsPbBr3 perovskite nanocrystals: insights into structure transformation, optical performance, and charge-carrier dynamics, J. Mater. Chem. C 11 (2023) 14248; DOI.",
+      "year": "2023",
+      "url": "https://doi.org/10.1039/D3TC02179C",
+      "areas": [
+        "perovskites"
+      ],
+      "type": "journal",
+      "story": "p08"
+    },
+    {
+      "id": "p09",
+      "index": 8,
+      "title": "Dual-Phase CsPbBr3–CsPb2Br5 Perovskite Scintillator for Sensitive X-ray Detection and Imaging",
+      "citation": "V. Naresh, S. Singh, H. Soh, J. Lee, and N. Lee, Dual-phase CsPbBr3-CsPb2Br5 perovskite scintillator for sensitive X-ray detection and imaging, Mater. Today Nano 23 (2023) 100364; DOI.",
+      "year": "2023",
+      "url": "https://doi.org/10.1016/j.mtnano.2023.100364",
+      "areas": [
+        "scintillators",
+        "perovskites"
+      ],
+      "type": "journal",
+      "story": "p09"
+    },
+    {
+      "id": "p10",
+      "index": 9,
+      "title": "Polar-Solvent-Free Sonochemical Synthesis of Mn(II)-Doped CsPbCl3 Perovskite Nanocrystals for Dual-Color Emission",
+      "citation": "V. Naresh, M.K. Cho, P.R. Cha, and N. Lee, Polar-Solvent-Free Sonochemical Synthesis of Mn(II)-Doped CsPbCl3 Perovskite Nanocrystals for Dual-Color Emission, ACS Appl. Nano Mater. 2023, 6, 4693-4706; DOI.",
+      "year": "2023",
+      "url": "https://doi.org/10.1021/acsanm.3c00182",
+      "areas": [
+        "perovskites"
+      ],
+      "type": "journal",
+      "story": "p10"
+    },
+    {
+      "id": "p11",
+      "index": 10,
+      "title": "Highly Luminescent Dual-Phase CsPbBr3/Cs4PbBr6 Microcrystals for Wide Color Gamut for Backlight Display",
+      "citation": "V. Naresh, T. Jang, Y. Pan, and N. Lee, Highly luminescent dual-phase CsPbBr3/Cs4PbBr6 microcrystals for wide color gamut for backlight display, Nanoscale 14 (2022) 17789; DOI.",
+      "year": "2022",
+      "url": "https://doi.org/10.1039/D2NR05653D",
+      "areas": [
+        "crystals",
+        "perovskites"
+      ],
+      "type": "journal",
+      "story": "p11"
+    },
+    {
+      "id": "p12",
+      "index": 11,
+      "title": "NIR-Triggered NaYF4:Yb3+,Tm3+@NaYF4/CsPb(Br1−x/Ix)3 Composite for Up-Converted White-Light Emission and Dual-Model Anti-Counterfeiting Applications",
+      "citation": "V. Naresh, V.N.K.B. Adusumalli, Y.I. Park, N. Lee, NIR-triggered NaYF4:Yb3+, Tm3+ @ NaYF4/CsPb(Br1-x/Ix)3 composite for up-converted white-light emission and dual-model anti-counterfeiting applications, Mater. Today Chem. 23 (2022) 100752; DOI.",
+      "year": "2022",
+      "url": "https://doi.org/10.1016/j.mtchem.2021.100752",
+      "areas": [
+        "perovskites"
+      ],
+      "type": "journal",
+      "story": "p12"
+    },
+    {
+      "id": "p13",
+      "index": 12,
+      "title": "Synthesis of CsPbX3 (X = Cl/Br, Br, and Br/I)@SiO2/PMMA Composite Films as Color-Conversion Materials for Achieving Tunable Multi-Color and White Light Emissions",
+      "citation": "V. Naresh, B.H. Kim, N. Lee, Synthesis of CsPbX3 (X = Cl/Br, Br, and Br/I)@SiO2/PMMA composite films as color-conversion materials for achieving tunable multi-color and white light emissions, Nano Res. 14 (2021) 1187-1194; DOI.",
+      "year": "2021",
+      "url": "https://doi.org/10.1007/s12274-020-3170-5",
+      "areas": [
+        "polymers",
+        "perovskites"
+      ],
+      "type": "journal",
+      "story": "p13"
+    },
+    {
+      "id": "p14",
+      "index": 13,
+      "title": "A Review on Biosensors and Recent Development of Nanostructured Materials-Enabled Biosensors",
+      "citation": "V. Naresh, and N. Lee, A Review on Biosensors and Recent Development of Nanostructured Materials-Enabled Biosensors, Sensors 21 (2021) 1109; (Editor's Choice & Best Review Article). DOI",
+      "year": "2021",
+      "url": "https://doi.org/10.3390/s21041109",
+      "areas": [
+        "other"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p15",
+      "index": 14,
+      "title": "Energy Transfer Dynamics in Thermally Stable Single-Phase LiMgBO3:Tm3+/Dy3+ Phosphor for UV-Triggered White Light-Emitting Devices",
+      "citation": "V. Naresh, N. Lee, Energy transfer dynamics in thermally stable single-phase LiMgBO3:Tm3+/Dy3+ phosphor for UV-triggered white light-emitting devices, Mater. Sci. Eng. B 271 (2021) 115306; DOI.",
+      "year": "2021",
+      "url": "https://doi.org/10.1016/j.mseb.2021.115306",
+      "areas": [
+        "crystals"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p16",
+      "index": 15,
+      "title": "Dy3+/Pr3+ Co-Doped Fluoro-Borosilicate Glasses: Energy Transfer Induced Color-Tunable Luminescence",
+      "citation": "V. Naresh, N. Lee, Dy3+/Pr3+ co-doped fluoro-borosilicate glasses: Energy transfer induced color-tunable luminescence. Mater. Res. Bull. 142 (2021) 111381; DOI.",
+      "year": "2021",
+      "url": "https://doi.org/10.1016/j.materresbull.2021.111381",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p17",
+      "index": 16,
+      "title": "Synthesis and Photoluminescent Characteristics of Sm3+-Doped Ba3(PO4)2 Phosphor Hierarchical Architectures",
+      "citation": "C.B. Ballipalli, R. Rajavaram, V. Naresh, D. Thatikayala, D. Kim, D.S. Shin, A.P. Baker, G.G. Wang, J. Park, Synthesis and photoluminescent characteristics of Sm3+-doped Ba3(PO4)2 phosphor hierarchical architectures, Mater. Sci. Eng. B 264 (2021) 114979; DOI.",
+      "year": "2021",
+      "url": "https://doi.org/10.1016/j.mseb.2020.114979",
+      "areas": [
+        "crystals"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p18",
+      "index": 17,
+      "title": "Zn(II)-Doped Cesium Lead Halide Perovskite Nanocrystals with High Quantum Yield and Wide Color Tunability for Color-Conversion Light-Emitting Displays",
+      "citation": "V. Naresh, N. Lee, Zn(II)-Doped Cesium Lead Halide Perovskite Nanocrystals with High Quantum Yield and Wide Color Tunability for Color-Conversion Light-Emitting Displays, ACS Appl. Nano Mater. 3 (2020) 7621-7632; DOI.",
+      "year": "2020",
+      "url": "https://doi.org/10.1021/acsanm.0c01254",
+      "areas": [
+        "perovskites"
+      ],
+      "type": "journal",
+      "story": "p18"
+    },
+    {
+      "id": "p19",
+      "index": 18,
+      "title": "NIR Luminescence and Energy Transfer Kinetics in Nd3+/Yb3+ Co-Doped Sodium Aluminum Bismuth Fluoro-Borosilicate Glasses",
+      "citation": "V. Naresh, N. Lee, NIR Luminescence and Energy Transfer Kinetics in Nd3+/Yb3+ Co-Doped Sodium Aluminum Bismuth Fluoro-Borosilicate Glasses, Ceram. Int. 45 (2019) 22649-22659; DOI.",
+      "year": "2019",
+      "url": "https://doi.org/10.1016/j.ceramint.2019.07.298",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p20",
+      "index": 19,
+      "title": "KGaP2O7:Mn4+ Deep Red Emitting Phosphor: Synthesis, Structure, Concentration, and Temperature-Dependent Photoluminescence Characteristics",
+      "citation": "V. Naresh, N. Lee, KGaP2O7: Mn4+ Deep Red Emitting Phosphor: Synthesis, Structure, Concentration, and Temperature-dependent Photoluminescence Characteristics, J. Lumin. 214 (2019) 116565; DOI.",
+      "year": "2019",
+      "url": "https://doi.org/10.1016/j.jlumin.2019.116565",
+      "areas": [
+        "crystals"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p21",
+      "index": 20,
+      "title": "K2xMnxSn3−xS6 (KMS-1) Immobilized on Reduced Graphene Oxide as KMS-1/r-GO Aerogel to Effectively Remove Cs+ and Sr2+ from Aqueous Solution",
+      "citation": "K. Gupta, B. Yuan, C. Chena, V. Naresh, M. Lai Fu, K2xMnxSn3-xS6 (x = 0.5–0.95) (KMS-1) Immobilized on the Reduced Graphene Oxide as KMS-1/r-GO Aerogel to Effectively Remove Cs+ and Sr2+ from Aqueous Solution, Chem. Eng. J. 369 (2019) 803-812; DOI.",
+      "year": "2019",
+      "url": "https://doi.org/10.1016/j.cej.2019.03.109",
+      "areas": [
+        "other"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p22",
+      "index": 21,
+      "title": "Energy Transfer-Based Colour Tunability in UV Light-Induced Tm3+/Tb3+/Eu3+:ZnB Glass Phosphors Generating White Light Emission",
+      "citation": "V. Naresh, Kiran Gupta, C. Parthasarathi Reddy, B. S. Ham, Energy Transfer-based Colour Tunability in UV Light-Induced Tm3+/Tb3+/Eu3+: ZnB Glass Phosphors Generating White Light Emission, Spectrochim. Acta A 175 (2017) 43–50; DOI.",
+      "year": "2017",
+      "url": "https://doi.org/10.1016/j.saa.2016.12.023",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p23",
+      "index": 22,
+      "title": "Photoluminescence Properties of LiTi2−xEux(PO4)3 Phosphor",
+      "citation": "R. Ramaraghavulu, V. Naresh, V. Eswaraiah, Photoluminescence Properties of LiTi2-xEux(PO4)3 Phosphor, Luminescence 32 (2017) 11-16; DOI.",
+      "year": "2017",
+      "url": "https://doi.org/10.1002/bio.3141",
+      "areas": [
+        "crystals"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p24",
+      "index": 23,
+      "title": "Influence of Multiphonon and Cross-Relaxations on 3P0 and 1D2 Emission Levels of Pr3+-Doped Borosilicate Glasses for Broadband Signal Amplification",
+      "citation": "V. Naresh, B.S. Ham, Influence of Multiphonon and Cross-relaxations on 3P0 and 1D2 Emission Levels of Pr3+ Doped Borosilicate Glasses for Broadband Signal Amplification, J. Alloys Compd. 664 (2016) 321-330; DOI.",
+      "year": "2016",
+      "url": "https://doi.org/10.1016/j.jallcom.2015.12.246",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p25",
+      "index": 24,
+      "title": "Li2O–LiF–ZnF2–B2O3–P2O5:MnO Glasses — Thermal, Structural, and Luminescence Characteristics",
+      "citation": "C. Parthasaradhi Reddy, V. Naresh, K.T.R. Reddy, Li2O-LiF-ZnF2-B2O3-P2O5: MnO Glasses - Thermal, Structural, and Luminescence Characteristics, Opt. Mater. 51 (2016) 154-161; DOI.",
+      "year": "2016",
+      "url": "https://doi.org/10.1016/j.optmat.2015.11.035",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p26",
+      "index": 25,
+      "title": "Analysis of Visible-NIR Emission and Photoluminescence Quenching in Er3+:Bi2O3–AlF3–TeO–B2O3 Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Analysis of Visible-NIR Emission and Photoluminescence Quenching in Er3+: Bi2O3-AlF3-TeO-B2O3 Glasses, Phys. Chem. Glasses: Eur. J. Glass Sci. & Technol. 56 (2015) 255-262; DOI.",
+      "year": "2015",
+      "url": "https://doi.org/10.13036/17533562.56.5.255",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p27",
+      "index": 26,
+      "title": "Cross-Relaxations and Non-Radiative Energy Transfer from Sm3+ to Eu3+ in B2O3–ZnO Glasses",
+      "citation": "V. Naresh, B.H. Rudramadevi, S. Buddhudu, Cross-Relaxations and Non-Radiative Energy Transfer from (4G5/2) Sm3+→(5D0) Eu3+: B2O3-ZnO Glasses, J. Alloys Compd. 632 (2015) 59-67; DOI.",
+      "year": "2015",
+      "url": "https://doi.org/10.1016/j.jallcom.2015.01.138",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p28",
+      "index": 27,
+      "title": "Energy Transfer-Based Emission Analysis of (Tb3+, Sm3+): Lithium Zinc Phosphate Glasses",
+      "citation": "C. Parthasaradhi Reddy, V. Naresh, R. Ramaraghavulu, B.H. Rdramadevi, K.T.R. Reddy, S. Buddhudu, Energy Transfer-based Emission Analysis of (Tb3+, Sm3+): Lithium Zinc Phosphate Glasses, Spectrochemica. Acta A 144 (2015) 68-75; DOI.",
+      "year": "2015",
+      "url": "https://doi.org/10.1016/j.saa.2015.02.090",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p29",
+      "index": 28,
+      "title": "Analysis of Energy Transfer-Based Emission Spectra of (Sm3+, Dy3+): Li2O–LiF–B2O3–CdO Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Analysis of Energy Transfer-based Emission Spectra of (Sm3+, Dy3+): Li2O-LiF-B2O3-CdO Glasses, J. Lumin. 147 (2014) 63-71; DOI.",
+      "year": "2014",
+      "url": "https://doi.org/10.1016/j.jlumin.2013.10.035",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p30",
+      "index": 29,
+      "title": "Preparation and Characterization of Ti3+ & Cr3+:Li2O–LiF–B2O3–ZnO Optical Glasses",
+      "citation": "L. Vijayalakshmi, V. Naresh, R. Ramaraghavulu, B.H. Rudramadevi, S. Buddhudu, Preparation and Characterization of Ti3+ & Cr3+:Li2O-LiF-B2O3-ZnO Optical Glasses, Int. J. Eng. Res. Appl. 4, 168–176 (2014), ISSN: 2248-9622; Link.",
+      "year": "2014",
+      "url": "https://www.ijera.com/papers/Vol4_issue6/Version%206/AB04606168176.pdf",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p31",
+      "index": 30,
+      "title": "Spectral Analysis of Sm3+ & Dy3+:B2O3–ZnO–MgO Optical Glasses",
+      "citation": "M. Venkateswarlu, V. Naresh, R. Ramaraghavulu, B.H. Rudramadevi, Spectral analysis of Sm3+&Dy3+: B2O3-Zno-Mgo optical glasses, Int. J. Eng. Res. Appl. 4 (2014) 103-113, ISSN: 2248-9622; Link.",
+      "year": "2014",
+      "url": "https://www.ijera.com/papers/Vol4_issue4/Version%209/T4409103113.pdf",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p32",
+      "index": 31,
+      "title": "Optical and Dielectric Properties of Cr3+ & Cu2+:P2O5–ZnO–LiF Glasses",
+      "citation": "C. Parthasaradhi Reddy, V. Naresh, R. Ramaraghavulu, B.H. Rudramadevi, S. Buddhudu, Optical and Dielectric Properties of Cr3+ & Cu2+:P2O5-ZnO-LiF Glasses, Int. J. Eng. Res. Appl. 4 (2014) 127-134, ISSN: 2248-9622; Link.",
+      "year": "2014",
+      "url": "https://www.ijera.com/papers/Vol4_issue5/Version%205/Y04505127134.pdf",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p33",
+      "index": 32,
+      "title": "Emission Analysis of Pr3+ & Dy3+ Ions Doped Li2O–LiF–B2O3–ZnO Glasses",
+      "citation": "L. Vijayalakshmi, V. Naresh, B.H. Rudramadevi, S. Buddhudu, Emission analysis of Pr3+ & Dy3+ ions doped Li2O-LiF-B2O3-ZnO glasses, Res. Invent. Int. J. Eng. Sci., 4 (2014), 19-25, ISSN: 2278-4721; Link.",
+      "year": "2014",
+      "url": "https://www.researchinventy.com/papers/v4i9/D049019025.pdf",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p34",
+      "index": 33,
+      "title": "Photoluminescence and Energy Transfer Process in Bi3+/Sm3+ Co-Doped Phosphate Zinc Lithium Glasses",
+      "citation": "C. Parthasaradhi Reddy, V. Naresh, B. Chandra Babu, S. Buddhudu, Photoluminescence and Energy Transfer Process in Bi3+/Sm3+ Co-Doped Phosphate Zinc Lithium Glasses, Adv. Mater. Phys. Chem. 4 (2014) 165-171; DOI.",
+      "year": "2014",
+      "url": "https://doi.org/10.4236/ampc.2014.49019",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal",
+      "story": "p34"
+    },
+    {
+      "id": "p35",
+      "index": 34,
+      "title": "Energy Transfer-Based Enhanced Red Emission Intensity from (Eu3+, Tb3+) LFBCd Optical Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Energy Transfer-based Enhanced Red Emission Intensity from (Eu3+, Tb3+) LFBCd Optical Glasses, J. Lumin. 137 (2013) 15-21; DOI.",
+      "year": "2013",
+      "url": "https://doi.org/10.1016/j.jlumin.2012.12.060",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p36",
+      "index": 35,
+      "title": "Studies on Optical, Dielectric, and Magnetic Properties of Mn2+, Fe3+, & Co2+ Ions Doped LFBCd Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Studies on Optical, Dielectric, and Magnetic Properties of Mn2+, Fe3+, & Co2+ Ions Doped LFBCd Glasses, Ferroelectrics 437 (2012) 110-125; DOI.",
+      "year": "2012",
+      "url": "https://doi.org/10.1080/00150193.2012.741987",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p37",
+      "index": 36,
+      "title": "Structural, Thermal, Dielectric, and AC Conductivity Properties of Lithium Fluoro-Borate Optical Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Structural, Thermal, Dielectric, and Ac Conductivity Properties of Lithium Fluro-Borate Optical Glasses, Ceram. Int. 38 (2012) 2325-2332; DOI.",
+      "year": "2012",
+      "url": "https://doi.org/10.1016/j.ceramint.2011.10.084",
+      "areas": [
+        "glasses"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p38",
+      "index": 37,
+      "title": "Synthesis, Structural and Dielectric Properties of Co2+, Ni2+ and Cu2+:Zn2SiO4 Nanoceramics by a Sol-Gel Method",
+      "citation": "B. Chandra Babu, V. Naresh, B. Jaya Prakash, S. Buddhudu, Synthesis, Structural and Dielectric Properties of Co2+, Ni2+ and Cu2+:Zn2SiO4 Nanoceramics by a Sol-gel Method, Ferroelectr. Lett. Sect. 38 (2011) 114-127; DOI.",
+      "year": "2011",
+      "url": "https://doi.org/10.1080/07315171.2011.623610",
+      "areas": [
+        "crystals"
+      ],
+      "type": "journal"
+    },
+    {
+      "id": "p39",
+      "index": 38,
+      "title": "Structural and Optical Properties of Li+:PVP & Ag+:PVP Polymer Films",
+      "citation": "K. Sivaiah, K. Naveen, V. Naresh, S. Buddhudu, Structural and Optical Properties of Li+: PVP & Ag+: PVP Polymer Films, Mater. Sci. & Appl. 2 (2011) 1688-1696; DOI.",
+      "year": "2011",
+      "url": "https://doi.org/10.4236/msa.2011.211225",
+      "areas": [
+        "polymers"
+      ],
+      "type": "journal",
+      "story": "p39"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "c02",
+      "title": "Optical and Spectral Analysis of Pr3+-Doped Lithium Zinc Fluoro Telluro Phosphate Glasses",
+      "citation": "C. Parthasaradhi Reddy, V. Naresh, K.T. Ramakrishna Reddy, Optical and spectral analysis of Pr3+-doped lithium zinc fluoro telluro phosphate glasses, Mater. Today: Proc., 3 (2016) 4058-4063; DOI.",
+      "url": "https://doi.org/10.1016/j.matpr.2016.11.073",
+      "year": "2016",
+      "areas": [
+        "glasses"
+      ],
+      "type": "proceeding"
+    },
+    {
+      "id": "c03",
+      "title": "VIS-NIR Emission Analysis of Tm3+-Doped LiF-ZnF2-AlF3-B2O3-SiO2 Glasses",
+      "citation": "V. Naresh, S. Buddhudu, VIS-NIR Emission Analysis of Tm3+-Doped LiF-ZnF2-AlF3-B2O3-SiO2 Glasses, AIP Conf. Proc. 1665 (2015) 070026; DOI.",
+      "url": "https://doi.org/10.1063/1.4917890",
+      "year": "2015",
+      "areas": [
+        "glasses"
+      ],
+      "type": "proceeding"
+    },
+    {
+      "id": "c04",
+      "title": "Energy Transfer and Optical Gain Properties of P2O5-ZnO-LiF: (Yb3+, Er3+) Glasses",
+      "citation": "C. Parthasaradhi Reddy, V. Naresh, K.T.R. Reddy, S. Buddhudu, Energy Transfer and Optical Gain Properties of P2O5-ZnO-LiF: (Yb3+, Er3+) glasses, AIP Conf. Proc. 1665 (2015) 070017; DOI.",
+      "url": "https://doi.org/10.1063/1.4917881",
+      "year": "2015",
+      "areas": [
+        "glasses"
+      ],
+      "type": "proceeding"
+    },
+    {
+      "id": "c05",
+      "title": "Analysis of Emission Spectra of Ho3+: LFBCd Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Analysis of emission spectra of Ho3+: LFBCd glasses, AIP Conf. Proc. 1591, (2014) 725; DOI.",
+      "url": "https://doi.org/10.1063/1.4872733",
+      "year": "2014",
+      "areas": [
+        "glasses"
+      ],
+      "type": "proceeding"
+    },
+    {
+      "id": "c06",
+      "title": "Luminescence, Electrical, and Magnetic Studies of Mn2+: Li2O-LiF-B2O3-CdO Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Luminescence, Electrical, and Magnetic Studies of Mn2+: Li2O-LiF-B2O3-CdO Glasses, AIP Conf. Proc. 1512 (2013) 602; DOI.",
+      "url": "https://doi.org/10.1063/1.4791181",
+      "year": "2013",
+      "areas": [
+        "glasses"
+      ],
+      "type": "proceeding"
+    },
+    {
+      "id": "c07",
+      "title": "Energy Transfer and Luminescence Properties of Sm3+/Eu3+: B2O3-ZnO Glasses",
+      "citation": "V. Naresh, B.H. Rudramdevi, S. Buddhudu, Energy Transfer and Luminescence Properties of Sm3+/ Eu3+:B2O3-ZnO Glasses, Proceedings of DAE-National Laser Symposium (NLS-23), 2014; (ISBN-9788190332156 CP-06-48).",
+      "url": null,
+      "year": "2014",
+      "areas": [
+        "glasses"
+      ],
+      "type": "proceeding",
+      "category": "symposium"
+    },
+    {
+      "id": "c08",
+      "title": "Photoluminescence Properties of (Yb3+, Er3+): Li2O-LiF-B2O3-CdO Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Photoluminescence Properties of (Yb3+, Er3+): Li2O-LiF-B2O3-CdO Glasses, Proceedings of DAE-National Laser Symposium (NLS-22), 2013; (ISBN-978-93-82460-05-3).",
+      "url": null,
+      "year": "2013",
+      "areas": [
+        "glasses"
+      ],
+      "type": "proceeding",
+      "category": "symposium"
+    },
+    {
+      "id": "c09",
+      "title": "Study on Enhancement of Eu3+ Emission by Non-Radiative Energy Transfer from Tb3+ in LFBCd Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Study on Enhancement of Eu3+ Emission by Non-Radiative Energy Transfer from Tb3+ in LFBCd Glasses (AMST-2012 Conf. Proc.) LAP LAMBART Acad. Pub. (2013) 154-161; (ISBN-978-3-659-38098-3).",
+      "url": null,
+      "year": "2013",
+      "areas": [
+        "glasses"
+      ],
+      "type": "proceeding",
+      "category": "symposium"
+    }
+  ],
+  "profiles": {
+    "linkedin": "https://www.linkedin.com/in/naresh-varnakavi-381578a8/",
+    "googleScholar": "https://scholar.google.com/citations?user=GbwKoHsAAAAJ",
+    "orcid": "https://orcid.org/0000-0002-7271-9888"
+  },
+  "presentations": [
+    {
+      "id": "c01",
+      "title": "Blue-Emitting 2D CsPbBr3 Nanoplatelets with Enhanced Quantum Yield and Stability via Dual-Ligand Surface Modification for Lighting and Display Technologies",
+      "citation": "V. Naresh, V. John Leo, Y. Matthew, L.Y. Lin, Blue-Emitting 2D CsPbBr3 Nanoplatelets with Enhanced Quantum Yield and Stability via Dual-Ligand Surface Modification for Lighting and Display Technologies. 2026, DOI.",
+      "url": null,
+      "year": "2026",
+      "areas": [
+        "perovskites"
+      ],
+      "type": "presentation",
+      "relatedUrl": "https://doi.org/10.1002/adom.202501375"
+    },
+    {
+      "id": "t01",
+      "title": "Blue-Emitting 2D CsPbBr3 Nanoplatelets with Enhanced Quantum Yield and Stability via Dual Ligand Surface Modification for Lighting and Display Technologies",
+      "citation": "V. Naresh, V. John Leo, L.Y. Lin, Blue-Emitting 2D CsPbBr3 Nanoplatelets with Enhanced Quantum Yield and Stability via Dual Ligand Surface Modification for Lighting and Display Technologies, Materials Research Society (MRS) Spring Meeting, Seattle, WA, USA.",
+      "venue": "Materials Research Society (MRS) Spring Meeting · Seattle, WA, USA",
+      "year": null,
+      "areas": [
+        "perovskites"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t02",
+      "title": "In-situ Synthesis of Br-passivated 2D Blue-Emitting CsPbBr3 Nanoplatelets",
+      "citation": "V. Naresh, V. John Leo, L.Y. Lin, In-situ Synthesis of Br-passivated 2D Blue-Emitting CsPbBr3 Nanoplatelets, International Meeting on Optoelectronic Devices (IMOD), Philadelphia, PA, USA.",
+      "venue": "International Meeting on Optoelectronic Devices (IMOD) · Philadelphia, PA, USA",
+      "year": null,
+      "areas": [
+        "perovskites"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t03",
+      "title": "Optical and Spectral Analysis of Pr3+ Doped Lithium Zinc Fluoro Telluro Phosphate Glasses",
+      "citation": "C. Parthasaradhi Reddy, V. Naresh, K.T.R. Reddy, Optical and Spectral Analysis of Pr3+ Doped Lithium Zinc Fluoro Telluro Phosphate Glasses, International Conference on Materials Research and Applications (ICMRA-2016), Hyderabad, India.",
+      "venue": "International Conference on Materials Research and Applications (ICMRA-2016) · Hyderabad, India",
+      "year": null,
+      "areas": [
+        "glasses"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t04",
+      "title": "Vis-NIR Emission Analysis of Pr3+ Doped Borosilicate Glasses for Broadband Signal Amplification",
+      "citation": "V. Naresh, B.S. Ham, Vis-NIR Emission Analysis of Pr3+ Doped Borosilicate Glasses for Broadband Signal Amplification, Korean Physical Society Meeting, Gyeongju, South Korea.",
+      "venue": "Korean Physical Society Meeting · Gyeongju, South Korea",
+      "year": null,
+      "areas": [
+        "glasses"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t05",
+      "title": "Vis-NIR Emission Analysis of Tm3+ Doped LiF-ZnF2-AlF3-B2O3-SiO2 Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Vis-NIR Emission Analysis of Tm3+ Doped LiF-ZnF2-AlF3-B2O3-SiO2 Glasses, DAE Solid State Physics Symposium, VIT University, Vellore, India.",
+      "venue": "DAE Solid State Physics Symposium · VIT University, Vellore, India",
+      "year": null,
+      "areas": [
+        "glasses"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t06",
+      "title": "Energy Transfer and Luminescence Properties of Sm3+/Eu3+: B2O3-ZnO Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Energy Transfer and Luminescence Properties of Sm3+/Eu3+: B2O3-ZnO Glasses DAE National Laser Symposium, Sri Venkateswara University, Tirupati, India.",
+      "venue": "DAE National Laser Symposium · Sri Venkateswara University, Tirupati, India",
+      "year": null,
+      "areas": [
+        "glasses"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t07",
+      "title": "Luminescence Quenching of (1D2→3H4) & (1G4→3H5) Transitions in Pr3+: LZBP Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Luminescence Quenching of (1D2→3H4) & (1G4→3H5) Transitions in Pr3+: LZBP Glasses, International Seminar on Glasses and Other Functional Materials, Acharya Nagarjuna University, Guntur, India.",
+      "venue": "International Seminar on Glasses and Other Functional Materials · Acharya Nagarjuna University, Guntur, India",
+      "year": null,
+      "areas": [
+        "glasses"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t08",
+      "title": "Energy Transfer-Based Emission Analysis of Rare-Earth Ions (Eu3+, Tb3+; Sm3+, Dy3+): Li2O-LiF-B2O3-CdO Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Energy Transfer-Based Emission Analysis of Rare-Earth Ions (Eu3+, Tb3+; Sm3+, Dy3+): Li2O-LiF-B2O3-CdO Glasses, National Conference on Emerging Nano-Materials (NCENM-14), Sri Krishnadevaraya University, Anantapuramu, India.",
+      "venue": "National Conference on Emerging Nano-Materials (NCENM-14) · Sri Krishnadevaraya University, Anantapuramu, India",
+      "year": null,
+      "areas": [
+        "glasses"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t09",
+      "title": "Structural, Thermal, Dielectric and Magnetic Properties of Mn2+, Fe3+ & Co2+ Doped Li2O-LiF-B2O3-CdO Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Structural, Thermal, Dielectric and Magnetic Properties of Mn2+, Fe3+ & Co2+ Doped Li2O-LiF-B2O3-CdO Glasses, Indian Science Congress (ISC), University of Jammu, India.",
+      "venue": "Indian Science Congress (ISC) · University of Jammu, India",
+      "year": null,
+      "areas": [
+        "glasses"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t10",
+      "title": "Photoluminescence Properties of (Yb3+, Er3+): Li2O-LiF-B2O2-CdO Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Photoluminescence Properties of (Yb3+, Er3+): Li2O-LiF-B2O2-CdO Glasses, DAE National Laser Symposium, Manipal Institute of Technology, India.",
+      "venue": "DAE National Laser Symposium · Manipal Institute of Technology, India",
+      "year": null,
+      "areas": [
+        "glasses"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t11",
+      "title": "Analysis of Emission Spectra of Ho3+: LFBCd Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Analysis of Emission Spectra of Ho3+: LFBCd Glasses, DAE Solid State Physics Symposium, Thapar University, Patiala, India.",
+      "venue": "DAE Solid State Physics Symposium · Thapar University, Patiala, India",
+      "year": null,
+      "areas": [
+        "glasses"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t12",
+      "title": "Luminescence, Electrical and Magnetic Studies of Fe3+ Doped Li2O-LiF-B2O3-CdO Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Luminescence, Electrical and Magnetic Studies of Fe3+ Doped Li2O-LiF-B2O3-CdO Glasses, National Conference on Advanced Materials and Applications (NCAMA), NIT Tamil Nadu, India.",
+      "venue": "National Conference on Advanced Materials and Applications (NCAMA) · NIT Tamil Nadu, India",
+      "year": null,
+      "areas": [
+        "glasses"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t13",
+      "title": "Energy Transfer-Based Emission Properties of (Sm3+, Dy3+): LFBCd Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Energy Transfer-Based Emission Properties of (Sm3+, Dy3+): LFBCd Glasses, National Conference on Luminescence and its Applications (NCLA), PES Institute of Technology, Bangalore, India.",
+      "venue": "National Conference on Luminescence and its Applications (NCLA) · PES Institute of Technology, Bangalore, India",
+      "year": null,
+      "areas": [
+        "glasses"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t14",
+      "title": "Luminescence, Electrical and Magnetic Studies of Mn2+: Li2O-LiF-B2O3-CdO Glasses",
+      "citation": "V. Naresh, S. Buddhudu, Luminescence, Electrical and Magnetic Studies of Mn2+: Li2O-LiF-B2O3-CdO Glasses, DAE Solid State Physics Symposium, IIT Bombay, Mumbai, India.",
+      "venue": "DAE Solid State Physics Symposium · IIT Bombay, Mumbai, India",
+      "year": null,
+      "areas": [
+        "glasses"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t15",
+      "title": "Enhancement of Eu3+ Emission via Non-Radiative Energy Transfer from Tb3+ in LFBCd Glass",
+      "citation": "V. Naresh, S. Buddhudu, Enhancement of Eu3+ Emission via Non-Radiative Energy Transfer from Tb3+ in LFBCd Glass, National Conference on Advances in Materials Science and Technologies (AMST), Kakathiya University, Warangal, India.",
+      "venue": "National Conference on Advances in Materials Science and Technologies (AMST) · Kakathiya University, Warangal, India",
+      "year": null,
+      "areas": [
+        "glasses"
+      ],
+      "type": "presentation"
+    },
+    {
+      "id": "t16",
+      "title": "Suitability of Li2O-LiF-B2O3-CdO Glass as Cathode Host Material for Battery Applications",
+      "citation": "V. Naresh, S. Buddhudu, Suitability of Li2O-LiF-B2O3-CdO Glass as Cathode Host Material for Battery Applications, International Conference on Material Science and Technology (ICMST), ST. Thomas College, Kerala, India.",
+      "venue": "International Conference on Material Science and Technology (ICMST) · ST. Thomas College, Kerala, India",
+      "year": null,
+      "areas": [
+        "glasses"
+      ],
+      "type": "presentation"
+    }
+  ],
+  "workshops": [
+    {
+      "id": "w01",
+      "title": "Nanomaterials and Nanotechnology",
+      "citation": "V. Naresh, S. Buddhudu, Nanomaterials and Nanotechnology, National Seminar, Govt. Degree and P.G. College, Puttur, India, October 2, 2013.",
+      "venue": "National Seminar · Govt. Degree and P.G. College, Puttur, India · October 2, 2013",
+      "year": "2013",
+      "areas": [
+        "general"
+      ],
+      "type": "seminar"
+    },
+    {
+      "id": "w02",
+      "title": "Advanced Materials Characterization Techniques (AMCT-2013)",
+      "citation": "V. Naresh, S. Buddhudu, Advanced Materials Characterization Techniques (AMCT-2013), National Workshop, Dept. of Physics, Sri Venkateswara University, Tirupati, India, March 23, 2013.",
+      "venue": "National Workshop · Department of Physics, Sri Venkateswara University, Tirupati, India · March 23, 2013",
+      "year": "2013",
+      "areas": [
+        "general"
+      ],
+      "type": "seminar"
+    },
+    {
+      "id": "w03",
+      "title": "Innovative Experiments in Physics",
+      "citation": "V. Naresh, S. Buddhudu, Innovative Experiments in Physics, Regional Workshop, APCOST & Dept. of Physics, Sri Venkateswara University, Tirupati, India, February 7–10, 2011.",
+      "venue": "Regional Workshop · APCOST & Department of Physics, Sri Venkateswara University, Tirupati, India · February 7–10, 2011",
+      "year": "2011",
+      "areas": [
+        "general"
+      ],
+      "type": "seminar"
+    }
+  ]
+}
