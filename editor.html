@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-AOPKY4X7Tix2oG8k2bFfZvP0mZaYRxMKk0StR4MGOGo='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; frame-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Website editor · Naresh Varnakavi</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="editor.css">
+  <script src="editor-core.js" defer></script>
+  <script src="editor.js" defer></script>
+</head>
+<body>
+  <header class="editor-header">
+    <a class="editor-brand" href="index.html" target="_blank" rel="noopener">nv<span>·</span><div>Website editor<small>Naresh Varnakavi</small></div></a>
+    <label class="page-label">Page<select id="page-select" disabled></select></label>
+    <div class="view-switch" aria-label="Preview size"><button id="desktop-view" class="selected" aria-pressed="true">Desktop</button><button id="mobile-view" aria-pressed="false">Mobile</button></div>
+    <div class="header-actions"><button id="undo" disabled>Undo</button><button id="redo" disabled>Redo</button><button id="save-draft" disabled>Save draft</button><button id="export" disabled>Download changes</button><button id="publish" class="primary" disabled>Publish</button></div>
+  </header>
+  <div class="workspace">
+    <aside class="properties">
+      <p class="eyebrow">YOUR WEBSITE, YOUR WORDS</p><h1>Make it yours.</h1>
+      <p class="intro">Click text to edit it. Click a photo to replace it. Your changes stay in this browser until you publish.</p>
+      <div id="connection" class="connection"><span id="connection-label">GitHub not connected</span><button id="connect">Connect publishing</button><button id="disconnect" hidden>Disconnect</button></div>
+      <div id="selection-empty" class="empty-card"><span class="selection-icon">↖</span><h2>Choose something on the page</h2><p>Editable text and images show an outline as you move over them.</p></div>
+      <section id="text-panel" class="property-card" hidden>
+        <p class="eyebrow" id="text-kind">TEXT</p><h2>Edit text</h2>
+        <label>Text<textarea id="text-value" rows="6"></textarea></label>
+        <p class="hint">You can also type directly on the preview. Editing this box replaces inline emphasis; use the preview to retain it.</p>
+        <div class="property-row"><label>Font size · px<input id="font-size" type="number" min="8" max="120" placeholder="Default"></label><label>Colour<input id="text-color" type="color" value="#163c35"></label></div>
+        <div class="format-buttons"><button id="bold" aria-pressed="false"><strong>Bold</strong></button><button id="italic" aria-pressed="false"><em>Italic</em></button><button id="reset-format">Reset format</button></div>
+        <label>Alignment<select id="text-align"><option value="">Default</option><option value="left">Left</option><option value="center">Centre</option><option value="right">Right</option></select></label>
+        <div id="link-fields" hidden><label>Link destination<input id="link-value" type="text" placeholder="https://… or publications.html"></label><button id="apply-link">Update link</button></div>
+      </section>
+      <section id="image-panel" class="property-card" hidden>
+        <p class="eyebrow">IMAGE</p><h2>Replace image</h2><img id="selected-image" class="image-thumbnail" alt="Selected image preview">
+        <label class="upload-button">Choose a photo<input id="image-file" type="file" accept="image/jpeg,image/png,image/webp,image/gif,image/avif"></label>
+        <p class="hint">JPG, PNG, WebP, GIF or AVIF · up to 8 MB. Images are stored with your website.</p>
+        <label class="check-label"><input id="replace-all" type="checkbox">Replace matching images on all pages</label>
+        <label>Image description<textarea id="image-alt" rows="3"></textarea></label>
+        <label>Image fit<select id="image-fit"><option value="">Default</option><option value="cover">Fill the frame</option><option value="contain">Show the whole image</option></select></label>
+      </section>
+      <section class="property-card" id="sections-card" hidden><p class="eyebrow">HOMEPAGE</p><h2>Section order</h2><p class="hint">Move a section one place at a time. The introduction stays at the top.</p><div id="section-list"></div></section>
+      <details class="help"><summary>How saving works</summary><p><strong>Save draft</strong> keeps edits on this device. <strong>Download changes</strong> creates a ZIP you can send to ChatGPT. <strong>Publish</strong> commits your changes to your GitHub repository and starts automatic publishing.</p><p>Only someone with write access to your repository can publish. Opening this editor does not let a visitor change your live site.</p><p>Calculator inputs and scientific diagrams are not directly editable here. Use the normal tool pages to run calculations.</p></details>
+      <a class="view-live" href="https://varnaresh17.github.io/" target="_blank" rel="noopener noreferrer">View public website ↗</a>
+    </aside>
+    <main class="canvas-area" id="canvas-area">
+      <div class="canvas-toolbar"><span id="page-name">Preparing your website…</span><span id="change-count">No unpublished changes</span></div>
+      <div id="draft-banner" class="draft-banner" hidden><span>A saved draft is available on this device.</span><button id="restore-draft">Restore draft</button><button id="discard-draft">Discard</button></div>
+      <div id="stage" class="stage"><iframe id="preview" title="Editable website preview" sandbox="allow-scripts" referrerpolicy="no-referrer"></iframe></div>
+      <div id="loading" class="loading"><span class="spinner"></span><h2>Opening your pages</h2><p id="loading-detail">Getting the latest version from GitHub…</p><button id="reload-editor" hidden>Try again</button></div>
+    </main>
+  </div>
+  <footer class="statusbar"><p id="status" role="status" aria-live="polite">Loading…</p><span id="draft-state">Drafts stay on this device</span></footer>
+  <dialog id="connect-dialog">
+    <form id="connect-form"><button class="close-dialog" type="button" data-close="connect-dialog" aria-label="Close">×</button><p class="eyebrow">ONE-TIME SETUP PER SESSION</p><h2>Publish with your GitHub account</h2>
+      <p>The editor needs permission to save files to <strong>varnaresh17.github.io</strong>. The GitHub connection in ChatGPT is separate.</p>
+      <ol><li><a id="token-create" target="_blank" rel="noopener noreferrer" href="https://github.com/settings/personal-access-tokens/new?name=Research+website+editor&target_name=varnaresh17&expires_in=30&contents=write">Create a fine-grained GitHub token ↗</a></li><li>Select <strong>Only select repositories → varnaresh17.github.io</strong>.</li><li>Under repository permissions, set <strong>Contents → Read and write</strong>, then generate the token.</li><li>Paste it below. Do not send it in chat.</li></ol>
+      <label>GitHub publishing token<input id="github-token" type="password" autocomplete="off" spellcheck="false" required></label>
+      <p class="hint">The token is held only in this tab’s memory. It is never saved in drafts or website files, and is sent only to GitHub’s API. Closing this tab disconnects publishing.</p>
+      <p id="connect-error" class="error" role="alert"></p><button class="primary" id="connect-submit" type="submit">Connect securely</button><button type="button" data-close="connect-dialog">Continue without connecting</button>
+    </form>
+  </dialog>
+  <dialog id="publish-dialog"><button class="close-dialog" data-close="publish-dialog" aria-label="Close">×</button><p class="eyebrow">REVIEW & PUBLISH</p><h2>Ready to update your website?</h2><p>The following files will be saved in one GitHub commit. Your previous versions remain in GitHub history.</p><ul id="publish-files"></ul><label>Describe this update<input id="commit-message" value="Update website with visual editor" maxlength="160"></label><p id="publish-error" class="error" role="alert"></p><button id="confirm-publish" class="primary">Publish changes</button><button data-close="publish-dialog">Keep editing</button></dialog>
+  <dialog id="help-dialog"><button class="close-dialog" data-close="help-dialog" aria-label="Close">×</button><h2 id="help-title">Website editor</h2><p id="help-message"></p><button data-close="help-dialog">Continue editing</button></dialog>
+</body>
+</html>

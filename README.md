@@ -12,6 +12,10 @@ GitHub Pages publishes the **main** branch from the **/ (root)** folder. In **Se
 
 Official setup instructions: https://docs.github.com/en/pages/quickstart
 
+## Visual editing
+
+Open **https://varnaresh17.github.io/editor.html** to edit text and photos in a page preview. Drafts stay on your device; download changes for help publishing, or connect a repository-restricted GitHub token for direct publishing. See [VISUAL_EDITOR.md](VISUAL_EDITOR.md) for the step-by-step guide.
+
 ## How to request updates
 
 You can send changes in plain language, for example:
