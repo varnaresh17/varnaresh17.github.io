@@ -18,7 +18,7 @@
   function parse(text){return new DOMParser().parseFromString(text,'text/html');}
   function serialize(doc){return '<!doctype html>\n'+doc.documentElement.outerHTML+'\n';}
   function buildMap(page){
-    const candidates=[...page.doc.querySelectorAll('h1,h2,h3,h4,h5,h6,p,figcaption,dt,dd,small,.brand-name,.brand-sub,.photo-tag,a')].filter(el=>!el.closest('svg,script,style,pre,code')&&!el.querySelector('svg,img,input,select,textarea,button')&&!(el.tagName==='A'&&el.parentElement.closest('h1,h2,h3,h4,h5,h6,p,figcaption,dt,dd,small')));
+    const candidates=[...page.doc.querySelectorAll('h1,h2,h3,h4,h5,h6,p,figcaption,dt,dd,small,summary,.brand-name,.brand-sub,.photo-tag,a')].filter(el=>!el.closest('svg,script,style,pre,code')&&!el.querySelector('svg,img,input,select,textarea,button')&&!(el.tagName==='A'&&el.parentElement.closest('h1,h2,h3,h4,h5,h6,p,figcaption,dt,dd,small')));
     const leaf=candidates.filter(el=>!candidates.some(other=>other!==el&&el.contains(other)));
     const images=[...page.doc.querySelectorAll('main img,.hero-profile img')];
     page.map=new Map([...leaf,...images].map((el,i)=>['e'+i,el]));
