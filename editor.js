@@ -18,7 +18,7 @@
   function parse(text){return new DOMParser().parseFromString(text,'text/html');}
   function serialize(doc){return '<!doctype html>\n'+doc.documentElement.outerHTML+'\n';}
   function buildMap(page){
-    const candidates=[...page.doc.querySelectorAll('h1,h2,h3,h4,h5,h6,p,figcaption,dt,dd,small,summary,.brand-name,.brand-sub,.photo-tag,a')].filter(el=>!el.closest('svg,script,style,pre,code')&&!el.querySelector('svg,img,input,select,textarea,button')&&!(el.tagName==='A'&&el.parentElement.closest('h1,h2,h3,h4,h5,h6,p,figcaption,dt,dd,small')));
+    const candidates=[...page.doc.querySelectorAll('h1,h2,h3,h4,h5,h6,p,figcaption,dt,dd,small,summary,.brand-name,.brand-sub,.photo-tag,a')].filter(el=>!el.closest('svg,script,style,pre,code,.publication-full-citation')&&!el.querySelector('svg,img,input,select,textarea,button')&&!(el.tagName==='A'&&el.parentElement.closest('h1,h2,h3,h4,h5,h6,p,figcaption,dt,dd,small')));
     const leaf=candidates.filter(el=>!candidates.some(other=>other!==el&&el.contains(other)));
     const images=[...page.doc.querySelectorAll('main img,.hero-profile img')];
     page.map=new Map([...leaf,...images].map((el,i)=>['e'+i,el]));
@@ -61,12 +61,14 @@
     const row=element?.closest('.citation-row.research-entry');if(!row)return;
     const data=JSON.parse(state.jsonSource);
     const records=[...(data.papers||[]),...(data.contributions||[]),...(data.presentations||[]),...(data.workshops||[])];
-    const title=row.querySelector('h3')?.textContent?.trim(),citation=row.querySelector('.citation-detail p')?.textContent?.trim(),venue=row.querySelector('.activity-venue')?.textContent||'';
+    const title=row.querySelector('h3')?.textContent?.trim(),citation=row.querySelector('.citation-detail p')?.textContent?.trim(),venue=row.querySelector('.activity-venue,.publication-venue')?.textContent||'',authors=row.querySelector('.publication-authors')?.textContent?.trim()||'';
     const record=records.find(r=>r.id===row.id);let updated=false;
     if(record&&element.closest('h3')&&record.title!==title){record.title=title;updated=true;}
     if(record&&element.closest('.citation-detail p')&&record.citation!==citation){record.citation=citation;updated=true;}
-    if(record&&element.closest('.activity-venue')&&record.venue!==venue){record.venue=venue;updated=true;}
-    row.dataset.search=[title,citation,venue,record?.year||'',row.dataset.areas||''].join(' ').toLowerCase();p.source=serialize(p.doc);
+    if(record&&element.closest('.activity-venue,.publication-venue')&&record.venue!==venue){record.venue=venue;updated=true;}
+    if(record&&element.closest('.publication-authors')&&record.authors!==authors){record.authors=authors;updated=true;}
+    if(updated&&row.classList.contains('publication-item')&&!element.closest('.citation-detail p')){record.citation=[authors,title,venue].filter(Boolean).join(', ');const full=row.querySelector('.citation-detail p');if(full)full.textContent=record.citation;}
+    row.dataset.search=[title,citation,authors,venue,record?.year||'',row.dataset.areas||''].join(' ').toLowerCase();p.source=serialize(p.doc);
     if(updated){state.json=data;state.jsonSource=JSON.stringify(data,null,2)+'\n';state.jsonDirty=state.jsonSource!==state.jsonOriginal;}
   }
   function updateSource(p){p.source=serialize(p.doc);p.dirty=p.source!==p.original;if(p===state.pages.get('publications.html'))syncPublications(selected());}

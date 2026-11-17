@@ -17,7 +17,7 @@ document.addEventListener('keydown', event => {
     menu.focus();
   }
 });
-const entries = [...document.querySelectorAll('.research-entry')];
+const entries = document.body.classList.contains('publication-template') ? [] : [...document.querySelectorAll('.research-entry')];
 const areaButtons = [...document.querySelectorAll('.area-filter')];
 const search = document.querySelector('#research-search');
 const typeFilter = document.querySelector('#type-filter');

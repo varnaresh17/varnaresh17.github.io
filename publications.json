@@ -22,7 +22,12 @@
         "mxenes"
       ],
       "type": "journal",
-      "publisherUrl": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.78575"
+      "publisherUrl": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.78575",
+      "tags": [
+        "mxenes"
+      ],
+      "authors": "V. Naresh, M. Soroush",
+      "venue": "Advanced Functional Materials 36 (2026), e78575. DOI: 10.1002/adfm.78575."
     },
     {
       "id": "p02",
@@ -35,7 +40,14 @@
         "perovskites"
       ],
       "type": "journal",
-      "story": "p02"
+      "story": "p02",
+      "tags": [
+        "perovskites",
+        "npls",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, J. L. Velpugonda, A. Kala, M. Yerich, D. Jones, Z. Xing, N. Sharvirala, A. Majumdar, L.Y. Lin",
+      "venue": "Adv. Opt. Mater. 2025, e01375"
     },
     {
       "id": "p03",
@@ -49,7 +61,13 @@
         "perovskites"
       ],
       "type": "journal",
-      "story": "p03"
+      "story": "p03",
+      "tags": [
+        "photonics",
+        "perovskites"
+      ],
+      "authors": "J. Fang, A. Kala, R. Johnson, D. Sharp, R. Chen, C. Chang, C. Munley, J. Fröch, V. Naresh, A. Tang, A. Manna, V. Tara, B. Datta, Z. Zhou, D. Ginger, V. Menon, L.Y. Lin, A. Majumdar",
+      "venue": "Nat. Commun. 16 (2025) 10099"
     },
     {
       "id": "p04",
@@ -62,7 +80,12 @@
         "photonics"
       ],
       "type": "journal",
-      "story": "p04"
+      "story": "p04",
+      "tags": [
+        "photonics"
+      ],
+      "authors": "J.L. Velpugonda, V. Naresh, Y. Matthew, and L.Y. Lin",
+      "venue": "Light: Adv. Manuf. 6 (2025) 228-235"
     },
     {
       "id": "p05",
@@ -75,7 +98,14 @@
         "perovskites"
       ],
       "type": "journal",
-      "story": "p05"
+      "story": "p05",
+      "tags": [
+        "perovskites",
+        "npls",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, J.L. Velpugonda, N. Lee, S.H. Nah, L.Y. Lin",
+      "venue": "Adv. Funct. Mater., 35 (2024) 2413320"
     },
     {
       "id": "p06",
@@ -90,7 +120,15 @@
         "crystals"
       ],
       "type": "journal",
-      "story": "p06"
+      "story": "p06",
+      "tags": [
+        "scintillators",
+        "perovskites",
+        "crystals",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, P.R. Cha, and N. Lee",
+      "venue": "ACS Appl. Mater. Interfaces 16 (2024) 19068-80"
     },
     {
       "id": "p07",
@@ -105,7 +143,14 @@
         "polymers"
       ],
       "type": "journal",
-      "story": "p07"
+      "story": "p07",
+      "tags": [
+        "scintillators",
+        "perovskites",
+        "polymers"
+      ],
+      "authors": "V. Naresh, R. Ramaraghavulu, Kiran Gupta, P.R. Cha, and N. Lee",
+      "venue": "Adv. Opt. Mater., 12 (2024) 2301868"
     },
     {
       "id": "p08",
@@ -118,7 +163,12 @@
         "perovskites"
       ],
       "type": "journal",
-      "story": "p08"
+      "story": "p08",
+      "tags": [
+        "perovskites"
+      ],
+      "authors": "V. Naresh, Kiran Gupta, P.R. Cha, and N. Lee",
+      "venue": "J. Mater. Chem. C 11 (2023) 14248"
     },
     {
       "id": "p09",
@@ -132,7 +182,13 @@
         "perovskites"
       ],
       "type": "journal",
-      "story": "p09"
+      "story": "p09",
+      "tags": [
+        "scintillators",
+        "perovskites"
+      ],
+      "authors": "V. Naresh, S. Singh, H. Soh, J. Lee, and N. Lee",
+      "venue": "Mater. Today Nano 23 (2023) 100364"
     },
     {
       "id": "p10",
@@ -145,7 +201,13 @@
         "perovskites"
       ],
       "type": "journal",
-      "story": "p10"
+      "story": "p10",
+      "tags": [
+        "perovskites",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, M.K. Cho, P.R. Cha, and N. Lee",
+      "venue": "ACS Appl. Nano Mater. 2023, 6, 4693-4706"
     },
     {
       "id": "p11",
@@ -159,7 +221,14 @@
         "perovskites"
       ],
       "type": "journal",
-      "story": "p11"
+      "story": "p11",
+      "tags": [
+        "crystals",
+        "perovskites",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, T. Jang, Y. Pan, and N. Lee",
+      "venue": "Nanoscale 14 (2022) 17789"
     },
     {
       "id": "p12",
@@ -172,7 +241,14 @@
         "perovskites"
       ],
       "type": "journal",
-      "story": "p12"
+      "story": "p12",
+      "tags": [
+        "perovskites",
+        "photoluminescence",
+        "white-light"
+      ],
+      "authors": "V. Naresh, V.N.K.B. Adusumalli, Y.I. Park, N. Lee",
+      "venue": "Mater. Today Chem. 23 (2022) 100752"
     },
     {
       "id": "p13",
@@ -186,7 +262,15 @@
         "perovskites"
       ],
       "type": "journal",
-      "story": "p13"
+      "story": "p13",
+      "tags": [
+        "polymers",
+        "perovskites",
+        "photoluminescence",
+        "white-light"
+      ],
+      "authors": "V. Naresh, B.H. Kim, N. Lee",
+      "venue": "Nano Res. 14 (2021) 1187-1194"
     },
     {
       "id": "p14",
@@ -198,7 +282,12 @@
       "areas": [
         "other"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "biosensors"
+      ],
+      "authors": "V. Naresh, and N. Lee",
+      "venue": "Sensors 21 (2021) 1109; (Editor's Choice & Best Review Article)."
     },
     {
       "id": "p15",
@@ -210,7 +299,15 @@
       "areas": [
         "crystals"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "crystals",
+        "energy-transfer",
+        "photoluminescence",
+        "white-light"
+      ],
+      "authors": "V. Naresh, N. Lee",
+      "venue": "Mater. Sci. Eng. B 271 (2021) 115306"
     },
     {
       "id": "p16",
@@ -222,7 +319,14 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses",
+        "energy-transfer",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, N. Lee",
+      "venue": "Mater. Res. Bull. 142 (2021) 111381"
     },
     {
       "id": "p17",
@@ -234,7 +338,13 @@
       "areas": [
         "crystals"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "crystals",
+        "photoluminescence"
+      ],
+      "authors": "C.B. Ballipalli, R. Rajavaram, V. Naresh, D. Thatikayala, D. Kim, D.S. Shin, A.P. Baker, G.G. Wang, J. Park",
+      "venue": "Mater. Sci. Eng. B 264 (2021) 114979"
     },
     {
       "id": "p18",
@@ -247,7 +357,13 @@
         "perovskites"
       ],
       "type": "journal",
-      "story": "p18"
+      "story": "p18",
+      "tags": [
+        "perovskites",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, N. Lee",
+      "venue": "ACS Appl. Nano Mater. 3 (2020) 7621-7632"
     },
     {
       "id": "p19",
@@ -259,7 +375,14 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses",
+        "energy-transfer",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, N. Lee",
+      "venue": "Ceram. Int. 45 (2019) 22649-22659"
     },
     {
       "id": "p20",
@@ -271,7 +394,13 @@
       "areas": [
         "crystals"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "crystals",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, N. Lee",
+      "venue": "J. Lumin. 214 (2019) 116565"
     },
     {
       "id": "p21",
@@ -283,7 +412,12 @@
       "areas": [
         "other"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "water-treatment"
+      ],
+      "authors": "K. Gupta, B. Yuan, C. Chena, V. Naresh, M. Lai Fu",
+      "venue": "Chem. Eng. J. 369 (2019) 803-812"
     },
     {
       "id": "p22",
@@ -295,7 +429,15 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses",
+        "energy-transfer",
+        "photoluminescence",
+        "white-light"
+      ],
+      "authors": "V. Naresh, Kiran Gupta, C. Parthasarathi Reddy, B. S. Ham",
+      "venue": "Spectrochim. Acta A 175 (2017) 43–50"
     },
     {
       "id": "p23",
@@ -307,7 +449,13 @@
       "areas": [
         "crystals"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "crystals",
+        "photoluminescence"
+      ],
+      "authors": "R. Ramaraghavulu, V. Naresh, V. Eswaraiah",
+      "venue": "Luminescence 32 (2017) 11-16"
     },
     {
       "id": "p24",
@@ -319,7 +467,13 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, B.S. Ham",
+      "venue": "J. Alloys Compd. 664 (2016) 321-330"
     },
     {
       "id": "p25",
@@ -331,7 +485,13 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses",
+        "photoluminescence"
+      ],
+      "authors": "C. Parthasaradhi Reddy, V. Naresh, K.T.R. Reddy",
+      "venue": "Opt. Mater. 51 (2016) 154-161"
     },
     {
       "id": "p26",
@@ -343,7 +503,13 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, S. Buddhudu",
+      "venue": "Phys. Chem. Glasses: Eur. J. Glass Sci. & Technol. 56 (2015) 255-262"
     },
     {
       "id": "p27",
@@ -355,7 +521,13 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses",
+        "energy-transfer"
+      ],
+      "authors": "V. Naresh, B.H. Rudramadevi, S. Buddhudu",
+      "venue": "J. Alloys Compd. 632 (2015) 59-67"
     },
     {
       "id": "p28",
@@ -367,7 +539,14 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses",
+        "energy-transfer",
+        "photoluminescence"
+      ],
+      "authors": "C. Parthasaradhi Reddy, V. Naresh, R. Ramaraghavulu, B.H. Rdramadevi, K.T.R. Reddy, S. Buddhudu",
+      "venue": "Spectrochemica. Acta A 144 (2015) 68-75"
     },
     {
       "id": "p29",
@@ -379,7 +558,14 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses",
+        "energy-transfer",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, S. Buddhudu",
+      "venue": "J. Lumin. 147 (2014) 63-71"
     },
     {
       "id": "p30",
@@ -391,7 +577,12 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses"
+      ],
+      "authors": "L. Vijayalakshmi, V. Naresh, R. Ramaraghavulu, B.H. Rudramadevi, S. Buddhudu",
+      "venue": "Int. J. Eng. Res. Appl. 4, 168–176 (2014), ISSN: 2248-9622"
     },
     {
       "id": "p31",
@@ -403,7 +594,12 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses"
+      ],
+      "authors": "M. Venkateswarlu, V. Naresh, R. Ramaraghavulu, B.H. Rudramadevi",
+      "venue": "Int. J. Eng. Res. Appl. 4 (2014) 103-113, ISSN: 2248-9622"
     },
     {
       "id": "p32",
@@ -415,7 +611,12 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses"
+      ],
+      "authors": "C. Parthasaradhi Reddy, V. Naresh, R. Ramaraghavulu, B.H. Rudramadevi, S. Buddhudu",
+      "venue": "Int. J. Eng. Res. Appl. 4 (2014) 127-134, ISSN: 2248-9622"
     },
     {
       "id": "p33",
@@ -427,7 +628,13 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses",
+        "photoluminescence"
+      ],
+      "authors": "L. Vijayalakshmi, V. Naresh, B.H. Rudramadevi, S. Buddhudu",
+      "venue": "Res. Invent. Int. J. Eng. Sci., 4 (2014), 19-25, ISSN: 2278-4721"
     },
     {
       "id": "p34",
@@ -440,7 +647,14 @@
         "glasses"
       ],
       "type": "journal",
-      "story": "p34"
+      "story": "p34",
+      "tags": [
+        "glasses",
+        "energy-transfer",
+        "photoluminescence"
+      ],
+      "authors": "C. Parthasaradhi Reddy, V. Naresh, B. Chandra Babu, S. Buddhudu",
+      "venue": "Adv. Mater. Phys. Chem. 4 (2014) 165-171"
     },
     {
       "id": "p35",
@@ -452,7 +666,14 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses",
+        "energy-transfer",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, S. Buddhudu",
+      "venue": "J. Lumin. 137 (2013) 15-21"
     },
     {
       "id": "p36",
@@ -464,7 +685,12 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses"
+      ],
+      "authors": "V. Naresh, S. Buddhudu",
+      "venue": "Ferroelectrics 437 (2012) 110-125"
     },
     {
       "id": "p37",
@@ -476,7 +702,12 @@
       "areas": [
         "glasses"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "glasses"
+      ],
+      "authors": "V. Naresh, S. Buddhudu",
+      "venue": "Ceram. Int. 38 (2012) 2325-2332"
     },
     {
       "id": "p38",
@@ -488,7 +719,12 @@
       "areas": [
         "crystals"
       ],
-      "type": "journal"
+      "type": "journal",
+      "tags": [
+        "crystals"
+      ],
+      "authors": "B. Chandra Babu, V. Naresh, B. Jaya Prakash, S. Buddhudu",
+      "venue": "Ferroelectr. Lett. Sect. 38 (2011) 114-127"
     },
     {
       "id": "p39",
@@ -501,7 +737,12 @@
         "polymers"
       ],
       "type": "journal",
-      "story": "p39"
+      "story": "p39",
+      "tags": [
+        "polymers"
+      ],
+      "authors": "K. Sivaiah, K. Naveen, V. Naresh, S. Buddhudu",
+      "venue": "Mater. Sci. & Appl. 2 (2011) 1688-1696"
     }
   ],
   "contributions": [
@@ -514,7 +755,12 @@
       "areas": [
         "glasses"
       ],
-      "type": "proceeding"
+      "type": "proceeding",
+      "tags": [
+        "glasses"
+      ],
+      "authors": "C. Parthasaradhi Reddy, V. Naresh, K.T. Ramakrishna Reddy",
+      "venue": "Mater. Today: Proc., 3 (2016) 4058-4063"
     },
     {
       "id": "c03",
@@ -525,7 +771,13 @@
       "areas": [
         "glasses"
       ],
-      "type": "proceeding"
+      "type": "proceeding",
+      "tags": [
+        "glasses",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, S. Buddhudu",
+      "venue": "AIP Conf. Proc. 1665 (2015) 070026"
     },
     {
       "id": "c04",
@@ -536,7 +788,13 @@
       "areas": [
         "glasses"
       ],
-      "type": "proceeding"
+      "type": "proceeding",
+      "tags": [
+        "glasses",
+        "energy-transfer"
+      ],
+      "authors": "C. Parthasaradhi Reddy, V. Naresh, K.T.R. Reddy, S. Buddhudu",
+      "venue": "AIP Conf. Proc. 1665 (2015) 070017"
     },
     {
       "id": "c05",
@@ -547,7 +805,13 @@
       "areas": [
         "glasses"
       ],
-      "type": "proceeding"
+      "type": "proceeding",
+      "tags": [
+        "glasses",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, S. Buddhudu",
+      "venue": "AIP Conf. Proc. 1591, (2014) 725"
     },
     {
       "id": "c06",
@@ -558,7 +822,13 @@
       "areas": [
         "glasses"
       ],
-      "type": "proceeding"
+      "type": "proceeding",
+      "tags": [
+        "glasses",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, S. Buddhudu",
+      "venue": "AIP Conf. Proc. 1512 (2013) 602"
     },
     {
       "id": "c07",
@@ -570,7 +840,14 @@
         "glasses"
       ],
       "type": "proceeding",
-      "category": "symposium"
+      "category": "symposium",
+      "tags": [
+        "glasses",
+        "energy-transfer",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, B.H. Rudramdevi, S. Buddhudu",
+      "venue": "Proceedings of DAE-National Laser Symposium (NLS-23), 2014; (ISBN-9788190332156 CP-06-48)."
     },
     {
       "id": "c08",
@@ -582,7 +859,13 @@
         "glasses"
       ],
       "type": "proceeding",
-      "category": "symposium"
+      "category": "symposium",
+      "tags": [
+        "glasses",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, S. Buddhudu",
+      "venue": "Proceedings of DAE-National Laser Symposium (NLS-22), 2013; (ISBN-978-93-82460-05-3)."
     },
     {
       "id": "c09",
@@ -594,7 +877,14 @@
         "glasses"
       ],
       "type": "proceeding",
-      "category": "symposium"
+      "category": "symposium",
+      "tags": [
+        "glasses",
+        "energy-transfer",
+        "photoluminescence"
+      ],
+      "authors": "V. Naresh, S. Buddhudu",
+      "venue": "(AMST-2012 Conf. Proc.) LAP LAMBART Acad. Pub. (2013) 154-161; (ISBN-978-3-659-38098-3)."
     }
   ],
   "profiles": {
@@ -825,6 +1115,60 @@
         "general"
       ],
       "type": "seminar"
+    }
+  ],
+  "publicationTopics": [
+    {
+      "id": "glasses",
+      "label": "Glasses"
+    },
+    {
+      "id": "polymers",
+      "label": "Polymers & Composites"
+    },
+    {
+      "id": "crystals",
+      "label": "Crystals & Phosphors"
+    },
+    {
+      "id": "scintillators",
+      "label": "X-ray Scintillators"
+    },
+    {
+      "id": "perovskites",
+      "label": "Perovskites"
+    },
+    {
+      "id": "npls",
+      "label": "Nanoplatelets"
+    },
+    {
+      "id": "mxenes",
+      "label": "MAX Phases & MXenes"
+    },
+    {
+      "id": "photonics",
+      "label": "Photonics & Patterning"
+    },
+    {
+      "id": "energy-transfer",
+      "label": "Energy Transfer"
+    },
+    {
+      "id": "photoluminescence",
+      "label": "Photoluminescence"
+    },
+    {
+      "id": "white-light",
+      "label": "White-Light Emission"
+    },
+    {
+      "id": "biosensors",
+      "label": "Biosensors"
+    },
+    {
+      "id": "water-treatment",
+      "label": "Water Treatment"
     }
   ]
 }
