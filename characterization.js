@@ -1,4 +1,8 @@
 "use strict";
+// Preserve existing bookmarks to calculators formerly embedded in this page.
+const legacyToolPages={'#xrd-calculators':'xrd.html','#crystal-area-guide':'xrd.html#crystal-area-guide','#ftir-explorer':'ftir.html'};
+function openLegacyTool(){const target=legacyToolPages[location.hash];if(target)location.replace(target);}
+openLegacyTool();window.addEventListener('hashchange',openLegacyTool);
 const techniqueCards=[...document.querySelectorAll(".technique-card")];
 const techniqueButtons=[...document.querySelectorAll(".technique-filter")];
 const techniqueSearch=document.querySelector("#technique-search");

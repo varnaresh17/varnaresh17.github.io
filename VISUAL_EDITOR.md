@@ -12,7 +12,7 @@ Open **https://varnaresh17.github.io/editor.html** on a computer.
 
 On the homepage, the **Section order** controls move sections up or down. The introduction stays first.
 
-The editor previews the existing design in an isolated frame. Calculator controls are inactive in the editor; open the public Tools page to run them. Descriptive text can be edited. Scientific diagram internals and calculator code remain in their original files.
+The editor previews the existing design in an isolated frame. Calculator controls are inactive in the editor; open the dedicated XRD, FTIR, Colorimetry, or PLQY tool page to run them. Descriptive text can be edited. Scientific diagram internals and calculator code remain in their original files.
 
 ## Keep a draft
 

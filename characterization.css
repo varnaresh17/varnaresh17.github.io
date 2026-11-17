@@ -8,3 +8,5 @@
 @media(max-width:760px){.technique-explanation{padding:23px 21px}.technique-explanation>p{font-size:15px}.technique-explanation .technique-reveals{font-size:14px}.technique-title p{font-size:13px}.technique-intro>p:not(.eyebrow){font-size:16px}.technique-intro-note span{font-size:14px}.technique-filter{font-size:12px}.technique-card figcaption{font-size:11px}.technique-landing p{font-size:14px}}
 
 .site-header nav{gap:15px}@media(min-width:761px) and (max-width:1150px){.site-header nav{gap:10px;font-size:11px}}@media(max-width:760px){.site-header nav{gap:0;font-size:13px}}
+
+.technique-tool-callout{padding:25px 28px;background:#eef3e7;border-top:1px solid #ccd9c2;scroll-margin-top:24px}.technique-tool-callout h3{font-size:24px;font-weight:500;margin-bottom:10px}.technique-tool-callout p{font-size:14px;line-height:1.8;color:#52644e;margin-bottom:18px}

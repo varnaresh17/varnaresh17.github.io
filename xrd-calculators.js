@@ -70,7 +70,7 @@
  $('crystal-example').addEventListener('click',()=>{$('crystal-mode').value='total';$('crystal-ac').value='60';$('crystal-other').value='100';host.querySelector('[data-xrd-area="total"]').click();updateCrystal();});
  $('crystal-clear').addEventListener('click',()=>{crystal.reset();updateCrystal();});
  function revealTools(){
-  if(!document.querySelector('#xrd').hidden)return;
+  const card=document.querySelector('#xrd');if(!card||!card.hidden)return;
   const search=document.querySelector('#technique-search');
   if(search){search.value='';search.dispatchEvent(new Event('input',{bubbles:true}));}
   document.querySelector('[data-technique-filter="all"]')?.click();

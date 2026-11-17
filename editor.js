@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   const Core=window.WebsiteEditorCore,$=id=>document.getElementById(id),OWNER='varnaresh17',REPO='varnaresh17.github.io',PREFIX='/repos/'+OWNER+'/'+REPO;
-  const labels={'index.html':'Home','stories.html':'Research stories','publications.html':'Publications','synthesis.html':'Synthesis','characterization.html':'Characterization','softwares.html':'Tools overview','colorimetry.html':'Colorimetry','plqy.html':'PLQY / PLQE','resume.html':'CV'};
+  const labels={'index.html':'Home','stories.html':'Research stories','publications.html':'Publications','synthesis.html':'Synthesis','characterization.html':'Characterization','softwares.html':'Tools overview','xrd.html':'XRD calculators','ftir.html':'FTIR interpreter','colorimetry.html':'Colorimetry','plqy.html':'PLQY / PLQE','resume.html':'CV'};
   const frame=$('preview'),channel=crypto.randomUUID(),pageParam=new URLSearchParams(location.search).get('page');
   const localMode=['127.0.0.1','localhost'].includes(location.hostname)&&new URLSearchParams(location.search).get('local')==='1';
   const siteBase=new URL('./',location.href).href;
@@ -167,7 +167,7 @@
     try{
       let sourceBase=siteBase;
       if(!localMode){try{const ref=await publicRequest(PREFIX+'/git/ref/heads/main');sourceBase='https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+ref.object.sha+'/';}catch{sourceBase=siteBase;}}
-      $('loading-detail').textContent='Loading nine pages and your publication record…';
+      $('loading-detail').textContent='Loading '+Core.PAGES.length+' pages and your publication record…';
       const paths=[...Core.PAGES,'publications.json'];const results=await Promise.allSettled(paths.map(async path=>{let source;try{source=await getText(new URL(path,sourceBase));}catch(error){if(sourceBase===siteBase)throw error;source=await getText(new URL(path,siteBase));}return[path,source];}));
       for(const result of results)if(result.status==='rejected')throw result.reason;
       for(const result of results){const [path,source]=result.value;

@@ -89,7 +89,7 @@
  }catch(e){fail(e);}});
  $('ftir-export-results').addEventListener('click',()=>{const quote=s=>'"'+String(s).replace(/"/g,'""')+'"';const rows=[['Band_cm-1','Source','Candidate_vibrations','Reference_ranges_cm-1','Notes']];for(const p of current().peaks){const m=C.assignments(p.x);rows.push([f(p.x),p.source,m.map(r=>r.name).join('; '),m.map(r=>r.high+'-'+r.low).join('; '),m.map(r=>r.note).join(' | ')]);}download(rows.map(r=>r.map(quote).join(',')).join('\r\n'),'text/csv;charset=utf-8','ftir-candidate-assignments.csv');});
  $('ftir-export-plot').addEventListener('click',()=>{const svg=$('ftir-chart').querySelector('svg');if(svg)download('<?xml version="1.0" encoding="UTF-8"?>\n'+svg.outerHTML,'image/svg+xml;charset=utf-8','ftir-spectrum.svg');});
- function reveal(){if(!document.querySelector('#ftir').hidden)return;const search=document.querySelector('#technique-search');search.value='';search.dispatchEvent(new Event('input',{bubbles:true}));document.querySelector('[data-technique-filter="all"]').click();}
+ function reveal(){const card=document.querySelector('#ftir');if(!card||!card.hidden)return;const search=document.querySelector('#technique-search');search.value='';search.dispatchEvent(new Event('input',{bubbles:true}));document.querySelector('[data-technique-filter="all"]').click();}
  document.querySelectorAll('a[href="#ftir-explorer"]').forEach(a=>a.addEventListener('click',reveal));window.addEventListener('hashchange',()=>{if(location.hash==='#ftir-explorer')reveal();});
  renderReference();render();
 })();
