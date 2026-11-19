@@ -14,13 +14,22 @@ On the homepage, the **Section order** controls move sections up or down. The in
 
 The editor previews the existing design in an isolated frame. Calculator controls are inactive in the editor; open the dedicated XRD, FTIR, Colorimetry, or PLQY tool page to run them. Descriptive text can be edited. Scientific diagram internals and calculator code remain in their original files.
 
+## Add, remove, and arrange content
+
+- Open **Add content** to insert a heading, paragraph, bullet list, link, photo, or section. Choose whether it goes before, after, inside the selected container, or at the end of the page.
+- Click an item, then use **Duplicate**, **Move up**, **Move down**, or **Delete selected**. **Select container** selects the surrounding card or section. **Find an item on this page** helps you select content by name.
+- Change font family, font size, line spacing, colour, alignment, width, height, rounded corners, padding, and space above/below in the sidebar.
+- On Publications, **Add content → Journal article / Proceedings paper** opens a record form with title, authors, journal details, year, DOI, and topic tags. Select a whole publication card to delete or duplicate it. The publication data, topic counts, homepage counts, and public CV totals update together.
+- Deleting an element within an interactive calculator hides it while retaining the code it needs. Calculator formulas are maintained in the source code; the editor changes content and presentation.
+- Use **Undo** to restore a deletion. Changes stay in your draft until you publish.
+
 ## Keep a draft
 
 Drafts save automatically in this browser. **Save draft** saves immediately. On returning, use **Restore draft**. A draft is local to the device and browser; it does not update the public website.
 
 For a portable copy, click **Download changes**. Send that ZIP to ChatGPT and ask to publish it to your existing website. The ZIP includes only edited pages, updated publication data when relevant, and new images.
 
-Editing existing publication titles or citation paragraphs updates both the publication HTML and the corresponding JSON record, including search text. Adding or deleting publication entries is a source update; ask for help with that so counts and categories remain consistent.
+Editing existing publication titles or citation paragraphs updates both the publication HTML and the corresponding JSON record, including search text. Use Add content to create publication records; select a whole publication card to duplicate or delete it. Counts and categories stay synchronized.
 
 ## Publish directly (optional)
 
