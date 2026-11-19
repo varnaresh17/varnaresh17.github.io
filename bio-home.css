@@ -1,0 +1,43 @@
+/* Only the homepage Bio/About Me section uses this palette and layout. */
+.bio-about{position:relative;isolation:isolate;overflow:hidden;background:#003223;color:#eef8f3}
+.bio-about::before,.bio-about::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1}
+.bio-about::before{background:#004b3d;clip-path:polygon(0 18%,12% 10%,34% 21%,60% 23%,87% 8%,100% 13%,100% 100%,0 100%)}
+.bio-about::after{background:#02594e;clip-path:polygon(0 58%,16% 47%,35% 65%,47% 71%,58% 55%,74% 64%,88% 52%,100% 58%,100% 100%,0 100%)}
+.bio-about-layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:62px;align-items:start;padding-top:64px;padding-bottom:62px}
+.bio-profile{min-width:0;text-align:center;padding-top:7px}
+.bio-portrait{display:block;width:200px;height:200px;object-fit:cover;object-position:50% 34%;border-radius:50%;margin:0 auto 23px;border:4px solid #88aa9c;box-shadow:0 6px 22px #001c2240}
+.bio-profile h2{font-family:var(--sans);font-size:1.65rem;font-weight:650;letter-spacing:-.025em;line-height:1.35;margin:0 auto 12px;max-width:260px;color:#fff}
+.bio-profile-title{font-size:1.125rem;line-height:1.7;margin:0;color:#e3f0e9}
+.bio-profile-links{display:flex;justify-content:center;gap:13px;margin-top:22px}
+.bio-profile-link{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;color:#edf8f2;border-radius:50%;text-decoration:none;transition:background .15s,color .15s}
+.bio-profile-link:hover{background:#ffffff1c;color:#fff}.bio-profile-link:focus-visible{outline:2px solid white;outline-offset:4px}
+.bio-profile-link svg{width:27px;height:27px;display:block}.bio-email-symbol{font-family:Arial,sans-serif;font-size:32px;line-height:1}.bio-orcid-symbol{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border:1.8px solid currentColor;border-radius:50%;font:18px/1 Arial,sans-serif;letter-spacing:-1px;padding-right:1px}
+.bio-main{min-width:0}
+.bio-introduction h1{font-family:var(--sans);font-size:2rem;line-height:1.3;letter-spacing:-.025em;font-weight:650;margin:0 0 24px;color:white}
+.bio-introduction>p{font-size:1.125rem;line-height:1.85;color:#e2eee7;margin:0 0 15px;max-width:850px}
+.bio-research-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin-top:31px}
+.bio-material-panel{min-width:0;overflow:hidden;border:1px solid #ffffff42;border-radius:7px;background:#003c30b3;box-shadow:0 3px 15px #00291b18}
+.bio-panel-glass{grid-column:1/-1}
+.bio-glass-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));height:138px;gap:3px;background:#102c22}
+.bio-glass-strip .glass-stage{position:relative;min-width:0;min-height:0;overflow:hidden;background:#122e25}
+.bio-glass-strip .glass-stage img{display:block;width:100%;height:100%;object-fit:cover}
+.bio-glass-strip .glass-daylight img,.bio-glass-strip .glass-uv img{object-fit:contain}
+.bio-glass-strip .glass-stage>span{position:absolute;bottom:6px;left:6px;background:#092a21e6;padding:3px 6px;font:600 11px/1.4 var(--sans);color:white;border-radius:2px;letter-spacing:.03em}
+.bio-panel-caption{padding:15px 17px 16px}
+.bio-panel-caption h3{font-family:var(--sans);font-size:1.125rem;font-weight:600;line-height:1.45;letter-spacing:-.01em;color:white;margin:0}
+.bio-panel-caption h3 a{color:inherit}.bio-panel-caption h3 a:hover{text-decoration:underline;text-underline-offset:4px}
+.bio-topic-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:7px}.bio-topic-links a,.bio-related-topic{font-size:.875rem;line-height:1.7;color:#d1e7dc;text-decoration:underline;text-underline-offset:4px;text-decoration-color:#7da993}
+.bio-related-topic{display:inline-block;margin-top:6px}
+.bio-panel-caption>p{font-size:.875rem;color:#d1e7dc;line-height:1.7;margin-top:6px}
+.bio-material-image-link{display:block;height:150px;background:#112a22;overflow:hidden}
+.bio-material-image-link>img{display:block;width:100%;height:100%;object-fit:cover}
+.bio-material-image-link>.bio-nanocrystal-photo{object-fit:contain;background:#081a15}
+.bio-about .bio-image-credits{font-size:.8125rem;color:#d2e4da;line-height:1.75;margin-top:17px;border-top:1px solid #ffffff30;padding-top:12px}
+.bio-about .bio-image-credits summary{font-size:.8125rem;color:#d2e4da;line-height:1.7;padding:0;gap:16px}
+.bio-about .bio-image-credits summary span{font-size:.75rem;color:#d2e4da;line-height:1.7}
+.bio-about .bio-image-credits[open]{padding:12px 14px;background:#00382dbf}.bio-about .bio-image-credits a{color:white;text-underline-offset:3px}
+@media(min-width:1600px){.bio-about-layout{padding-top:75px;padding-bottom:75px;gap:80px}.bio-glass-strip{height:160px}.bio-material-image-link{height:175px}}
+@media(max-width:1050px) and (min-width:761px){.bio-about-layout{grid-template-columns:220px minmax(0,1fr);gap:32px;padding-top:47px;padding-bottom:47px}.bio-portrait{width:180px;height:180px}.bio-profile h2{font-size:1.45rem}.bio-introduction>p{font-size:1rem}.bio-glass-strip{height:125px}.bio-panel-caption{padding:13px}.bio-panel-caption h3{font-size:1rem}.bio-material-image-link{height:140px}}
+@media(max-width:760px){.bio-about-layout{grid-template-columns:1fr;gap:36px;padding-top:36px;padding-bottom:39px}.bio-profile h2{max-width:none;font-size:1.55rem}.bio-portrait{width:165px;height:165px;margin-bottom:18px}.bio-profile-title{font-size:1.0625rem}.bio-profile-links{margin-top:15px}.bio-introduction h1{font-size:1.8rem;margin-bottom:18px}.bio-introduction>p{font-size:1rem;line-height:1.8}.bio-research-images{gap:14px;margin-top:26px}.bio-glass-strip{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));height:230px}.bio-material-image-link{height:140px}.bio-panel-caption{padding:13px}.bio-panel-caption h3{font-size:1rem}.bio-related-topic,.bio-topic-links a,.bio-panel-caption>p{font-size:.875rem}.bio-about .bio-image-credits summary{align-items:flex-start}}
+@media(max-width:420px){.bio-research-images{grid-template-columns:1fr}.bio-panel-glass{grid-column:auto}.bio-material-image-link{height:190px}.bio-about .bio-image-credits summary{flex-wrap:wrap;gap:4px 12px}}
+@media(prefers-reduced-motion:reduce){.bio-profile-link{transition:none}}
