@@ -46,3 +46,9 @@
 .bio-glass-collage-link{display:block;background:#fff}
 .bio-glass-collage-link>img{display:block;width:100%;height:auto;object-fit:contain}
 .bio-glass-collage-link:focus-visible{outline:3px solid #e4f5ed;outline-offset:-3px}
+
+/* Preserve the full nanocrystal montage and make its labels readable. */
+.bio-panel-perovskite{grid-column:1/-1}
+.bio-panel-perovskite .bio-material-image-link{height:auto;background:#fff}
+.bio-panel-perovskite .bio-material-image-link>img{width:100%;height:auto;object-fit:contain}
+.bio-panel-caption>.bio-montage-note{font-size:.875rem;line-height:1.6;margin-top:7px}
