@@ -62,3 +62,7 @@
 }
 @media(min-width:1600px){.bio-panel-mxene .bio-material-image-link{height:87.5px}}
 @media(min-width:761px) and (max-width:1050px){.bio-panel-mxene .bio-material-image-link{height:70px}}
+
+/* Show the complete scientific figure without cropping axes or scale bars. */
+.bio-panel-mxene .bio-material-image-link{height:auto;background:#fff}
+.bio-panel-mxene .bio-material-image-link>.bio-mxene-figure{width:100%;height:auto;object-fit:contain}
