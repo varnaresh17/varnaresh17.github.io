@@ -52,3 +52,13 @@
 .bio-panel-perovskite .bio-material-image-link{height:auto;background:#fff}
 .bio-panel-perovskite .bio-material-image-link>img{width:100%;height:auto;object-fit:contain}
 .bio-panel-caption>.bio-montage-note{font-size:.875rem;line-height:1.6;margin-top:7px}
+
+/* Compact research panels: half-width on desktop, readable on phones. */
+@media(min-width:761px){
+  .bio-research-images{width:50%;margin-inline:auto;gap:12px;align-items:start}
+  .bio-panel-mxene .bio-material-image-link{height:75px}
+  .bio-research-images .bio-panel-caption{padding:10px 12px}
+  .bio-research-images .bio-panel-caption h3{font-size:1rem}
+}
+@media(min-width:1600px){.bio-panel-mxene .bio-material-image-link{height:87.5px}}
+@media(min-width:761px) and (max-width:1050px){.bio-panel-mxene .bio-material-image-link{height:70px}}
