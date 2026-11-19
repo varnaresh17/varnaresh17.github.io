@@ -41,3 +41,8 @@
 @media(max-width:760px){.bio-about-layout{grid-template-columns:1fr;gap:36px;padding-top:36px;padding-bottom:39px}.bio-profile h2{max-width:none;font-size:1.55rem}.bio-portrait{width:165px;height:165px;margin-bottom:18px}.bio-profile-title{font-size:1.0625rem}.bio-profile-links{margin-top:15px}.bio-introduction h1{font-size:1.8rem;margin-bottom:18px}.bio-introduction>p{font-size:1rem;line-height:1.8}.bio-research-images{gap:14px;margin-top:26px}.bio-glass-strip{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));height:230px}.bio-material-image-link{height:140px}.bio-panel-caption{padding:13px}.bio-panel-caption h3{font-size:1rem}.bio-related-topic,.bio-topic-links a,.bio-panel-caption>p{font-size:.875rem}.bio-about .bio-image-credits summary{align-items:flex-start}}
 @media(max-width:420px){.bio-research-images{grid-template-columns:1fr}.bio-panel-glass{grid-column:auto}.bio-material-image-link{height:190px}.bio-about .bio-image-credits summary{flex-wrap:wrap;gap:4px 12px}}
 @media(prefers-reduced-motion:reduce){.bio-profile-link{transition:none}}
+
+/* Full collage stays visible at its original proportions. */
+.bio-glass-collage-link{display:block;background:#fff}
+.bio-glass-collage-link>img{display:block;width:100%;height:auto;object-fit:contain}
+.bio-glass-collage-link:focus-visible{outline:3px solid #e4f5ed;outline-offset:-3px}
