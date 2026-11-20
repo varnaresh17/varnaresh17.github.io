@@ -1,11 +1,672 @@
 {
   "version": 1,
-  "status": "pending",
+  "status": "ready",
   "profileUrl": "https://scholar.google.com/citations?user=GbwKoHsAAAAJ",
-  "updatedAt": null,
-  "metrics": {},
-  "articles": [],
-  "publicationMap": {},
-  "citationsByYear": [],
-  "additionalArticleIds": []
+  "updatedAt": "2026-11-20T04:57:43.753551+00:00",
+  "previousUpdatedAt": null,
+  "source": "Google Scholar via SerpApi",
+  "author": {
+    "name": "Varnakavi Naresh"
+  },
+  "metrics": {
+    "citations": {
+      "all": 4291,
+      "recent": 3810
+    },
+    "h_index": {
+      "all": 26,
+      "recent": 23
+    },
+    "i10_index": {
+      "all": 34,
+      "recent": 32
+    }
+  },
+  "recentLabel": "Since 2021",
+  "citationsByYear": [
+    {
+      "year": 2014,
+      "citations": 36
+    },
+    {
+      "year": 2015,
+      "citations": 31
+    },
+    {
+      "year": 2016,
+      "citations": 69
+    },
+    {
+      "year": 2017,
+      "citations": 69
+    },
+    {
+      "year": 2018,
+      "citations": 84
+    },
+    {
+      "year": 2019,
+      "citations": 87
+    },
+    {
+      "year": 2020,
+      "citations": 88
+    },
+    {
+      "year": 2021,
+      "citations": 183
+    },
+    {
+      "year": 2022,
+      "citations": 440
+    },
+    {
+      "year": 2023,
+      "citations": 596
+    },
+    {
+      "year": 2024,
+      "citations": 795
+    },
+    {
+      "year": 2025,
+      "citations": 1021
+    },
+    {
+      "year": 2026,
+      "citations": 743
+    }
+  ],
+  "articles": [
+    {
+      "id": "GbwKoHsAAAAJ:4DMP91E08xMC",
+      "title": "A review on biosensors and recent development of nanostructured materials-enabled biosensors",
+      "authors": "V Naresh, N Lee",
+      "publication": "Sensors 21 (4), 1109, 2021",
+      "year": "2021",
+      "citations": 2609,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:4DMP91E08xMC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5947667453332017906",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:Se3iqnhoufwC",
+      "title": "Influence of multiphonon and cross relaxations on 3P0 and 1D2 emission levels of Pr3+ doped borosilicate glasses for broad band signal amplification",
+      "authors": "V Naresh, BS Ham",
+      "publication": "Journal of Alloys and Compounds 664, 321-330, 2016",
+      "year": "2016",
+      "citations": 129,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:Se3iqnhoufwC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6480509638258726099",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:4TOpqqG69KYC",
+      "title": "Zn (II)-doped cesium lead halide perovskite nanocrystals with high quantum yield and wide color tunability for color-conversion light-emitting displays",
+      "authors": "V Naresh, N Lee",
+      "publication": "ACS Applied Nano Materials 3 (8), 7621-7632, 2020",
+      "year": "2020",
+      "citations": 126,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:4TOpqqG69KYC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1437030354563017279",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:u5HHmVD_uO8C",
+      "title": "Structural and optical properties of Li+: PVP & Ag+: PVP polymer films",
+      "authors": "K Sivaiah, KN Kumar, V Naresh, S Buddhudu",
+      "publication": "Mater. Sci. Appl 2 (11), 1688-1696, 2011",
+      "year": "2011",
+      "citations": 122,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:u5HHmVD_uO8C",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4767443954306921004",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:u-x6o8ySG0sC",
+      "title": "Energy transfer based enhanced red emission intensity from (Eu3+, Tb3+): LFBCd optical glasses",
+      "authors": "V Naresh, S Buddhudu",
+      "publication": "Journal of luminescence 137, 15-21, 2013",
+      "year": "2013",
+      "citations": 93,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:u-x6o8ySG0sC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13710687846959816624",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:bEWYMUwI8FkC",
+      "title": "Cs2NaGdCl6:Tb3+─A Highly Luminescent Rare-Earth Double Perovskite Scintillator for Low-Dose X-ray Detection and Imaging",
+      "authors": "V Naresh, PR Cha, N Lee",
+      "publication": "ACS Applied Materials & Interfaces 16 (15), 19068-19080, 2024",
+      "year": "2024",
+      "citations": 86,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:bEWYMUwI8FkC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6986319982124132517",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:9yKSN-GCB0IC",
+      "title": "Structural, thermal, dielectric and ac conductivity properties of lithium fluoro-borate optical glasses",
+      "authors": "V Naresh, S Buddhudu",
+      "publication": "Ceramics International 38 (3), 2325-2332, 2012",
+      "year": "2012",
+      "citations": 81,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:9yKSN-GCB0IC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6994188787413439245",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:2osOgNQ5qMEC",
+      "title": "Analysis of energy transfer based emission spectra of (Sm3+, Dy3+): Li2O–LiF–B2O3–CdO glasses",
+      "authors": "V Naresh, S Buddhudu",
+      "publication": "Journal of luminescence 147, 63-71, 2014",
+      "year": "2014",
+      "citations": 79,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:2osOgNQ5qMEC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6323362184954070499",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:LkGwnXOMwfcC",
+      "title": "Li2OLiFZnF2B2O3P2O5: MnO glasses–Thermal, structural, optical and luminescence characteristics",
+      "authors": "CP Reddy, V Naresh, KTR Reddy",
+      "publication": "Optical Materials 51, 154-161, 2016",
+      "year": "2016",
+      "citations": 67,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:LkGwnXOMwfcC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5312260121365394141",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:M3ejUd6NZC8C",
+      "title": "Synthesis of CsPbX3 (X = Cl/Br, Br, and Br/I)@SiO2/PMMA composite films as color-conversion materials for achieving tunable multi-color and white light emission",
+      "authors": "V Naresh, BH Kim, N Lee",
+      "publication": "Nano Research 14 (4), 1187-1194, 2021",
+      "year": "2021",
+      "citations": 65,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:M3ejUd6NZC8C",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6272359296642388970",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:W7OEmFMy1HYC",
+      "title": "Energy transfer based emission analysis of (Tb3+, Sm3+): Lithium zinc phosphate glasses",
+      "authors": "CP Reddy, V Naresh, R Ramaraghavulu, BH Rudramadevi, KTR Reddy, ...",
+      "publication": "Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy 144, 68-75, 2015",
+      "year": "2015",
+      "citations": 64,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:W7OEmFMy1HYC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12406616196413970713",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:GnPB-g6toBAC",
+      "title": "K2xMnxSn3− xS6 (x= 0.5–0.95)(KMS-1) immobilized on the reduced graphene oxide as KMS-1/r-GO aerogel to effectively remove Cs+ and Sr2+ from aqueous solution",
+      "authors": "K Gupta, B Yuan, C Chen, N Varnakavi, ML Fu",
+      "publication": "Chemical Engineering Journal 369, 803-812, 2019",
+      "year": "2019",
+      "citations": 60,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:GnPB-g6toBAC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8043160662426432079",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:d1gkVwhDpl0C",
+      "title": "Structural, thermal and dielectric properties of lithium zinc silicate ceramic powders by sol-gel method",
+      "authors": "BC Babu, V Naresh, BJ Prakash, S Buddhudu",
+      "publication": "Ferroelectrics Letters Section 38 (4-6), 114-127, 2011",
+      "year": "2011",
+      "citations": 57,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:d1gkVwhDpl0C",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4402101386783734148",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:iH-uZ7U-co4C",
+      "title": "Dual-phase CsPbBr3–CsPb2Br5 perovskite scintillator for sensitive X-ray detection and imaging",
+      "authors": "V Naresh, S Singh, H Soh, J Lee, N Lee",
+      "publication": "Materials Today Nano 23, 100364, 2023",
+      "year": "2023",
+      "citations": 54,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:iH-uZ7U-co4C",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17022196460609566211",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:maZDTaKrznsC",
+      "title": "Scintillation Performance of Mn(II)‐Doped Cs2NaBiCl6 Double Perovskite Nanocrystals for X‐Ray Imaging Applications",
+      "authors": "N Varnakavi, R Rajavaram, K Gupta, PR Cha, N Lee",
+      "publication": "Advanced Optical Materials 12 (9), 2301868, 2024",
+      "year": "2024",
+      "citations": 51,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:maZDTaKrznsC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18442414654344812045",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:Wp0gIr-vW9MC",
+      "title": "Dy3+/Pr3+ co-doped fluoro-borosilicate glasses: energy transfer induced color-tunable luminescence",
+      "authors": "V Naresh, N Lee",
+      "publication": "Materials Research Bulletin 142, 111381, 2021",
+      "year": "2021",
+      "citations": 48,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:Wp0gIr-vW9MC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7696041415715722192",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:qjMakFHDy7sC",
+      "title": "Studies on Optical, Dielectric and Magnetic Properties of Mn2+, Fe3+ & Co2+ Ions Doped LFBCd Glasses",
+      "authors": "V Naresh, S Buddhudu",
+      "publication": "Ferroelectrics 437 (1), 110-125, 2012",
+      "year": "2012",
+      "citations": 48,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:qjMakFHDy7sC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9303034691894773972",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:M3NEmzRMIkIC",
+      "title": "In Situ Synthesis of Br‐Rich CsPbBr3 Nanoplatelets: Enhanced Stability and High PLQY for Wide Color Gamut Displays",
+      "authors": "N Varnakavi, JL Velpugonda, N Lee, S Nah, LY Lin",
+      "publication": "Advanced Functional Materials 35 (3), 2413320, 2025",
+      "year": "2025",
+      "citations": 42,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:M3NEmzRMIkIC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2367535746805808428",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:MXK_kJrjxJIC",
+      "title": "Energy transfer and colour tunability in UV light induced Tm3+/Tb3+/Eu3+: ZnB glasses generating white light emission",
+      "authors": "V Naresh, K Gupta, CP Reddy, BS Ham",
+      "publication": "Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy 175, 43-50, 2017",
+      "year": "2017",
+      "citations": 41,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:MXK_kJrjxJIC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=478237852974281836",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:r0BpntZqJG4C",
+      "title": "Polar-solvent-free sonochemical synthesis of Mn (II)-doped CsPbCl3 perovskite nanocrystals for dual-color emission",
+      "authors": "V Naresh, MK Cho, PR Cha, N Lee",
+      "publication": "ACS Applied Nano Materials 6 (6), 4693-4706, 2023",
+      "year": "2023",
+      "citations": 38,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:r0BpntZqJG4C",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16346442563963703206",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:Y0pCki6q_DkC",
+      "title": "Crossrelaxations and non-radiative energy transfer from (4G5/2) Sm3+→(5D0) Eu3+: B2O3–ZnO glasses",
+      "authors": "V Naresh, BH Rudramadevi, S Buddhudu",
+      "publication": "Journal of Alloys and Compounds 632, 59-67, 2015",
+      "year": "2015",
+      "citations": 36,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:Y0pCki6q_DkC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14518060686157915240",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:Tyk-4Ss8FVUC",
+      "title": "Photoluminescence and energy transfer process in Bi3+/Sm3+ co-doped phosphate zinc lithium glasses",
+      "authors": "CP Reddy, V Naresh, BC Babu, S Buddhudu",
+      "publication": "Advances in Materials Physics and Chemistry 4 (9), 165-171, 2014",
+      "year": "2014",
+      "citations": 35,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:Tyk-4Ss8FVUC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18145693961487392215",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:9ZlFYXVOiuMC",
+      "title": "NIR triggered NaYF4: Yb3+, Tm3+@ NaYF4/CsPb (Br1-x/Ix) 3 composite for up-converted white-light emission and dual-model anti-counterfeiting applications",
+      "authors": "V Naresh, V Adusumalli, YI Park, N Lee",
+      "publication": "Materials Today Chemistry 23, 100752, 2022",
+      "year": "2022",
+      "citations": 31,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:9ZlFYXVOiuMC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10746416938698975089",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:j3f4tGmQtD8C",
+      "title": "Highly luminescent dual-phase CsPbBr3/Cs4PbBr6 microcrystals for a wide color gamut for backlight displays",
+      "authors": "V Naresh, T Jang, Y Pang, N Lee",
+      "publication": "Nanoscale 14 (47), 17789-17801, 2022",
+      "year": "2022",
+      "citations": 28,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:j3f4tGmQtD8C",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4783256854605836684",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:ULOm3_A8WrAC",
+      "title": "NIR luminescence and energy transfer kinetics in Nd3+/Yb3+ co-doped sodium aluminium bismuth fluoro-borosilicate glasses",
+      "authors": "V Naresh, N Lee",
+      "publication": "Ceramics International 45 (17), 22649-22659, 2019",
+      "year": "2019",
+      "citations": 27,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:ULOm3_A8WrAC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6704748362645685913",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:Zph67rFs4hoC",
+      "title": "KGaP2O7: Mn4+ deep red emitting phosphor: Synthesis, structure, concentration and temperature dependent photoluminescence characteristics",
+      "authors": "V Naresh, N Lee",
+      "publication": "Journal of Luminescence 214, 116565, 2019",
+      "year": "2019",
+      "citations": 26,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:Zph67rFs4hoC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2024827000260976677",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:isC4tDSrTZIC",
+      "title": "Compositional engineering of ZnBr2-doped CsPbBr3 perovskite nanocrystals: insights into structure transformation, optical performance, and charge-carrier …",
+      "authors": "N Varnakavi, K Gupta, K Lee, J Yang, PR Cha, N Lee",
+      "publication": "Journal of Materials Chemistry C 11 (41), 14248-14259, 2023",
+      "year": "2023",
+      "citations": 24,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:isC4tDSrTZIC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17037772012109031190",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:roLk4NBRz8UC",
+      "title": "Analysis of visible-NIR emission and photoluminescence quenching in Er3+: Bi2O3–AlF3–TeO2–B2O3 glasses",
+      "authors": "V Naresh, S Buddhudu",
+      "publication": "Physics and Chemistry of Glasses-European Journal of Glass Science and …, 2015",
+      "year": "2015",
+      "citations": 23,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:roLk4NBRz8UC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9425613731258731714",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:mVmsd5A6BfQC",
+      "title": "Energy transfer dynamics in thermally stable single-phase LiMgBO3: Tm3+/Dy3+ phosphor for UV triggered white light-emitting devices",
+      "authors": "V Naresh, N Lee",
+      "publication": "Materials Science and Engineering: B 271, 115306, 2021",
+      "year": "2021",
+      "citations": 21,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:mVmsd5A6BfQC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18347043187798433808",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:0EnyYjriUFMC",
+      "title": "Emission analysis of Pr3+ & Dy3+ ions doped Li2O-LiF-B2O3-ZnO glasses",
+      "authors": "L Vijayalakshmi, V Naresh, BH Rudramadevi, S Buddhudu",
+      "publication": "Int. J. Eng. Sci 4 (9), 19-25, 2014",
+      "year": "2014",
+      "citations": 15,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:0EnyYjriUFMC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3192299180517768686",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:8k81kl-MbHgC",
+      "title": "Optical and spectral analysis of Pr3+ doped lithium zinc fluoro telluro phosphate glasses",
+      "authors": "CP Reddy, V Naresh, KTR Reddy",
+      "publication": "Materials Today: Proceedings 3 (10), 4058-4063, 2016",
+      "year": "2016",
+      "citations": 14,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:8k81kl-MbHgC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3862805122408586155",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:hMod-77fHWUC",
+      "title": "Defect Passivation via Dual‐Ligand Surface Modification for Bright and Stable Blue Emission in CsPbBr3 Nanoplatelets",
+      "authors": "N Varnakavi, JL Velpugonda, A Kala, M Yerich, D Jones, Z Xing, ...",
+      "publication": "Advanced Optical Materials 13 (27), e01375, 2025",
+      "year": "2025",
+      "citations": 11,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:hMod-77fHWUC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10292692747222546962",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:O3NaXMp0MMsC",
+      "title": "A universal high-resolution micro-patterning technique for solution-processed materials",
+      "authors": "JL Velpugonda",
+      "publication": "University of Washington, 2024",
+      "year": "2024",
+      "citations": 11,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:O3NaXMp0MMsC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16785331196000493487",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:qxL8FJ1GzNcC",
+      "title": "Synthesis and photoluminescent characteristics of Sm3+-doped Ba3 (PO4) 2 phosphor hierarchical architectures",
+      "authors": "CB Ballipalli, R Rajavaram, V Naresh, D Thatikayala, D Kim, DS Shin, ...",
+      "publication": "Materials Science and Engineering: B 264, 114979, 2021",
+      "year": "2021",
+      "citations": 11,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:qxL8FJ1GzNcC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2155587270803610459",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:ufrVoPGSRksC",
+      "title": "Spectral analysis of Sm3+& Dy3+: B2O3-Zno-Mgo optical glasses",
+      "authors": "M Venkateswarlu, V Naresh, R Ramaraghavulu, BH Rudramadevi, ...",
+      "publication": "Journal of Engineering Research and Applications 4, 103-113, 2014",
+      "year": "2014",
+      "citations": 4,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:ufrVoPGSRksC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9859887914310983196",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:NMxIlDl6LWMC",
+      "title": "Free space few-photon nonlinearity in critically coupled polaritonic metasurfaces",
+      "authors": "J Fang, A Kala, R Johnson, D Sharp, R Chen, C Chang, C Munley, ...",
+      "publication": "Nature Communications 16 (1), 10099, 2025",
+      "year": "2025",
+      "citations": 3,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:NMxIlDl6LWMC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14614525341510217802",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:UebtZRa9Y70C",
+      "title": "Photoluminescence properties of LiTi2 − xEux(PO4)3 phosphor",
+      "authors": "R Ramaraghavulu, V Naresh, V Eswaraiah",
+      "publication": "Luminescence 32 (1), 11-16, 2017",
+      "year": "2017",
+      "citations": 3,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:UebtZRa9Y70C",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9058505470550293356",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:hqOjcs7Dif8C",
+      "title": "Preparation and Characterization of Ti 3+ & Cr 3+: Li2O-LiF-B2O3-ZnO Optical Glasses",
+      "authors": "L Vijayalakshmi, V Naresh, R Ramaraghavulu, BH Rudramadevi, ...",
+      "publication": "Int J Eng Res Appl 4, 168-176, 2014",
+      "year": "2014",
+      "citations": 3,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:hqOjcs7Dif8C",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15517654620788434080",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:_FxGoFyzp5QC",
+      "title": "VIS-NIR emission analysis of Tm3+ doped LiF-ZnF2-AlF3-B2O3-SiO2 glasses",
+      "authors": "V Naresh, S Buddhudu",
+      "publication": "AIP Conference Proceedings 1665 (1), 070026, 2015",
+      "year": "2015",
+      "citations": 2,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:_FxGoFyzp5QC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9891433022602067925",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:IjCSPb-OGe4C",
+      "title": "Analysis of emission spectra of glasses",
+      "authors": "V Naresh, S Buddhudu",
+      "publication": "AIP Conference Proceedings 1591 (1), 725-727, 2014",
+      "year": "2014",
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:IjCSPb-OGe4C",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18412626865425080434",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:UeHWp8X0CEIC",
+      "title": "Mn2+: Li",
+      "authors": "V Naresh, S Buddhudu",
+      "publication": "AIP Conf. Proc 1512, 602-603, 2013",
+      "year": "2013",
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:UeHWp8X0CEIC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10777436076838203142",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:eQOLeE2rZwMC",
+      "title": "Homogeneity: bubble formation in the manufacturing of glass",
+      "authors": "V Naresh",
+      "publication": "",
+      "year": "",
+      "citations": 1,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:eQOLeE2rZwMC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11468962283421079254",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:RGFaLdJalmkC",
+      "title": "Nitride MXenes Beyond Carbides: Bridging the Gap Between Computational Prediction and Experimental Realization",
+      "authors": "N Varnakavi, M Soroush",
+      "publication": "Advanced Functional Materials, e78575, 2026",
+      "year": "2026",
+      "citations": null,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:RGFaLdJalmkC",
+      "citingUrl": null,
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:YFjsv_pBGBYC",
+      "title": "Blue-Emitting 2D CsPbBr3 Nanoplatelets with Enhanced Quantum Yield and Stability via Dual-Ligand Surface Modification for Lighting and Display Technologies",
+      "authors": "N Varnakavi, JL Velpugonda, M Yerich, LY Lin",
+      "publication": "Materials Research Society (MRS) 2025 Spring Meeting, 2025",
+      "year": "2025",
+      "citations": null,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:YFjsv_pBGBYC",
+      "citingUrl": null,
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    },
+    {
+      "id": "GbwKoHsAAAAJ:WF5omc3nYNoC",
+      "title": "Energy transfer and optical gain properties of P2O5-ZnO-LiF: (Yb3+, Er3+) glasses",
+      "authors": "CP Reddy, V Naresh, KTR Reddy, S Buddhudu",
+      "publication": "AIP Conference Proceedings 1665 (1), 070017, 2015",
+      "year": "2015",
+      "citations": null,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:WF5omc3nYNoC",
+      "citingUrl": null,
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": null
+    }
+  ],
+  "publicationMap": {
+    "p01": "GbwKoHsAAAAJ:RGFaLdJalmkC",
+    "p02": "GbwKoHsAAAAJ:hMod-77fHWUC",
+    "p03": "GbwKoHsAAAAJ:NMxIlDl6LWMC",
+    "p06": "GbwKoHsAAAAJ:bEWYMUwI8FkC",
+    "p07": "GbwKoHsAAAAJ:maZDTaKrznsC",
+    "p09": "GbwKoHsAAAAJ:iH-uZ7U-co4C",
+    "p10": "GbwKoHsAAAAJ:r0BpntZqJG4C",
+    "p12": "GbwKoHsAAAAJ:9ZlFYXVOiuMC",
+    "p14": "GbwKoHsAAAAJ:4DMP91E08xMC",
+    "p15": "GbwKoHsAAAAJ:mVmsd5A6BfQC",
+    "p16": "GbwKoHsAAAAJ:Wp0gIr-vW9MC",
+    "p17": "GbwKoHsAAAAJ:qxL8FJ1GzNcC",
+    "p18": "GbwKoHsAAAAJ:4TOpqqG69KYC",
+    "p20": "GbwKoHsAAAAJ:Zph67rFs4hoC",
+    "p23": "GbwKoHsAAAAJ:UebtZRa9Y70C",
+    "p24": "GbwKoHsAAAAJ:Se3iqnhoufwC",
+    "p28": "GbwKoHsAAAAJ:W7OEmFMy1HYC",
+    "p29": "GbwKoHsAAAAJ:2osOgNQ5qMEC",
+    "p30": "GbwKoHsAAAAJ:hqOjcs7Dif8C",
+    "p31": "GbwKoHsAAAAJ:ufrVoPGSRksC",
+    "p33": "GbwKoHsAAAAJ:0EnyYjriUFMC",
+    "p34": "GbwKoHsAAAAJ:Tyk-4Ss8FVUC",
+    "p35": "GbwKoHsAAAAJ:u-x6o8ySG0sC",
+    "p36": "GbwKoHsAAAAJ:qjMakFHDy7sC",
+    "p37": "GbwKoHsAAAAJ:9yKSN-GCB0IC",
+    "p39": "GbwKoHsAAAAJ:u5HHmVD_uO8C",
+    "c02": "GbwKoHsAAAAJ:8k81kl-MbHgC",
+    "c03": "GbwKoHsAAAAJ:_FxGoFyzp5QC",
+    "c04": "GbwKoHsAAAAJ:WF5omc3nYNoC"
+  },
+  "additionalArticleIds": [
+    "GbwKoHsAAAAJ:LkGwnXOMwfcC",
+    "GbwKoHsAAAAJ:M3ejUd6NZC8C",
+    "GbwKoHsAAAAJ:GnPB-g6toBAC",
+    "GbwKoHsAAAAJ:d1gkVwhDpl0C",
+    "GbwKoHsAAAAJ:M3NEmzRMIkIC",
+    "GbwKoHsAAAAJ:MXK_kJrjxJIC",
+    "GbwKoHsAAAAJ:Y0pCki6q_DkC",
+    "GbwKoHsAAAAJ:j3f4tGmQtD8C",
+    "GbwKoHsAAAAJ:ULOm3_A8WrAC",
+    "GbwKoHsAAAAJ:isC4tDSrTZIC",
+    "GbwKoHsAAAAJ:roLk4NBRz8UC",
+    "GbwKoHsAAAAJ:O3NaXMp0MMsC",
+    "GbwKoHsAAAAJ:IjCSPb-OGe4C",
+    "GbwKoHsAAAAJ:UeHWp8X0CEIC",
+    "GbwKoHsAAAAJ:eQOLeE2rZwMC",
+    "GbwKoHsAAAAJ:YFjsv_pBGBYC"
+  ],
+  "matchedPublications": 29
 }
