@@ -28,8 +28,12 @@ It records aggregate page visits, publication-link clicks, CV opens, and named c
 
 For a simple check, visit the live site, open Publications, and return to the dashboard after about 10 seconds. If nothing appears, check your browser's content blocker and GoatCounter's allowed domains. You can exclude your own browsing in GoatCounter settings.
 
-## Public visit number on the website
+## Private visitor statistics
 
-The footer on every public page displays the aggregate site visit count from GoatCounter's public `TOTAL` counter. In your GoatCounter account, open Settings and enable **Allow adding visitor counts on your website**, then save. This permits the number to be displayed; it does not require making the detailed dashboard public. The counter can be cached for up to four hours. An em dash means the count is unavailable, never an invented zero. This is aggregate traffic, not a count of identifiable people or a live online-user count.
+The public visit counter has been removed from all 16 portfolio pages. Page-visit and named-action collection continues through `site-analytics.js`, while statistics are accessed separately through the account dashboard.
 
-The citation workflow also starts after edits to its own workflow, updater or verified mapping file, allowing a first refresh after setup.
+Open `editor.html` and choose **Visitor statistics**, or sign in at https://varnaresh17.goatcounter.com/. The editor link does not contain an access token and does not embed statistics on the public website. Someone opening the editor still needs the appropriate GoatCounter account to see a private dashboard.
+
+In GoatCounter **Settings**, keep **Public access** set to **Private**, and turn off **Allow adding visitor counts on your website**. Removing a page widget cannot revoke a previously enabled public counter endpoint; the provider setting must be disabled as well. No private API key should be placed in the repository or the public site.
+
+The retired `visitor-counter.js` file cleans old page copies without fetching any counts. New public pages no longer load it. The citation workflow still runs independently.

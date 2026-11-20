@@ -27,13 +27,10 @@ test('Tracking and Scholar assets are installed once on their intended pages',()
   assert.equal(pages,16);
   const html=fs.readFileSync('publications.html','utf8');assert.ok(html.includes('id="scholar-impact"'));assert.ok(html.includes('scholar.js?'));assert.ok(html.includes('scholar.css?'));
 });
-const counter=require('../visitor-counter.js');
-test('Public counter distinguishes zero from unavailable data',()=>{
-  assert.equal(counter.displayCount('0'),'0');assert.equal(counter.displayCount('1,234'),'1,234');
-  for(const x of [null,undefined,'unavailable','-1','1.2','<script>',{},9007199254740992])assert.equal(counter.displayCount(x),null);
-});
-test('Every public footer contains exactly one visible aggregate counter',()=>{
+test('Public pages cannot display or fetch aggregate visitor totals',()=>{
   for(const file of fs.readdirSync('.').filter(f=>f.endsWith('.html'))){const html=fs.readFileSync(file,'utf8');if(!html.includes('site-navigation.js?'))continue;
-    assert.equal((html.match(/data-visitor-total/g)||[]).length,1);assert.ok(html.includes('visitor-counter.js?v=20261120'));assert.ok(html.includes('site-navigation.css?v=visitor20261120'));
+    assert.ok(!html.includes('data-visitor-total'));assert.ok(!html.includes('site-visit-counter'));assert.ok(!html.includes('visitor-counter.js'));
   }
+  const retired=fs.readFileSync('visitor-counter.js','utf8');assert.ok(!retired.includes('fetch('));assert.ok(!retired.includes('counter/TOTAL'));
+  const editor=fs.readFileSync('editor.html','utf8');assert.ok(editor.includes('Visitor statistics'));assert.ok(editor.includes('https://varnaresh17.goatcounter.com/'));assert.ok(editor.includes('Sign in to view your traffic.'));
 });

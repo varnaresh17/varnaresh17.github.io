@@ -8,7 +8,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-fBjRZYVfV7WM235ce0VytSetOsxMeyQc6POT/g9MeS4='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; frame-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
   <title>Website editor · Naresh Varnakavi</title>
   <link rel="icon" href="assets/favicon.svg">
-  <link rel="stylesheet" href="editor.css?v=full-editor20261119">
+  <link rel="stylesheet" href="editor.css?v=private-analytics20261120">
   <script src="editor-core.js?v=clean-navigation20261120" defer></script>
   <script src="editor.js?v=clean-navigation20261120" defer></script>
 </head>
@@ -23,6 +23,7 @@
     <aside class="properties">
       <p class="eyebrow">YOUR WEBSITE, YOUR WORDS</p><h1>Make it yours.</h1>
       <p class="intro">Edit text, fonts, images, boxes and containers. Select a container to resize it or change its layout. Your draft stays private until you publish.</p>
+      <section class="property-card editor-statistics" aria-label="Private website statistics"><h2>Website statistics</h2><a class="statistics-link" href="https://varnaresh17.goatcounter.com/" target="_blank" rel="noopener noreferrer">Visitor statistics</a><p class="hint">Opens your GoatCounter dashboard. Sign in to view your traffic.</p></section>
       <div id="connection" class="connection"><span id="connection-label">GitHub not connected</span><button id="connect">Connect publishing</button><button id="disconnect" hidden>Disconnect</button></div>
       <details class="property-card content-builder"><summary>Add content</summary>
 <label>Content type<select id="add-kind"><option value="p">Paragraph</option><option value="h2">Heading</option><option value="ul">Bullet list</option><option value="a">Link</option><option value="img">Photo</option><option value="div">Box / container</option><option value="section">New section</option><option value="journal">Journal article</option><option value="proceeding">Proceedings paper</option></select></label>
