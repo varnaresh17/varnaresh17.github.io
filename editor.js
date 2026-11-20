@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   const Core=window.WebsiteEditorCore,$=id=>document.getElementById(id),OWNER='varnaresh17',REPO='varnaresh17.github.io',PREFIX='/repos/'+OWNER+'/'+REPO;
-  const labels={'index.html':'Home','stories.html':'Research stories','publications.html':'Publications','synthesis.html':'Synthesis','characterization.html':'Characterization','softwares.html':'Tools overview','xrd.html':'XRD calculators','ftir.html':'FTIR interpreter','colorimetry.html':'Colorimetry','plqy.html':'PLQY / PLQE','resume.html':'CV'};
+  const labels={'index.html':'Home','research.html':'Research','expertise.html':'Technical Expertise','experience.html':'Experience','achievements.html':'Achievements','contact.html':'Contact','stories.html':'Research stories','publications.html':'Publications','synthesis.html':'Synthesis','characterization.html':'Characterization','softwares.html':'Tools overview','xrd.html':'XRD calculators','ftir.html':'FTIR interpreter','colorimetry.html':'Colorimetry','plqy.html':'PLQY / PLQE','resume.html':'CV'};
   const frame=$('preview'),channel=crypto.randomUUID(),pageParam=new URLSearchParams(location.search).get('page');
   const localMode=['127.0.0.1','localhost'].includes(location.hostname)&&new URLSearchParams(location.search).get('local')==='1';
   const siteBase=new URL('./',location.href).href;
@@ -298,7 +298,7 @@
         change(p.doc.querySelector('#academic-activities>summary>span'),talks+' presentations · '+seminars+' workshops & seminars');
         for(const [id,count]of [['conference-presentations',talks],['workshops-seminars',seminars]])change(p.doc.querySelector('#'+id+' .publication-group-count'),count+' entries');
       }
-      if(path==='index.html'){
+      if(path==='index.html'||path==='research.html'){
         for(const div of p.doc.querySelectorAll('.proof-strip>div'))if(/journal/i.test(div.textContent))change(div.querySelector('strong'),journals);
         for(const tile of p.doc.querySelectorAll('.area-tile')){const area=new URL(tile.getAttribute('href'),siteBase).searchParams.get('area');const n=data.papers.filter(r=>r.areas?.includes(area)).length;const count=tile.querySelector('.area-count');if(count){const svg=count.querySelector('svg')?.cloneNode(true);change(count,n+' journal article'+(n===1?'':'s')+' ');if(svg)count.appendChild(svg);}}
       }
