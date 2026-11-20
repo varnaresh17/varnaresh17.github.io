@@ -69,3 +69,7 @@ The existing Wix website remains online during the migration. No paid domain is 
 ## Citations and visitor statistics
 
 See [METRICS_SETUP.md](METRICS_SETUP.md) for the one-time SerpApi secret setup, daily Scholar refresh, and private GoatCounter dashboard. Citation data are stored separately from the editable bibliography.
+
+## Search engines
+
+See [SEARCH_VISIBILITY.md](SEARCH_VISIBILITY.md) for Google Search Console verification, sitemap submission and IndexNow notifications. A public URL and search-engine indexing are separate states.

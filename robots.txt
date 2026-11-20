@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://varnaresh17.github.io/sitemap.xml
