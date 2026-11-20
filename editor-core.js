@@ -1,9 +1,13 @@
 /* Pure helpers for the visual editor. No credentials or browser storage. */
 (function(root,factory){'use strict';const core=factory();if(typeof module==='object'&&module.exports)module.exports=core;else root.WebsiteEditorCore=core;})(typeof globalThis!=='undefined'?globalThis:this,function(){
   'use strict';
-  const PAGES=['index.html', 'research.html', 'publications.html', 'expertise.html', 'synthesis.html', 'characterization.html', 'softwares.html', 'xrd.html', 'ftir.html', 'colorimetry.html', 'plqy.html', 'experience.html', 'achievements.html', 'contact.html', 'resume.html', 'stories.html'];
+  const PAGES=['index.html', 'research.html', 'publications.html', 'expertise.html', 'synthesis.html', 'characterization.html', 'softwares.html', 'xrd.html', 'ftir.html', 'colorimetry.html', 'plqy.html', 'experience.html', 'achievements.html', 'contact.html', 'resume.html', 'stories.html', 'image-credits.html'];
   const enc=new TextEncoder();
   const bytes=value=>typeof value==='string'?enc.encode(value):value;
+  function resizeStyles(width,height){
+    if(![width,height].every(n=>typeof n==='number'&&Number.isFinite(n)&&n>=1&&n<=3000))return null;
+    return {width:Math.round(width)+'px',height:Math.round(height)+'px','min-width':'0px','max-width':'none','min-height':'0px','max-height':'none','aspect-ratio':'auto','flex-shrink':'0'};
+  }
   function allowedPath(path){return PAGES.includes(path)||path==='publications.json'||/^assets\/uploads\/[a-zA-Z0-9_-]+\.(jpg|jpeg|png|webp|gif|avif)$/.test(path);}
   async function blobHash(value,cryptoAPI=globalThis.crypto){const data=bytes(value),header=enc.encode('blob '+data.length+'\0'),all=new Uint8Array(header.length+data.length);all.set(header);all.set(data,header.length);return Array.from(new Uint8Array(await cryptoAPI.subtle.digest('SHA-1',all)),n=>n.toString(16).padStart(2,'0')).join('');}
   function base64(value){const data=bytes(value);let s='';for(let i=0;i<data.length;i+=8192)s+=String.fromCharCode.apply(null,data.subarray(i,i+8192));return btoa(s);}
@@ -48,5 +52,5 @@
     const [end,e]=view(22);e.setUint32(0,0x06054b50,true);e.setUint16(8,files.length,true);e.setUint16(10,files.length,true);e.setUint32(12,centralLength,true);e.setUint32(16,offset,true);
     const output=new Uint8Array(offset+centralLength+end.length);let p=0;for(const a of [...parts,...central,end]){output.set(a,p);p+=a.length;}return output;
   }
-  return {PAGES,allowedPath,blobHash,publish,zip,crc32,base64};
+  return {PAGES,resizeStyles,allowedPath,blobHash,publish,zip,crc32,base64};
 });

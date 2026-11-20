@@ -60,3 +60,11 @@ test('Publishing is limited to editorial pages, publication data and new raster 
     const server=fakeServer();await assert.rejects(core.publish({request:server.request,changes:{[path]:'changed'},baselines:{}}),/cannot publish/);assert.equal(server.calls.length,0);
   }
 });
+
+
+test('Visual resize dimensions stay numeric and within the publishing limits',()=>{
+  const style=core.resizeStyles(367.4,279.2);
+  assert.equal(style.width,'367px');assert.equal(style.height,'279px');
+  assert.equal(style['max-width'],'none');assert.equal(style['min-height'],'0px');assert.equal(style['aspect-ratio'],'auto');
+  for(const pair of [[0,10],[10,3001],[NaN,10],[Infinity,10],['100%',10],[null,10]])assert.equal(core.resizeStyles(...pair),null);
+});

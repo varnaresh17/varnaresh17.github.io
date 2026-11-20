@@ -17,7 +17,7 @@
   const input=doc.querySelector('#publication-search'),type=doc.querySelector('#publication-type'),status=doc.querySelector('#publication-status');
   const activities=doc.querySelector('#academic-activities');
   let topic='',category='';
-  const legacyTypes={'published-articles':'journal','conference-proceedings':'proceeding','symposium-proceedings':'proceeding','book-chapters':'proceeding'};
+  const legacyTypes={'published-articles':'journal','published-proceedings':'proceeding','conference-proceedings':'proceeding','symposium-proceedings':'proceeding','book-chapters':'proceeding'};
   const aliases={nanoplatelets:'npls',other:'biosensors'};
   function readLocation(){
     const url=new URL(root.location.href);let hash='';try{hash=decodeURIComponent(url.hash.slice(1));}catch{hash='';}category='';
@@ -56,6 +56,14 @@
   for(const link of topicLinks)link.addEventListener('click',event=>{
     event.preventDefault();topic=topic===link.dataset.topic?'':link.dataset.topic;writeLocation(true);
     if(link.closest('.publication-item'))browser.scrollIntoView({block:'start'});
+  });
+  for(const jump of doc.querySelectorAll('.publication-summary [data-publication-type]'))jump.addEventListener('click',event=>{
+    event.preventDefault();
+    const url=new URL(root.location.href);
+    for(const param of ['area','q'])url.searchParams.delete(param);
+    url.searchParams.set('type',jump.dataset.publicationType);
+    url.hash=jump.getAttribute('href');
+    root.history.pushState(null,'',url);readLocation();
   });
   input.addEventListener('input',()=>writeLocation());type.addEventListener('change',()=>writeLocation(true));
   doc.querySelector('#publication-show-all').addEventListener('click',reset);
