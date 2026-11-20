@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-fBjRZYVfV7WM235ce0VytSetOsxMeyQc6POT/g9MeS4='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; frame-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-fBjRZYVfV7WM235ce0VytSetOsxMeyQc6POT/g9MeS4='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://api.github.com https://raw.githubusercontent.com https://varnaresh17.goatcounter.com; frame-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
   <title>Website editor · Naresh Varnakavi</title>
   <link rel="icon" href="assets/favicon.svg">
   <link rel="stylesheet" href="editor.css?v=private-analytics20261120">
   <script src="editor-core.js?v=clean-navigation20261120" defer></script>
   <script src="editor.js?v=clean-navigation20261120" defer></script>
+  <link rel="stylesheet" href="owner-analytics.css?v=20261120">
+  <script src="owner-analytics.js?v=20261120" defer></script>
 </head>
 <body>
   <header class="editor-header">
@@ -23,7 +25,7 @@
     <aside class="properties">
       <p class="eyebrow">YOUR WEBSITE, YOUR WORDS</p><h1>Make it yours.</h1>
       <p class="intro">Edit text, fonts, images, boxes and containers. Select a container to resize it or change its layout. Your draft stays private until you publish.</p>
-      <section class="property-card editor-statistics" aria-label="Private website statistics"><h2>Website statistics</h2><a class="statistics-link" href="https://varnaresh17.goatcounter.com/" target="_blank" rel="noopener noreferrer">Visitor statistics</a><p class="hint">Opens your GoatCounter dashboard. Sign in to view your traffic.</p></section>
+      <section class="property-card editor-statistics" aria-label="Private website statistics"><h2>Website statistics</h2><button type="button" class="statistics-link" id="show-statistics">Visitor statistics</button><p class="hint">View your private traffic dashboard here, without leaving the editor.</p></section>
       <div id="connection" class="connection"><span id="connection-label">GitHub not connected</span><button id="connect">Connect publishing</button><button id="disconnect" hidden>Disconnect</button></div>
       <details class="property-card content-builder"><summary>Add content</summary>
 <label>Content type<select id="add-kind"><option value="p">Paragraph</option><option value="h2">Heading</option><option value="ul">Bullet list</option><option value="a">Link</option><option value="img">Photo</option><option value="div">Box / container</option><option value="section">New section</option><option value="journal">Journal article</option><option value="proceeding">Proceedings paper</option></select></label>
@@ -89,5 +91,29 @@
   <dialog id="publish-dialog"><button class="close-dialog" data-close="publish-dialog" aria-label="Close">×</button><p class="eyebrow">REVIEW & PUBLISH</p><h2>Ready to update your website?</h2><p>The following files will be saved in one GitHub commit. Your previous versions remain in GitHub history.</p><ul id="publish-files"></ul><label>Describe this update<input id="commit-message" value="Update website with visual editor" maxlength="160"></label><p id="publish-error" class="error" role="alert"></p><button id="confirm-publish" class="primary">Publish changes</button><button data-close="publish-dialog">Keep editing</button></dialog>
   <dialog id="help-dialog"><button class="close-dialog" data-close="help-dialog" aria-label="Close">×</button><h2 id="help-title">Website editor</h2><p id="help-message"></p><button data-close="help-dialog">Continue editing</button></dialog>
   <dialog id="publication-add-dialog"><button class="close-dialog" data-close="publication-add-dialog" aria-label="Close">×</button><h2 id="publication-add-title">Add a publication</h2><form id="publication-add-form"><label>Title<input id="new-pub-title" required></label><label>Authors<textarea id="new-pub-authors" rows="2" required></textarea></label><label>Journal or proceedings details<textarea id="new-pub-venue" rows="2" required></textarea></label><div class="property-row"><label>Year<input id="new-pub-year" type="number" min="1900" max="2100" required></label><label id="new-pub-category-field">Proceedings category<select id="new-pub-category"><option value="conference">Conference proceedings</option><option value="symposium">Symposium proceedings</option></select></label></div><label>DOI or paper URL<input id="new-pub-url" placeholder="10.… or https://…"></label><fieldset><legend>Topics · choose at least one</legend><div id="new-pub-topics" class="topic-checkboxes"></div></fieldset><p id="new-pub-error" class="error" role="alert"></p><button class="primary" type="submit">Add publication</button></form></dialog>
+
+  <dialog id="statistics-dialog" class="statistics-dialog" aria-labelledby="statistics-title">
+    <div class="statistics-header"><div><p class="eyebrow">OWNER VIEW / PRIVATE ANALYTICS</p><h2 id="statistics-title">Website statistics</h2></div><button type="button" id="statistics-close">Lock &amp; close</button></div>
+    <p class="statistics-intro">See visits, popular pages, referring websites, approximate locations and calculator activity here. Analytics cannot identify visitors by name or email.</p>
+    <form id="statistics-auth" class="statistics-auth" method="post" autocomplete="off">
+      <h3>Connect your private statistics</h3><label for="statistics-api-key">Read-only GoatCounter API key</label><div class="statistics-connect-row"><input id="statistics-api-key" type="password" autocomplete="off" spellcheck="false" autocapitalize="none" aria-describedby="statistics-key-help" placeholder="Enter your read-only API key"><button type="submit" id="statistics-connect" class="primary">Connect statistics</button></div>
+      <p id="statistics-key-help" class="statistics-help">Your key is sent only to your GoatCounter account. It stays in this open tab’s memory and is cleared when you lock, close or reload this dashboard. Statistics and keys are never saved to public website files.</p>
+      <details><summary>One-time setup: create a read-only key</summary><ol><li>Open your <a href="https://varnaresh17.goatcounter.com/" target="_blank" rel="noopener noreferrer">GoatCounter account</a>.</li><li>Choose your username in the top menu, then <b>API</b>, and create a key named <b>Website statistics</b> with permission to <b>read statistics only</b>.</li><li>Copy the key into the field above. Do not paste it into chat, GitHub files or a public page.</li><li>Keep the GoatCounter dashboard private and leave public visitor counts disabled.</li></ol><p class="statistics-help">After setup, use this dashboard to view statistics while staying on your website. Enter the key again when starting a new session.</p></details>
+    </form>
+    <p id="statistics-status" role="status" aria-live="polite"></p>
+    <div id="statistics-data" hidden>
+      <form id="statistics-filter" class="statistics-filter"><label>Period<select id="statistics-period"><option value="1">Today</option><option value="7" selected>Last 7 days</option><option value="30">Last 30 days</option><option value="90">Last 90 days</option><option value="custom">Custom dates</option></select></label><label>Start date · UTC<input id="statistics-start" type="date" required></label><label>End date · UTC<input id="statistics-end" type="date" required></label><button id="statistics-refresh" type="submit" class="primary">Refresh</button><button id="statistics-lock" type="button" class="statistics-disconnect">Disconnect</button></form>
+      <p id="statistics-range-label" class="statistics-help"></p><dl class="statistics-summary"><div><dt>Page visits</dt><dd data-stat-value="visits">—</dd></div><div><dt>Tracked actions</dt><dd data-stat-value="actions">—</dd></div><div><dt>Total activity</dt><dd data-stat-value="activity">—</dd></div></dl>
+      <p class="statistics-help">Visits are aggregate counts, not a list of identifiable people. Counts across different pages or actions should not be interpreted as distinct visitors. Locations are approximate and depend on the data collected.</p>
+      <section class="statistics-card"><h3>Activity by day</h3><p class="statistics-help">Page visits plus tracked actions.</p><div id="statistics-daily" data-stat-rows class="statistics-chart" role="list" aria-label="Daily activity"></div></section>
+      <div class="statistics-grid">
+        <section class="statistics-card"><h3>Most visited pages</h3><div class="statistics-scroll"><table><thead><tr><th>Page</th><th>Visits</th></tr></thead><tbody id="statistics-pages" data-stat-rows></tbody></table></div></section>
+        <section class="statistics-card"><h3>Calculator and link activity</h3><div class="statistics-scroll"><table><thead><tr><th>Action</th><th>Count</th></tr></thead><tbody id="statistics-events" data-stat-rows></tbody></table></div></section>
+        <section class="statistics-card"><h3>Referring websites</h3><div class="statistics-scroll"><table><thead><tr><th>Referrer</th><th>Count</th></tr></thead><tbody id="statistics-referrers" data-stat-rows></tbody></table></div></section>
+        <section class="statistics-card"><h3>Approximate locations</h3><div class="statistics-scroll"><table><thead><tr><th>Location</th><th>Count</th></tr></thead><tbody id="statistics-locations" data-stat-rows></tbody></table></div></section>
+        <section class="statistics-card"><h3>Browsers</h3><div class="statistics-scroll"><table><thead><tr><th>Browser</th><th>Count</th></tr></thead><tbody id="statistics-browsers" data-stat-rows></tbody></table></div></section>
+      </div><p id="statistics-more" class="statistics-help" hidden>The top 100 tracked paths are shown. More paths exist; summary totals include all recorded activity in this period.</p><p id="statistics-updated" class="statistics-help"></p>
+    </div>
+  </dialog>
 </body>
 </html>

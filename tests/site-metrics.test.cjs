@@ -32,5 +32,5 @@ test('Public pages cannot display or fetch aggregate visitor totals',()=>{
     assert.ok(!html.includes('data-visitor-total'));assert.ok(!html.includes('site-visit-counter'));assert.ok(!html.includes('visitor-counter.js'));
   }
   const retired=fs.readFileSync('visitor-counter.js','utf8');assert.ok(!retired.includes('fetch('));assert.ok(!retired.includes('counter/TOTAL'));
-  const editor=fs.readFileSync('editor.html','utf8');assert.ok(editor.includes('Visitor statistics'));assert.ok(editor.includes('https://varnaresh17.goatcounter.com/'));assert.ok(editor.includes('Sign in to view your traffic.'));
+  const editor=fs.readFileSync('editor.html','utf8');assert.ok(editor.includes('Visitor statistics'));assert.ok(editor.includes('https://varnaresh17.goatcounter.com/'));assert.ok(editor.includes('id="show-statistics"'));assert.ok(editor.includes('id="statistics-api-key"'));
 });

@@ -30,10 +30,18 @@ For a simple check, visit the live site, open Publications, and return to the da
 
 ## Private visitor statistics
 
-The public visit counter has been removed from all 16 portfolio pages. Page-visit and named-action collection continues through `site-analytics.js`, while statistics are accessed separately through the account dashboard.
+The public visit counter has been removed from all 16 portfolio pages. Page-visit and named-action collection continues through `site-analytics.js`, while statistics are viewed privately in the editor or account dashboard.
 
-Open `editor.html` and choose **Visitor statistics**, or sign in at https://varnaresh17.goatcounter.com/. The editor link does not contain an access token and does not embed statistics on the public website. Someone opening the editor still needs the appropriate GoatCounter account to see a private dashboard.
+Open `editor.html` and choose **Visitor statistics**, or sign in at https://varnaresh17.goatcounter.com/. The editor requires a read-only GoatCounter API key to retrieve statistics. Opening the editor alone does not reveal private statistics. Keys are entered at runtime and are never included in public files.
 
 In GoatCounter **Settings**, keep **Public access** set to **Private**, and turn off **Allow adding visitor counts on your website**. Removing a page widget cannot revoke a previously enabled public counter endpoint; the provider setting must be disabled as well. No private API key should be placed in the repository or the public site.
 
 The retired `visitor-counter.js` file cleans old page copies without fetching any counts. New public pages no longer load it. The citation workflow still runs independently.
+
+## Statistics inside the website editor
+
+The **Visitor statistics** button now opens an authenticated dashboard inside `editor.html`. It uses GoatCounter's official read-only JSON API directly over HTTPS with Authorization headers. Browser CORS support was checked against the production service. The key is supplied by the owner at runtime and stays in an in-memory closure; the app never writes it to localStorage, sessionStorage, URLs, public JSON files or GitHub. Closing or disconnecting wipes the key and rendered data and aborts pending requests.
+
+One-time setup: sign in to GoatCounter, open your username menu → API, and create a token with permission to read statistics only. Enter it in the editor's dashboard, not in a chat or source file. New browser sessions require entering it again. Keep the provider's dashboard and visitor counter private.
+
+The dashboard displays period totals, daily activity, the top 100 tracked paths split into pages and actions, and the top 20 locations, referring sites and browsers. Page visits are total activity minus tracked actions; they are not distinct identified people. Daily activity includes both page visits and actions. It makes only five whitelisted GET requests, throttles calls below the documented four-per-second limit, and handles authorization failures without exposing response bodies or keys. Optional breakdown failures do not fabricate data. No names, emails or raw IP addresses are inferred or displayed.
