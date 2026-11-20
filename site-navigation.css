@@ -78,3 +78,6 @@ body>.skip:focus{top:10px}
 }
 @media print{body{padding:0!important}.site-topbar,.site-sidebar,body>.skip,.resume-actions{display:none!important}}
 @media(prefers-reduced-motion:reduce){.site-sidebar .submenu-toggle svg{transition:none}}
+
+/* Body copy follows even left and right edges; the last line remains natural. */
+.justified-copy{text-align:justify;text-align-last:left;text-justify:inter-word;hyphens:auto;overflow-wrap:break-word}
