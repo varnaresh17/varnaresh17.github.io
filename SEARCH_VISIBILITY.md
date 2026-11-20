@@ -30,3 +30,9 @@ The IndexNow submission helps participating search engines discover the URLs. A 
 Crawling and indexing may take days or weeks. Search engines decide whether and where to list a site. The two full-name queries are more specific than **Naresh** or **Varnakavi** alone, which may return many other people. There is no guarantee of a particular position. Link this canonical website from your own LinkedIn, Google Scholar and ORCID profiles when appropriate, so visitors and crawlers have consistent identity information.
 
 References: https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl ; https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap ; https://developers.google.com/search/docs/appearance/site-names ; https://www.indexnow.org/documentation
+
+## Calculator searches
+
+The Tools directory and four workspaces now use explicit calculator names in titles, main headings, descriptions and ordinary WebPage/Breadcrumb structured data. The descriptions name the supported inputs and outputs: XRD d-spacing/Bragg law/crystallinity; FTIR candidate functional-group interpretation; CIE 1931/1976 coordinates, CCT, Duv and lighting; and internal/external PLQY/PLQE. No ratings, reviews or unimplemented calculations are advertised. Calculator formulas and JavaScript are unchanged. All four URLs are in the sitemap.
+
+In Search Console, select the verified URL-prefix property, open **Indexing → Sitemaps**, enter `sitemap.xml`, and submit. Then use **URL Inspection** on each of `xrd.html`, `ftir.html`, `colorimetry.html` and `plqy.html` at the production hostname; run **Test live URL** and **Request indexing** when available. Google decides inclusion and rankings; metadata alone does not guarantee traffic or an app rich result.
