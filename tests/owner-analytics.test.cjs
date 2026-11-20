@@ -39,9 +39,26 @@ test('timeouts and caller cancellation terminate pending reads',async()=>{
  await assert.rejects(c.get('stats/total',{}),e=>e.status===408);
  const controller=new AbortController(),promise=c.get('stats/total',{},controller.signal);setTimeout(()=>controller.abort(),1);await assert.rejects(promise,e=>e.name==='AbortError');
 });
-test('dashboard is editor-only, no storage, public counters, query secrets or tracking',()=>{
+test('dashboard is authenticated on the site and editor, with no public snapshots or query secrets',()=>{
  const js=fs.readFileSync('owner-analytics.js','utf8'),editor=fs.readFileSync('editor.html','utf8');
- for(const forbidden of ['localStorage','sessionStorage','document.cookie','counter/TOTAL','console.log'])assert.ok(!js.includes(forbidden));
- assert.ok(editor.includes("https://raw.githubusercontent.com https://varnaresh17.goatcounter.com;"));assert.ok(editor.includes('type="password" autocomplete="off"'));assert.ok(editor.includes('sandbox="allow-scripts"'));
- for(const file of fs.readdirSync('.').filter(f=>f.endsWith('.html')&&f!=='editor.html'))assert.ok(!fs.readFileSync(file,'utf8').includes('owner-analytics.js'));
+ for(const forbidden of ['sessionStorage','document.cookie','counter/TOTAL','console.log'])assert.ok(!js.includes(forbidden));
+ assert.ok(editor.includes("https://raw.githubusercontent.com https://varnaresh17.goatcounter.com;"));assert.ok(editor.includes('type="password" autocomplete="off"'));assert.ok(editor.includes('sandbox="allow-scripts"'));assert.ok(editor.includes('id="statistics-remember" type="checkbox"'));
+ const page=fs.readFileSync('statistics.html','utf8');assert.ok(page.includes('data-statistics-page'));assert.ok(page.includes('class="statistics-dialog statistics-page"'));assert.ok(page.includes('noindex,nofollow'));assert.ok(!page.includes('site-analytics.js'));assert.ok(!fs.readFileSync('sitemap.xml','utf8').includes('statistics.html'));
+ for(const f of require('../editor-core.js').PAGES)assert.ok(fs.readFileSync(f,'utf8').includes('href="statistics.html"'));
+ assert.ok(!require('../editor-core.js').allowedPath('statistics.html'));
+ for(const file of fs.readdirSync('.').filter(f=>f.endsWith('.html')&&!['editor.html','statistics.html'].includes(f)))assert.ok(!fs.readFileSync(file,'utf8').includes('owner-analytics.js'));
+});
+
+function device(clock=()=>1000){const values=new Map();return {values,store:core.createDeviceStore({getItem:k=>values.get(k)||null,setItem:(k,v)=>values.set(k,v),removeItem:k=>values.delete(k)},clock)};}
+test('remember storage is empty by default and saves only a read key and expiry when asked',()=>{
+ const {store,values}=device();assert.equal(store.read(),null);assert.equal(values.size,0);
+ assert.equal(store.save('fixture-only'),true);const entry=JSON.parse(values.get(core.DEVICE_KEY));assert.deepEqual(Object.keys(entry).sort(),['expires','token']);assert.equal(entry.expires,1000+30*86400000);assert.equal(store.read(),'fixture-only');store.clear();assert.equal(store.read(),null);
+});
+test('expired, malformed and invalid device keys are removed',()=>{
+ let now=1000;const {store,values}=device(()=>now);store.save('fixture-only');now+=30*86400000;assert.equal(store.read(),null);assert.equal(values.size,0);
+ for(const value of ['bad json','null',JSON.stringify({token:'bad',expires:now+1000}),JSON.stringify({token:'fixture-only',expires:now+40*86400000})]){values.set(core.DEVICE_KEY,value);assert.equal(store.read(),null);assert.equal(values.size,0);}
+ assert.equal(store.save('bad key'),false);
+});
+test('blocked browser storage does not break session-only access',()=>{
+ const store=core.createDeviceStore({getItem(){throw Error('blocked');},setItem(){throw Error('blocked');},removeItem(){throw Error('blocked');}});assert.equal(store.read(),null);assert.equal(store.save('fixture-only'),false);assert.equal(store.clear(),false);
 });

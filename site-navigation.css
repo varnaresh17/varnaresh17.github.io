@@ -81,3 +81,5 @@ body>.skip:focus{top:10px}
 
 /* Body copy follows even left and right edges; the last line remains natural. */
 .justified-copy{text-align:justify;text-align-last:left;text-justify:inter-word;hyphens:auto;overflow-wrap:break-word}
+/* The entry is public; statistics behind it require the owner's read-only key. */
+.site-sidebar #navigation>.nav-owner{margin:18px 22px 0;padding:12px 0;border-top:1px solid #ffffff30;font-size:16px;color:#bfd3c6}.site-sidebar #navigation>.nav-owner[aria-current]{padding-left:14px}

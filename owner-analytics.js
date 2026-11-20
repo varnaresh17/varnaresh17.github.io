@@ -1,4 +1,4 @@
-/* Owner-only in-page analytics. Credentials and responses live only in this open tab. */
+/* Owner analytics: authenticated reads; optional device key storage requires explicit opt-in. */
 (function(root){
   'use strict';
   const API='https://varnaresh17.goatcounter.com/api/v0/';
@@ -86,21 +86,40 @@
       }
     };
   }
-  const core={range,preset,normalize,createClient,message,StatsError};
+  const DEVICE_KEY='nv.ownerAnalytics.device.v1',DEVICE_TTL=30*86400000;
+  const validKey=key=>typeof key==='string'&&key.length>=10&&key.length<=512&&!/\s/.test(key);
+  function createDeviceStore(storage,clock=()=>Date.now()){
+    return {
+      read(){
+        try{
+          const entry=JSON.parse(storage.getItem(DEVICE_KEY)||'null'),now=clock();
+          if(entry&&validKey(entry.token)&&Number.isFinite(entry.expires)&&entry.expires>now&&entry.expires<=now+DEVICE_TTL)return entry.token;
+          storage.removeItem(DEVICE_KEY);
+        }catch{try{storage.removeItem(DEVICE_KEY);}catch{}}
+        return null;
+      },
+      save(token){try{if(!validKey(token))return false;storage.setItem(DEVICE_KEY,JSON.stringify({token,expires:clock()+DEVICE_TTL}));return true;}catch{return false;}},
+      clear(){try{storage.removeItem(DEVICE_KEY);return true;}catch{return false;}}
+    };
+  }
+  const core={range,preset,normalize,createClient,message,StatsError,createDeviceStore,validKey,DEVICE_KEY};
   if(typeof module==='object'&&module.exports)module.exports=core;
   if(!root.document)return;
   const doc=root.document,$=id=>doc.getElementById(id),dialog=$('statistics-dialog');if(!dialog)return;
-  let client=null,controller=null,run=0,busy=false;
+  let client=null,controller=null,run=0,busy=false,pendingRemember=null;
+  // Access storage lazily; blocked storage must not prevent one-session authentication.
+  const device=createDeviceStore({getItem:key=>root.localStorage.getItem(key),setItem:(key,value)=>root.localStorage.setItem(key,value),removeItem:key=>root.localStorage.removeItem(key)});
+  const standalone=dialog.hasAttribute('data-statistics-page');
   function setStatus(text,error=false){$('statistics-status').textContent=text;$('statistics-status').classList.toggle('error',error);}
   function clearData(){
     for(const el of dialog.querySelectorAll('[data-stat-value]'))el.textContent='—';
     for(const el of dialog.querySelectorAll('[data-stat-rows]'))el.replaceChildren();
-    $('statistics-updated').textContent='';$('statistics-range-label').textContent='';$('statistics-more').hidden=true;
+    $('statistics-device-status').textContent='';$('statistics-updated').textContent='';$('statistics-range-label').textContent='';$('statistics-more').hidden=true;
   }
   function lock(){
     run++;controller?.abort();controller=null;client?.clear();client=null;
     $('statistics-api-key').value='';$('statistics-connect').disabled=false;$('statistics-refresh').disabled=false;
-    busy=false;clearData();$('statistics-data').hidden=true;$('statistics-auth').hidden=false;setStatus('');
+    pendingRemember=null;$('statistics-remember').checked=false;busy=false;clearData();$('statistics-data').hidden=true;$('statistics-auth').hidden=false;setStatus('');
   }
   function element(tag,text,className){const el=doc.createElement(tag);if(text!==undefined)el.textContent=text;if(className)el.className=className;return el;}
   function fillRows(id,rows){
@@ -140,27 +159,42 @@
       }
       if(ticket!==run||signal.aborted)return;
       render(normalize(totals,hits,...optional),period);
-      setStatus(missing?'Main totals loaded. Some breakdowns are temporarily unavailable.':'Private statistics loaded.');
+      let storageFailed=false;
+      if(pendingRemember){storageFailed=!device.save(pendingRemember);pendingRemember=null;}
+      $('statistics-device-status').textContent=device.read()?'Remembered on this browser for up to 30 days. Use Forget this device to remove access.':'This session only. No API key is saved on this device.';
+      setStatus(storageFailed?'Statistics loaded for this session. This browser could not remember the key.':missing?'Main totals loaded. Some breakdowns are temporarily unavailable.':'Private statistics loaded.');
     }catch(error){
       if(error.name==='AbortError'||ticket!==run)return;
+      if([401,403].includes(error.status))device.clear();
       if([401,403].includes(error.status)||!$('statistics-auth').hidden)lock();
       setStatus(message(error),true);
     }finally{
       if(ticket===run){busy=false;$('statistics-connect').disabled=false;$('statistics-refresh').disabled=false;}
     }
   }
-  $('show-statistics').addEventListener('click',()=>{if(!dialog.open){dialog.showModal();choosePreset();$('statistics-api-key').focus();}});
+  function openStatistics(){
+    if(!standalone){if(dialog.open)return;dialog.showModal();}
+    choosePreset();
+    const token=device.read();
+    if(token){client=createClient(token,root.fetch.bind(root));load();}else $('statistics-api-key').focus();
+  }
+  $('show-statistics')?.addEventListener('click',openStatistics);
   $('statistics-auth').addEventListener('submit',event=>{
     event.preventDefault();if(busy)return;
     const token=$('statistics-api-key').value.trim();$('statistics-api-key').value='';
-    if(token.length<10||token.length>512||/\s/.test(token)){setStatus('Paste a valid read-only GoatCounter API key.',true);return;}
+    if(!validKey(token)){setStatus('Paste a valid read-only GoatCounter API key.',true);return;}
+    const remember=$('statistics-remember').checked;
+    if(!remember)device.clear();
+    pendingRemember=remember?token:null;
     client?.clear();client=createClient(token,root.fetch.bind(root));load();
   });
   $('statistics-filter').addEventListener('submit',event=>{event.preventDefault();load();});
   $('statistics-period').addEventListener('change',choosePreset);
-  $('statistics-lock').addEventListener('click',()=>{lock();$('statistics-api-key').focus();});
-  $('statistics-close').addEventListener('click',()=>{lock();dialog.close();});
+  $('statistics-lock').addEventListener('click',()=>{device.clear();lock();setStatus('This device has been disconnected. Enter your key to reconnect.');$('statistics-api-key').focus();});
+  $('statistics-close').addEventListener('click',()=>{if(standalone)device.clear();lock();if(!standalone)dialog.close();});
   dialog.addEventListener('close',lock);
   root.addEventListener('pagehide',lock);
+  root.addEventListener('storage',event=>{if(event.key===DEVICE_KEY&&!event.newValue)lock();});
   choosePreset();
+  if(standalone)openStatistics();
 })(typeof window==='undefined'?{}:window);
