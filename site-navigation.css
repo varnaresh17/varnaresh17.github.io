@@ -84,3 +84,8 @@ body>.skip:focus{top:10px}
 
 /* Discreet owner-dashboard entry beside the footer return link. */
 footer .footer-return-links{display:inline-flex;align-items:baseline;gap:14px;white-space:nowrap}footer .footer-owner-link{font-size:.75rem;line-height:1.5;letter-spacing:.02em}
+
+/* One typographic scale for the main portfolio sections and scientific tool pages. */
+body main .page-title,body.publication-template main .page-title{font:700 3.125rem/1.2 Arial,Helvetica,sans-serif;font-style:normal;font-variant:normal;letter-spacing:-.025em;word-spacing:normal;text-transform:none;margin:0 0 22px;width:auto;height:auto;min-width:0;max-width:100%;overflow-wrap:break-word}
+body main .page-subtitle{line-height:1.2;letter-spacing:-.025em;margin:22px 0}
+@media(max-width:760px){body main .page-title,body.publication-template main .page-title{font-size:2.25rem}}
