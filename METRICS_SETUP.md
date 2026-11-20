@@ -1,0 +1,29 @@
+# Citation updates and website visitors
+
+## One-time citation setup
+
+1. Copy your API key from your own [SerpApi dashboard](https://serpapi.com/manage-api-key).
+2. Open [New GitHub Actions repository secret](https://github.com/varnaresh17/varnaresh17.github.io/settings/secrets/actions/new).
+3. Name the secret **SERPAPI_API_KEY**, paste the key into the Secret field, and save.
+4. Open [Update Google Scholar citations](https://github.com/varnaresh17/varnaresh17.github.io/actions/workflows/sync-scholar.yml), select **Run workflow**, and choose **main**.
+5. When it succeeds and Pages finishes publishing, open [Publications](https://varnaresh17.github.io/publications.html). You should see a timestamp and research metrics.
+
+No Google password is needed. Never paste the SerpApi key into HTML, JSON, JavaScript, a commit, or a chat. GitHub keeps it as an encrypted Actions secret. The public snapshot contains only selected public fields, not the raw API response or credentials.
+
+## Automatic updates
+
+The workflow runs daily at 11:23 UTC (6:23 AM Eastern in winter; 7:23 AM Eastern in summer), or manually. GitHub scheduling can be delayed and may disable scheduled workflows in inactive public repositories after 60 days; check the Actions page if the displayed timestamp becomes old. The website explicitly identifies snapshots older than three days as delayed. Failed requests retain the last successful snapshot and fail the workflow; missing values never become invented zeros.
+
+The updater reads the public profile **GbwKoHsAAAAJ** through SerpApi, with up to 100 records per API page. Additional pages consume extra requests. It retrieves total citations, h-index, i10-index, annual citation counts, article metadata and cited-by links. It does not access private Scholar libraries, emails, alerts, or account activity. Quotas and API availability apply.
+
+Per-publication counts are matched by exact normalized title plus a compatible year; ambiguous matches remain unavailable. If a real indexed title differs, add a verified mapping to `scholar-mappings.json`, for example `{"p01":"GbwKoHsAAAAJ:ARTICLE_ID"}` using the actual ID from `scholar-data.json`. Never guess an ID. Unmatched Scholar records appear in **Additional articles on Google Scholar** and may be alternate versions, rather than newly published papers. The curated 39 articles and 8 proceedings remain independently editable.
+
+The workflow commits only `scholar-data.json` and explicitly requests the existing branch-based Pages build; GITHUB_TOKEN commits alone do not trigger Pages. A failed build request is visible in Actions and should be retried after checking repository Pages permissions. A manual rerun requests a build even if no data changed.
+
+## Visitor dashboard
+
+Open **https://varnaresh17.goatcounter.com/** and sign in. Keep statistics private in GoatCounter settings. The tracker is installed on all 17 public portfolio pages, only on the production hostname. Preview pages and visual-editor frames do not count.
+
+It records aggregate page visits, publication-link clicks, CV opens, and named calculator actions. A click measures an attempted action, not necessarily a valid calculation or completed download. The tracker does not send files, spectra, calculator inputs, search strings, query parameters, or form text. GoatCounter may also collect coarse location, browser and referrer statistics according to the account's data-collection settings. Counts are estimates and can be reduced by blockers. Earlier visits cannot be reconstructed.
+
+For a simple check, visit the live site, open Publications, and return to the dashboard after about 10 seconds. If nothing appears, check your browser's content blocker and GoatCounter's allowed domains. You can exclude your own browsing in GoatCounter settings.

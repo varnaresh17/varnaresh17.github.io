@@ -1,0 +1,44 @@
+name: Update Google Scholar citations
+on:
+  schedule:
+    - cron: '23 11 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: scholar-citation-sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate citation updater
+        run: python -m unittest discover -s tests -p 'test_scholar_sync.py'
+      - name: Refresh public citation snapshot
+        env:
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+        run: python scripts/sync_scholar.py
+      - name: Save public citation data
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scholar-data.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update public Google Scholar citation snapshot'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      # GITHUB_TOKEN commits do not trigger branch-based Pages publication.
+      # Explicitly request the existing Pages build rather than changing its hosting settings.
+      - name: Publish refreshed data with the existing GitHub Pages configuration
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST 'repos/${{ github.repository }}/pages/builds' --silent

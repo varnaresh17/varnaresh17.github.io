@@ -1,0 +1,19 @@
+.scholar-impact{padding-top:12px;padding-bottom:32px}
+.scholar-panel{border:1px solid #c4d3ca;border-radius:10px;padding:clamp(18px,3vw,30px);background:#f3f8f5;color:#183c32}
+.scholar-heading{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.scholar-heading h2{font-size:1.55rem;margin:0;font-weight:600;letter-spacing:-.025em}
+.scholar-profile,.scholar-citation{color:#17614a;text-decoration:underline;text-underline-offset:4px;font-size:.95rem}
+#scholar-status,.scholar-explanation{font-size:.9rem;line-height:1.65;margin:14px 0 0;color:#425c51}
+.scholar-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0 0}
+.scholar-metric{padding:16px;background:#fff;border:1px solid #d8e4dc;border-radius:7px}
+.scholar-metric dt{font-size:.95rem;color:#425c51}.scholar-metric dd{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:650;margin:8px 0 0;font-variant-numeric:tabular-nums}
+.scholar-history,.scholar-additional{margin-top:20px;border-top:1px solid #c4d3ca;padding-top:16px}
+.scholar-panel summary{font-size:1rem;font-weight:600;cursor:pointer}
+.scholar-bars{margin-top:18px;max-height:340px;overflow:auto;padding-right:8px}
+.scholar-bar{display:grid;grid-template-columns:45px minmax(0,1fr) 60px;gap:12px;align-items:center;margin:10px 0;font-size:.9rem;font-variant-numeric:tabular-nums}
+.scholar-bar-track{height:12px;background:#dce9e1;border-radius:3px;overflow:hidden}.scholar-bar-fill{height:100%;background:#28745b;display:block;border-radius:3px}.scholar-bar-count{text-align:right}
+.scholar-paper-metric{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;margin-top:12px}
+.scholar-change,.scholar-unmatched{font-size:.875rem;color:#52665c}
+.scholar-additional li{margin:20px 0;line-height:1.6}.scholar-additional li>a:first-child{font-weight:600;font-size:1rem;text-decoration:underline;text-underline-offset:3px}.scholar-additional li p{font-size:.9rem;margin:7px 0;color:#425c51}
+.scholar-impact [hidden]{display:none!important}
+@media(max-width:480px){.scholar-metrics{grid-template-columns:1fr}.scholar-metric{display:flex;justify-content:space-between;align-items:center}.scholar-metric dd{margin:0}}

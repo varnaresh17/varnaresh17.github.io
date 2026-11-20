@@ -49,7 +49,7 @@ The visible publication HTML and JSON reference are separate files. Updating JSO
 
 - XRD, FTIR, basic colorimetry, and PLQY calculations run in the visitor's browser.
 - The advanced lighting/color-rendering engine downloads a pinned Pyodide release and numerical packages from jsDelivr when first used. That feature needs internet access. It is not a Python server.
-- Original uploaded data are processed by the existing browser-side calculator code. No new backend or analytics service has been added.
+- Original uploaded data are processed by the existing browser-side calculator code. Aggregate page visits and named calculator actions are collected by GoatCounter. Input values, files and spectra are not sent to analytics.
 - Image credits and existing scientific sources are retained. See THIRD_PARTY_NOTICES.md for the locally stored image inventory and scientific library license.
 
 ## Preview on your computer (optional)
@@ -65,3 +65,7 @@ Then open http://localhost:8000/. On Windows the command may be `py -m http.serv
 ## Hosting and updates
 
 The existing Wix website remains online during the migration. No paid domain is required. Check the repository Actions tab for the latest GitHub Pages publication status.
+
+## Citations and visitor statistics
+
+See [METRICS_SETUP.md](METRICS_SETUP.md) for the one-time SerpApi secret setup, daily Scholar refresh, and private GoatCounter dashboard. Citation data are stored separately from the editable bibliography.
