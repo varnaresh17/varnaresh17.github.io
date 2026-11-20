@@ -22,7 +22,7 @@ The workflow commits only `scholar-data.json` and explicitly requests the existi
 
 ## Visitor dashboard
 
-Open **https://varnaresh17.goatcounter.com/** and sign in. Keep statistics private in GoatCounter settings. The tracker is installed on all 17 public portfolio pages, only on the production hostname. Preview pages and visual-editor frames do not count.
+Open **https://varnaresh17.goatcounter.com/** and sign in. Keep statistics private in GoatCounter settings. The tracker is installed on all 16 public portfolio pages, only on the production hostname. Preview pages and visual-editor frames do not count.
 
 It records aggregate page visits, publication-link clicks, CV opens, and named calculator actions. A click measures an attempted action, not necessarily a valid calculation or completed download. The tracker does not send files, spectra, calculator inputs, search strings, query parameters, or form text. GoatCounter may also collect coarse location, browser and referrer statistics according to the account's data-collection settings. Counts are estimates and can be reduced by blockers. Earlier visits cannot be reconstructed.
 

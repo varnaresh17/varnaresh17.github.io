@@ -1,6 +1,6 @@
 # Image and scientific library credits
 
-The public pages retain their full image source links, licenses, and scientific references. Moving an image to local storage does not change its authorship or license.
+Image source details and scientific library notices are recorded here for maintenance. Scientific references remain on the relevant tool and publication pages.
 
 | Local image | Source and credit |
 | --- | --- |

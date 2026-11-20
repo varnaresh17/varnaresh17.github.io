@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   const Core=window.WebsiteEditorCore,$=id=>document.getElementById(id),OWNER='varnaresh17',REPO='varnaresh17.github.io',PREFIX='/repos/'+OWNER+'/'+REPO;
-  const labels={'index.html':'Home','research.html':'Research','expertise.html':'Technical Expertise','experience.html':'Experience','achievements.html':'Achievements','contact.html':'Contact','stories.html':'Research stories','image-credits.html':'Image credits','publications.html':'Publications','synthesis.html':'Synthesis','characterization.html':'Characterization','softwares.html':'Tools overview','xrd.html':'XRD calculators','ftir.html':'FTIR interpreter','colorimetry.html':'Colorimetry','plqy.html':'PLQY / PLQE','resume.html':'CV'};
+  const labels={'index.html':'Home','research.html':'Research','expertise.html':'Technical Expertise','experience.html':'Experience','achievements.html':'Achievements','contact.html':'Contact','stories.html':'Research stories','publications.html':'Publications','synthesis.html':'Synthesis','characterization.html':'Characterization','softwares.html':'Tools overview','xrd.html':'XRD calculators','ftir.html':'FTIR interpreter','colorimetry.html':'Colorimetry','plqy.html':'PLQY / PLQE','resume.html':'CV'};
   const frame=$('preview'),channel=crypto.randomUUID(),pageParam=new URLSearchParams(location.search).get('page');
   const localMode=['127.0.0.1','localhost'].includes(location.hostname)&&new URLSearchParams(location.search).get('local')==='1';
   const siteBase=new URL('./',location.href).href;

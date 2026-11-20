@@ -2,7 +2,7 @@
 
 A portable, custom-coded research portfolio, prepared for free GitHub Pages hosting. No Wix account, website builder, paid template, or server-side application is required.
 
-The website pages and assets are stored at the repository root. Its images are included locally, with the existing scientific credits preserved. The design, publication record, CV, and scientific calculators are retained from the latest approved website.
+The website pages and assets are stored at the repository root. Its images are included locally, with scientific references preserved. The design, publication record, CV, and scientific calculators are retained from the latest approved website.
 
 ## Publishing this website
 
@@ -50,7 +50,7 @@ The visible publication HTML and JSON reference are separate files. Updating JSO
 - XRD, FTIR, basic colorimetry, and PLQY calculations run in the visitor's browser.
 - The advanced lighting/color-rendering engine downloads a pinned Pyodide release and numerical packages from jsDelivr when first used. That feature needs internet access. It is not a Python server.
 - Original uploaded data are processed by the existing browser-side calculator code. Aggregate page visits and named calculator actions are collected by GoatCounter. Input values, files and spectra are not sent to analytics.
-- Image credits and existing scientific sources are retained. See THIRD_PARTY_NOTICES.md for the locally stored image inventory and scientific library license.
+- Scientific references remain on the relevant pages. THIRD_PARTY_NOTICES.md records the image inventory and scientific library license for maintenance.
 
 ## Preview on your computer (optional)
 
