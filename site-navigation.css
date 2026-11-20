@@ -1,0 +1,63 @@
+/* Shared, persistent navigation across the public portfolio and research tools. */
+:root{--sidebar-width:268px;--sidebar-bg:#191f1d;--sidebar-text:#e5efea;--sidebar-active:#205c50}
+html{scroll-padding-top:24px}
+body{padding-left:var(--sidebar-width)}
+.site-header.site-sidebar{position:fixed;inset:0 auto 0 0;width:var(--sidebar-width);height:100dvh;min-height:0;margin:0;padding:28px 0;display:flex;flex-direction:column;flex-wrap:nowrap;align-items:stretch;justify-content:flex-start;gap:28px;overflow-y:auto;overscroll-behavior:contain;background:var(--sidebar-bg);color:var(--sidebar-text);border:0;border-right:1px solid #ffffff16;z-index:200;font-family:Arial,Helvetica,sans-serif;box-sizing:border-box}
+.site-sidebar .brand{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:0 24px;color:#f5f9f6;text-decoration:none;max-width:none;flex-shrink:0}
+.site-sidebar .brand-mark{border:0;padding:0;font:38px/1 Georgia,serif;letter-spacing:-3px;color:#e2eddd}
+.site-sidebar .brand-mark span{color:#91bda4}
+.site-sidebar .brand-copy{min-width:0}
+.site-sidebar .brand-name{display:block;font:650 25px/1.3 Arial,Helvetica,sans-serif;letter-spacing:-.025em;max-width:none}
+.site-sidebar .brand-sub{display:block;margin-top:10px;padding:0;font:400 11px/1.6 Arial,Helvetica,sans-serif;letter-spacing:.11em;color:#afc1b6}
+.site-sidebar .menu-toggle{display:none}
+.site-sidebar #navigation{display:flex;position:static;flex-direction:column;align-items:stretch;justify-content:flex-start;flex-wrap:nowrap;flex-basis:auto;width:100%;max-width:none;gap:4px;padding:0;margin:0;font:400 20px/1.45 Arial,Helvetica,sans-serif;border:0;background:none}
+.site-sidebar #navigation>a,.site-sidebar .sidebar-group-heading>a{display:block;margin:0;padding:12px 24px;font:400 20px/1.45 Arial,Helvetica,sans-serif;white-space:normal;text-decoration:none;border:0;border-radius:0;color:var(--sidebar-text);background:none;min-width:0;box-sizing:border-box}
+.site-sidebar #navigation a:hover{color:white;background:#263f36;text-decoration:none}
+.site-sidebar #navigation a[aria-current]{background:var(--sidebar-active);color:white;text-decoration:none;box-shadow:inset 3px 0 #a1d5b6}
+.site-sidebar .sidebar-group{width:100%}
+.site-sidebar .sidebar-group-heading{display:flex;align-items:stretch;min-width:0}
+.site-sidebar .sidebar-group-heading>a{flex:1;padding-right:0}
+.site-sidebar .submenu-toggle{display:flex;align-items:center;justify-content:center;flex:0 0 38px;align-self:center;min-height:44px;padding:9px;margin:0 8px 0 0;background:none;border:0;border-radius:4px;color:#d9e9df;cursor:pointer}
+.site-sidebar .submenu-toggle:hover{background:#ffffff12}
+.site-sidebar .submenu-toggle svg{display:block;width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;transition:transform .18s}
+.site-sidebar .submenu-toggle[aria-expanded=true] svg{transform:rotate(180deg)}
+.site-sidebar .sidebar-group.is-current>.sidebar-group-heading{background:#233e34}
+.site-sidebar .sidebar-submenu{display:flex;flex-direction:column;border-left:1px solid #597668;margin:4px 16px 10px 26px;padding-left:8px}
+.site-sidebar .sidebar-submenu[hidden]{display:none}
+.site-sidebar .sidebar-submenu a{display:block;padding:10px 12px;font:400 17px/1.5 Arial,Helvetica,sans-serif;white-space:normal;text-decoration:none;color:#c5d9cd}
+.site-sidebar #navigation>.nav-cv{display:block;margin:10px 22px 0;padding:11px 16px;align-self:stretch;border:1px solid #759c86;border-radius:4px;text-align:center;background:none;color:#f4faf5;font:400 20px/1.45 Arial,Helvetica,sans-serif}
+.site-sidebar #navigation>.nav-cv:hover{background:#263f36}
+.site-sidebar a:focus-visible,.site-sidebar button:focus-visible{outline:2px solid #b2ebcc;outline-offset:-4px}
+body>.skip{position:fixed;top:-100px;left:calc(var(--sidebar-width) + 15px);z-index:400;padding:12px;background:#173e39;color:white}
+body>.skip:focus{top:10px}
+.section-shell{width:min(1320px,calc(100% - 80px))}
+.bio-about-layout{grid-template-columns:210px minmax(0,1fr);gap:36px;padding-top:48px;padding-bottom:48px}
+.bio-portrait{width:180px;height:180px}
+.bio-profile h2{font-size:1.4rem}
+.bio-profile-title{font-size:1.0625rem}
+.bio-profile-links{gap:6px}
+.resume-actions{gap:20px}
+@media(min-width:761px) and (max-width:1100px){.bio-about-layout{grid-template-columns:1fr;gap:28px}.bio-profile{display:grid;grid-template-columns:160px 1fr;text-align:left;align-items:center;column-gap:25px;max-width:650px;width:100%;margin:auto}.bio-portrait{grid-column:1;grid-row:1/4;width:150px;height:150px;margin:0}.bio-profile h2{grid-column:2;margin:0;max-width:none}.bio-profile-title{grid-column:2}.bio-profile-links{grid-column:2;justify-content:flex-start;margin-top:4px}}
+@media(max-width:760px){
+ html{scroll-padding-top:96px}
+ body{padding-left:0;padding-top:76px}
+ .site-header.site-sidebar{inset:0 0 auto;width:100%;height:76px;min-height:76px;overflow:visible;flex-direction:row;align-items:center;justify-content:space-between;padding:12px 20px;gap:12px;border-bottom:1px solid #ffffff20}
+ .site-sidebar .brand{display:block;padding:0;max-width:calc(100% - 74px)}
+ .site-sidebar .brand-mark,.site-sidebar .brand-sub{display:none}
+ .site-sidebar .brand-name{font-size:20px;line-height:1.3}
+ .site-sidebar .menu-toggle{display:flex;align-items:center;gap:8px;padding:8px 0 8px 8px;min-height:44px;border:0;background:none;color:#eff8f2;font:400 16px/1.5 Arial,sans-serif}
+ .site-sidebar .menu-toggle span{font-size:20px}
+ .site-sidebar #navigation{display:none;position:fixed;left:0;top:76px;bottom:0;width:min(320px,90vw);height:calc(100dvh - 76px);padding:16px 0 30px;overflow:auto;overscroll-behavior:contain;background:var(--sidebar-bg);box-shadow:14px 5px 35px #001b183d}
+ .site-sidebar #navigation.is-open{display:flex}
+ .site-sidebar #navigation>a,.site-sidebar .sidebar-group-heading>a{font-size:19px}
+ .site-sidebar #navigation>.nav-cv{font-size:19px}
+ body>.skip{left:12px}
+ .section-shell{width:calc(100% - 40px)}
+ .bio-about-layout{grid-template-columns:1fr;gap:30px;padding-top:34px;padding-bottom:34px}
+ .bio-profile h2{font-size:1.5rem}
+ .bio-profile-links{gap:13px}
+ .bio-research-images{margin-top:24px}
+ .resume-actions{flex-wrap:wrap}
+}
+@media print{body{padding:0!important}.site-header.site-sidebar,body>.skip,.resume-actions{display:none!important}}
+@media(prefers-reduced-motion:reduce){.site-sidebar .submenu-toggle svg{transition:none}}
