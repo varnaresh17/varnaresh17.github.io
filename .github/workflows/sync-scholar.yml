@@ -1,5 +1,11 @@
 name: Update Google Scholar citations
 on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/sync-scholar.yml
+      - scripts/sync_scholar.py
+      - scholar-mappings.json
   schedule:
     - cron: '23 11 * * *'
   workflow_dispatch:

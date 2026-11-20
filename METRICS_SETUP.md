@@ -27,3 +27,9 @@ Open **https://varnaresh17.goatcounter.com/** and sign in. Keep statistics priva
 It records aggregate page visits, publication-link clicks, CV opens, and named calculator actions. A click measures an attempted action, not necessarily a valid calculation or completed download. The tracker does not send files, spectra, calculator inputs, search strings, query parameters, or form text. GoatCounter may also collect coarse location, browser and referrer statistics according to the account's data-collection settings. Counts are estimates and can be reduced by blockers. Earlier visits cannot be reconstructed.
 
 For a simple check, visit the live site, open Publications, and return to the dashboard after about 10 seconds. If nothing appears, check your browser's content blocker and GoatCounter's allowed domains. You can exclude your own browsing in GoatCounter settings.
+
+## Public visit number on the website
+
+The footer on every public page displays the aggregate site visit count from GoatCounter's public `TOTAL` counter. In your GoatCounter account, open Settings and enable **Allow adding visitor counts on your website**, then save. This permits the number to be displayed; it does not require making the detailed dashboard public. The counter can be cached for up to four hours. An em dash means the count is unavailable, never an invented zero. This is aggregate traffic, not a count of identifiable people or a live online-user count.
+
+The citation workflow also starts after edits to its own workflow, updater or verified mapping file, allowing a first refresh after setup.
