@@ -2,16 +2,16 @@
   "version": 1,
   "status": "ready",
   "profileUrl": "https://scholar.google.com/citations?user=GbwKoHsAAAAJ",
-  "updatedAt": "2026-11-21T12:04:09.504403+00:00",
-  "previousUpdatedAt": "2026-11-20T12:16:33.792338+00:00",
+  "updatedAt": "2026-11-22T12:01:27.477232+00:00",
+  "previousUpdatedAt": "2026-11-21T12:04:09.504403+00:00",
   "source": "Google Scholar via SerpApi",
   "author": {
     "name": "Varnakavi Naresh"
   },
   "metrics": {
     "citations": {
-      "all": 4291,
-      "recent": 3810
+      "all": 4297,
+      "recent": 3815
     },
     "h_index": {
       "all": 26,
@@ -58,7 +58,7 @@
     },
     {
       "year": 2022,
-      "citations": 440
+      "citations": 439
     },
     {
       "year": 2023,
@@ -74,7 +74,7 @@
     },
     {
       "year": 2026,
-      "citations": 743
+      "citations": 748
     }
   ],
   "articles": [
@@ -84,11 +84,11 @@
       "authors": "V Naresh, N Lee",
       "publication": "Sensors 21 (4), 1109, 2021",
       "year": "2021",
-      "citations": 2609,
+      "citations": 2613,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:4DMP91E08xMC",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5947667453332017906",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 0
+      "change": 4
     },
     {
       "id": "GbwKoHsAAAAJ:Se3iqnhoufwC",
@@ -240,11 +240,11 @@
       "authors": "V Naresh, S Singh, H Soh, J Lee, N Lee",
       "publication": "Materials Today Nano 23, 100364, 2023",
       "year": "2023",
-      "citations": 54,
+      "citations": 55,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:iH-uZ7U-co4C",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17022196460609566211",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 0
+      "change": 1
     },
     {
       "id": "GbwKoHsAAAAJ:maZDTaKrznsC",
@@ -300,11 +300,11 @@
       "authors": "V Naresh, K Gupta, CP Reddy, BS Ham",
       "publication": "Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy 175, 43-50, 2017",
       "year": "2017",
-      "citations": 41,
+      "citations": 42,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:MXK_kJrjxJIC",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=478237852974281836",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 0
+      "change": 1
     },
     {
       "id": "GbwKoHsAAAAJ:r0BpntZqJG4C",
