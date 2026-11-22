@@ -11,3 +11,7 @@ The issue contains the calculator's name, a canonical link, a feedback type and 
 The owner can read and reply in the repository's Issues tab, search for `Calculator feedback`, close a conversation when appropriate and use GitHub's normal moderation controls. Closed conversations remain visible with a **Closed** badge; that status does not assert a calculation was fixed. Notification delivery depends on the owner's GitHub notification settings.
 
 No example or test comment was posted to the live repository during setup. Test fixtures remain local. The four numerical calculator scripts and their input/output fields are not changed by the feedback feature.
+
+## General website feedback on Contact
+
+The Contact page includes an expanded **Comments & suggestions** section below the existing contact panel, with a jump link beside the contact options. Its `website-general` scope uses a **Website feedback** title and is kept separate from the 14 calculator discussions. It uses the same review-and-submit process, public GitHub read API and moderation flow. The Contact page remains available in the visual editor’s Page menu; its heading, introductory copy and layout can be edited there. Private inquiries can still use the existing email link.

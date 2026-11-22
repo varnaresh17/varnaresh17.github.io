@@ -3,6 +3,7 @@
  'use strict';
  const REPO='varnaresh17/varnaresh17.github.io',WEB='https://github.com/'+REPO,API='https://api.github.com/';
  const SCOPES={
+  'website-general':{name:'Website comments and suggestions',page:'contact.html',anchor:'website-feedback',general:true},
   'xrd-bragg':{name:'XRD: Bragg’s law and d-spacing',page:'xrd.html',anchor:'bragg-title'},
   'xrd-crystallinity':{name:'XRD: crystallinity by integrated area',page:'xrd.html',anchor:'crystal-title'},
   'ftir-data':{name:'FTIR: uploaded numerical spectra',page:'ftir.html',anchor:'ftir-data-panel'},
@@ -21,15 +22,16 @@
  const KINDS=['Suggestion','Calculation concern','Technical problem','Explanation or usability'];
  const validScope=scope=>Object.hasOwn(SCOPES,scope);
  function scopeInfo(scope){if(!validScope(scope))throw Error('Unknown calculator.');return SCOPES[scope];}
- function searchQuery(scope){scopeInfo(scope);return 'repo:'+REPO+' is:issue in:title "Calculator feedback" "'+scope+'"';}
+ function titlePrefix(scope){return scopeInfo(scope).general?'Website feedback':'Calculator feedback';}
+ function searchQuery(scope){scopeInfo(scope);return 'repo:'+REPO+' is:issue in:title "'+titlePrefix(scope)+'" "'+scope+'"';}
  function listingURL(scope){const u=new URL(WEB+'/issues');u.searchParams.set('q',searchQuery(scope));return u.href;}
  function marker(scope){scopeInfo(scope);return '<!-- nv-calculator-feedback:v1 '+scope+' -->';}
  function compose(scope,kind,comment){
   const info=scopeInfo(scope),text=String(comment||'').trim();
   if(!KINDS.includes(kind))throw Error('Choose a feedback type.');
   if(text.length<10||text.length>1000)throw Error('Write a comment of 10 to 1,000 characters.');
-  const title='[Calculator feedback] ['+scope+'] '+kind;
-  const body=[marker(scope),'Calculator: '+info.name,'Page: https://varnaresh17.github.io/'+info.page+'#'+info.anchor,'Type: '+kind,'','### Feedback',text].join('\n');
+  const title='['+titlePrefix(scope)+'] ['+scope+'] '+kind;
+  const body=[marker(scope),(info.general?'Website section: ':'Calculator: ')+info.name,'Page: https://varnaresh17.github.io/'+info.page+'#'+info.anchor,'Type: '+kind,'','### Feedback',text].join('\n');
   const url=new URL(WEB+'/issues/new');url.searchParams.set('title',title);url.searchParams.set('body',body);
   if(url.href.length>7500)throw Error('Please shorten the comment before continuing to GitHub.');
   return {title,body,url:url.href};
@@ -37,7 +39,7 @@
  function validNumber(n){return Number.isSafeInteger(n)&&n>0;}
  function normalizeIssue(issue,scope){
   scopeInfo(scope);
-  if(!issue||issue.pull_request||!validNumber(issue.number)||typeof issue.body!=='string'||!issue.body.startsWith(marker(scope)+'\n')||typeof issue.title!=='string'||!issue.title.startsWith('[Calculator feedback] ['+scope+'] '))return null;
+  if(!issue||issue.pull_request||!validNumber(issue.number)||typeof issue.body!=='string'||!issue.body.startsWith(marker(scope)+'\n')||typeof issue.title!=='string'||!issue.title.startsWith('['+titlePrefix(scope)+'] ['+scope+'] '))return null;
   const split=issue.body.indexOf('\n### Feedback\n');if(split<0)return null;
   const created=new Date(issue.created_at);if(!Number.isFinite(created.getTime()))return null;
   return {number:issue.number,url:WEB+'/issues/'+issue.number,author:String(issue.user?.login||'GitHub user').slice(0,80),date:created.toISOString(),body:issue.body.slice(split+14).trim().slice(0,2000),closed:issue.state==='closed',replies:Number.isSafeInteger(issue.comments)&&issue.comments>=0?issue.comments:0};
@@ -90,11 +92,11 @@
   const scope=host.dataset.feedbackScope;if(!validScope(scope))continue;
   const info=SCOPES[scope],content=host.querySelector('[data-feedback-root]');if(!content)continue;
   content.replaceChildren();
-  content.append(el('h3','Help improve this calculator'),el('p',info.name,'feedback-context'),el('p','Public feedback. A GitHub account is required to post; you can read feedback here without signing in.','feedback-help'));
+  content.append(el('h3',info.general?'Help improve this website':'Help improve this calculator'),el('p',info.name,'feedback-context'),el('p','Public feedback. A GitHub account is required to post; you can read feedback here without signing in.','feedback-help'));
   const form=el('form'),typeLabel=el('label','Feedback type'),select=el('select');select.id='feedback-kind-'+scope;
   for(const kind of KINDS){const option=el('option',kind);option.value=kind;select.append(option);}typeLabel.htmlFor=select.id;typeLabel.append(select);
-  const copyLabel=el('label','Your comment'),textarea=el('textarea');textarea.id='feedback-copy-'+scope;textarea.rows=4;textarea.required=true;textarea.minLength=10;textarea.maxLength=1000;textarea.placeholder='What could be clearer or work better? For a calculation concern, describe the expected and observed behavior.';copyLabel.htmlFor=textarea.id;copyLabel.append(textarea);
-  const help=el('p','Your comment will be public. Do not include contact details, passwords or unpublished data. Uploaded spectra and calculator inputs are not attached.','feedback-help');help.id='feedback-help-'+scope;textarea.setAttribute('aria-describedby',help.id);
+  const copyLabel=el('label','Your comment'),textarea=el('textarea');textarea.id='feedback-copy-'+scope;textarea.rows=4;textarea.required=true;textarea.minLength=10;textarea.maxLength=1000;textarea.placeholder=info.general?'Share a suggestion about the website, research content, usability or a tool.':'What could be clearer or work better? For a calculation concern, describe the expected and observed behavior.';copyLabel.htmlFor=textarea.id;copyLabel.append(textarea);
+  const help=el('p',info.general?'Your comment will be public. Do not include contact details, passwords or unpublished data. For a private conversation, use the email address above.':'Your comment will be public. Do not include contact details, passwords or unpublished data. Uploaded spectra and calculator inputs are not attached.','feedback-help');help.id='feedback-help-'+scope;textarea.setAttribute('aria-describedby',help.id);
   const actions=el('div',undefined,'feedback-actions'),submit=el('button','Review & post on GitHub','feedback-primary');submit.type='submit';
   const prepared=link('Open prepared feedback',WEB+'/issues/new');prepared.hidden=true;actions.append(submit,prepared);
   const formStatus=el('p','','feedback-status');formStatus.setAttribute('role','status');formStatus.setAttribute('aria-live','polite');

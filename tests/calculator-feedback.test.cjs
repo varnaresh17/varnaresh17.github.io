@@ -35,3 +35,9 @@ test('all fourteen sections are on the intended four tool pages only',()=>{
  let total=0;for(const file of ['xrd.html','ftir.html','colorimetry.html','plqy.html']){const s=fs.readFileSync(file,'utf8');assert.equal((s.match(/src="calculator-feedback.js/g)||[]).length,1);for(const match of s.matchAll(/data-feedback-scope="([^"]+)"/g)){assert.ok(c.SCOPES[match[1]]);assert.equal(c.SCOPES[match[1]].page,file);total++;}}
  assert.equal(total,14);const js=fs.readFileSync('calculator-feedback.js','utf8');for(const word of ['localStorage','sessionStorage','api-key','goatcounter','github-token','data.csv','addEventListener(\'input\''])assert.ok(!js.includes(word));assert.ok(js.includes('Your comment has not been posted yet.'));
 });
+
+test('Contact feedback stays separate from calculator reports and is available in the editable Contact page',()=>{
+ const scope='website-general',entry=c.compose(scope,'Suggestion','Please add a clearer overview of research collaborations.');assert.ok(entry.title.startsWith('[Website feedback]'));assert.ok(entry.body.includes('contact.html#website-feedback'));assert.ok(!entry.body.includes('Calculator:'));assert.ok(c.searchQuery(scope).includes('Website feedback'));
+ const row=issue({title:entry.title,body:entry.body});assert.equal(c.normalizeIssue(row,scope).body,'Please add a clearer overview of research collaborations.');assert.equal(c.normalizeIssue(row,'xrd-bragg'),null);
+ const html=fs.readFileSync('contact.html','utf8');assert.equal((html.match(/data-feedback-scope=/g)||[]).length,1);assert.ok(html.includes('id="website-feedback"'));assert.ok(html.includes('class="contact-feedback-jump"'));assert.ok(html.includes('mailto:varna.naresh@gmail.com'));assert.ok(require('../editor-core.js').PAGES.includes('contact.html'));
+});
