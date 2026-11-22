@@ -12,13 +12,13 @@
 .technique-tool-callout{padding:25px 28px;background:#eef3e7;border-top:1px solid #ccd9c2;scroll-margin-top:24px}.technique-tool-callout h3{font-size:24px;font-weight:500;margin-bottom:10px}.technique-tool-callout p{font-size:14px;line-height:1.8;color:#52644e;margin-bottom:18px}
 
 /* Expanded transient absorption discussion and source presentation. */
-.ta-lesson{grid-column:1/-1;min-width:0;scroll-margin-top:130px}
+:is(.ta-lesson,.xrd-lesson){grid-column:1/-1;min-width:0;scroll-margin-top:130px}
 .ta-overview{display:grid;grid-template-columns:minmax(0,1fr)}
 .ta-overview .ta-figure,.ta-overview .technique-explanation{width:100%;max-width:1050px;margin-inline:auto}
-.ta-lesson .ta-figure{padding:20px;background:#fff;border:0;margin:0}
-.ta-lesson .ta-figure img{display:block;width:100%;height:auto;max-width:100%}
-.ta-lesson .ta-figure figcaption{font:14px/1.65 Arial,Helvetica,sans-serif;letter-spacing:normal;color:#52645a;margin:12px 0 0;text-align:left}
-.ta-lesson .ta-figure a:focus-visible{outline:3px solid #315a46;outline-offset:4px}
+:is(.ta-lesson,.xrd-lesson) .ta-figure{padding:20px;background:#fff;border:0;margin:0}
+:is(.ta-lesson,.xrd-lesson) .ta-figure img{display:block;width:100%;height:auto;max-width:100%}
+:is(.ta-lesson,.xrd-lesson) .ta-figure figcaption{font:14px/1.65 Arial,Helvetica,sans-serif;letter-spacing:normal;color:#52645a;margin:12px 0 0;text-align:left}
+:is(.ta-lesson,.xrd-lesson) .ta-figure a:focus-visible{outline:3px solid #315a46;outline-offset:4px}
 .ta-resources{display:flex;flex-wrap:wrap;gap:14px 26px;padding:22px 28px;border-top:1px solid #d6dfcd;font:600 16px/1.6 Arial,Helvetica,sans-serif}
 .ta-resources a,.ta-presentation a{color:#245a49;text-decoration:underline;text-underline-offset:4px}
 .ta-discussion,.ta-presentation{border-top:1px solid #d6dfcd}
@@ -38,6 +38,6 @@
 .ta-table-scroll tbody th{font-weight:600}
 .ta-presentation-body object{display:block;width:100%;height:650px;border:1px solid #d1dcd1;background:#fff}
 @media(max-width:900px){.ta-overview{grid-template-columns:1fr}}
-@media(max-width:600px){.ta-resources{padding:20px;flex-direction:column;gap:16px}.ta-lesson .ta-figure{padding:16px 4px}.ta-discussion>summary,.ta-presentation>summary{padding:20px}.ta-discussion-body,.ta-presentation-body{padding:6px 20px 24px}.ta-discussion-body h4{font-size:22px}.ta-discussion-body p,.ta-presentation-body p{text-align:left}.ta-presentation-body object{height:420px}}
+@media(max-width:600px){.ta-resources{padding:20px;flex-direction:column;gap:16px}:is(.ta-lesson,.xrd-lesson) .ta-figure{padding:16px 4px}.ta-discussion>summary,.ta-presentation>summary{padding:20px}.ta-discussion-body,.ta-presentation-body{padding:6px 20px 24px}.ta-discussion-body h4{font-size:22px}.ta-discussion-body p,.ta-presentation-body p{text-align:left}.ta-presentation-body object{height:420px}}
 
 .ta-resource-note{font:14px/1.7 Arial,Helvetica,sans-serif;color:#52645a;padding:0 28px 20px;margin:0}
