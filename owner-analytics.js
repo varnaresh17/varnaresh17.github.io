@@ -25,9 +25,56 @@
     return {start:a.toISOString(),end:new Date(b.getTime()+86400000).toISOString(),label:start+' to '+end+' · UTC'};
   }
   function preset(days,now=new Date()){
-    if(![1,7,30,90].includes(days))throw new Error('Invalid period');
+    if(![1,7,30,90,365].includes(days))throw new Error('Invalid period');
     const end=now.toISOString().slice(0,10),last=utcDay(end);
     return {start:new Date(last.getTime()-(days-1)*86400000).toISOString().slice(0,10),end};
+  }
+  const COUNTRY_PAGE_LIMIT=100,COUNTRY_MAX_PAGES=10;
+  let regionNames;
+  try{regionNames=new Intl.DisplayNames(['en'],{type:'region',fallback:'none'});}catch{}
+  function countryRows(data){
+    if(data===null)return null;
+    const rows=new Map();
+    for(const row of Array.isArray(data?.stats)?data.stats:[]){
+      if(!row||!isCount(row.count)||row.count===0)continue;
+      const raw=String(row.name||'').trim().slice(0,300),id=String(row.id||raw).trim().toUpperCase();
+      let code=/^[A-Z]{2}$/.test(id)?(id==='UK'?'GB':id):'',name=raw;
+      if(['ZZ','XX'].includes(code))code='';
+      if(code){try{name=regionNames?.of(code)||raw||code;}catch{name=raw||code;}}
+      if(!code&&(!name||/^(unknown|not supplied|\(unknown\)|\(no data\)|zz|xx)$/i.test(name)))name='Unknown location';
+      const key=code||name.toLowerCase(),previous=rows.get(key);
+      // Repeated rows during a paginated refresh must not inflate counts.
+      if(!previous||previous.count<row.count)rows.set(key,{name:name||'Unknown location',code,count:row.count});
+    }
+    return Array.from(rows.values()).sort((a,b)=>b.count-a.count||a.name.localeCompare(b.name,'en'));
+  }
+  async function loadCountries(client,parameters,signal){
+    const stats=[],seen=new Set();
+    for(let page=0;page<COUNTRY_MAX_PAGES;page++){
+      if(signal?.aborted)throw new DOMException('Aborted','AbortError');
+      const result=await client.get('stats/locations',{...parameters,limit:COUNTRY_PAGE_LIMIT,offset:page*COUNTRY_PAGE_LIMIT},signal);
+      if(!result||!Array.isArray(result.stats)||(result.more!==undefined&&typeof result.more!=='boolean'))throw new StatsError(502);
+      const signature=JSON.stringify(result.stats);
+      if(result.more&&(!result.stats.length||seen.has(signature)))throw new StatsError(502);
+      seen.add(signature);stats.push(...result.stats);
+      if(!result.more)return {stats,more:false};
+    }
+    // Never silently present an incomplete list as all countries.
+    throw new StatsError(502);
+  }
+  function countryView(rows,{query='',sort='count',page=1,pageSize=25}={}){
+    rows=Array.isArray(rows)?rows:[];
+    const total=rows.reduce((sum,row)=>sum+row.count,0),q=String(query).trim().toLowerCase();
+    const filtered=rows.filter(row=>(row.name+' '+row.code+(row.code==='GB'?' UK':'')).toLowerCase().includes(q)).slice();
+    filtered.sort(sort==='name'?(a,b)=>a.name.localeCompare(b.name,'en'):sort==='least'?(a,b)=>a.count-b.count||a.name.localeCompare(b.name,'en'):(a,b)=>b.count-a.count||a.name.localeCompare(b.name,'en'));
+    const size=[10,25,50,1000].includes(Number(pageSize))?Number(pageSize):25,pages=Math.max(1,Math.ceil(filtered.length/size));
+    page=Math.min(pages,Math.max(1,Number.isSafeInteger(page)?page:1));
+    return {rows:filtered.slice((page-1)*size,page*size),filtered,total,page,pages,size,countries:rows.filter(row=>row.name!=='Unknown location').length};
+  }
+  function countryCSV(rows){
+    const total=rows.reduce((sum,row)=>sum+row.count,0);
+    const cell=value=>{let text=String(value);if(/^[=+\-@\t\r\n]/.test(text))text="'"+text;return '"'+text.replace(/"/g,'""')+'"';};
+    return '\uFEFF'+[['Country','Country code','Count','Share of country counts (%)'],...rows.map(row=>[row.name,row.code,row.count,total?(100*row.count/total).toFixed(2):'0.00'])].map(row=>row.map(cell).join(',')).join('\r\n');
   }
   function normalize(totals,hits,locations,referrers,browsers){
     if(!totals||!isCount(totals.total)||!isCount(totals.total_events)||totals.total_events>totals.total)throw new StatsError(502);
@@ -38,7 +85,7 @@
       visits:totals.total-totals.total_events,actions:totals.total_events,activity:totals.total,daily,
       pages:rows.filter(row=>!row.event).map(row=>({name:String(row.title||row.path||'Page').slice(0,500),path:String(row.path||'').slice(0,500),count:row.count})),
       events:rows.filter(row=>row.event).map(row=>({name:String(row.title||row.path||'Action').slice(0,500),count:row.count})),
-      locations:statsRows(locations),referrers:statsRows(referrers),browsers:statsRows(browsers),more:!!hits?.more
+      locations:countryRows(locations),referrers:statsRows(referrers),browsers:statsRows(browsers),more:!!hits?.more
     };
   }
   function delay(ms,signal){return new Promise((resolve,reject)=>{
@@ -57,8 +104,9 @@
       async get(path,parameters,signal){
         if(!allowed.has(path))throw new StatsError(403);
         if(!key)throw new StatsError(401);
+        if(parameters.offset!==undefined&&(!Number.isSafeInteger(parameters.offset)||parameters.offset<0))throw new StatsError(400);
         const url=new URL(path,API);
-        for(const [name,value] of Object.entries(parameters))if(['start','end','limit','group'].includes(name))url.searchParams.set(name,String(value));
+        for(const [name,value] of Object.entries(parameters))if(['start','end','limit','offset','group'].includes(name))url.searchParams.set(name,String(value));
         for(let attempt=0;attempt<2;attempt++){
           await wait(Math.max(0,350-(clock()-last)),signal);last=clock();
           if(!key||signal?.aborted)throw new DOMException('Aborted','AbortError');
@@ -102,11 +150,11 @@
       clear(){try{storage.removeItem(DEVICE_KEY);return true;}catch{return false;}}
     };
   }
-  const core={range,preset,normalize,createClient,message,StatsError,createDeviceStore,validKey,DEVICE_KEY};
+  const core={range,preset,normalize,countryRows,loadCountries,countryView,countryCSV,createClient,message,StatsError,createDeviceStore,validKey,DEVICE_KEY};
   if(typeof module==='object'&&module.exports)module.exports=core;
   if(!root.document)return;
   const doc=root.document,$=id=>doc.getElementById(id),dialog=$('statistics-dialog');if(!dialog)return;
-  let client=null,controller=null,run=0,busy=false,pendingRemember=null;
+  let client=null,controller=null,run=0,busy=false,pendingRemember=null,countries=null,countryPage=1;
   // Access storage lazily; blocked storage must not prevent one-session authentication.
   const device=createDeviceStore({getItem:key=>root.localStorage.getItem(key),setItem:(key,value)=>root.localStorage.setItem(key,value),removeItem:key=>root.localStorage.removeItem(key)});
   const standalone=dialog.hasAttribute('data-statistics-page');
@@ -114,6 +162,7 @@
   function clearData(){
     for(const el of dialog.querySelectorAll('[data-stat-value]'))el.textContent='—';
     for(const el of dialog.querySelectorAll('[data-stat-rows]'))el.replaceChildren();
+    countries=null;countryPage=1;$('statistics-country-search').value='';$('statistics-country-summary').textContent='';$('statistics-country-showing').textContent='';$('statistics-country-pagination').hidden=true;$('statistics-country-export').disabled=true;
     $('statistics-device-status').textContent='';$('statistics-updated').textContent='';$('statistics-range-label').textContent='';$('statistics-more').hidden=true;
   }
   function lock(){
@@ -127,9 +176,27 @@
     if(!rows||!rows.length){const tr=element('tr'),td=element('td',rows?'No recorded data for this period.':'Temporarily unavailable. Refresh to try again.','statistics-empty');td.colSpan=2;tr.append(td);body.append(tr);return;}
     for(const row of rows){const tr=element('tr'),name=element('td');name.append(element('span',row.name));if(row.path&&row.path!==row.name)name.append(element('small',row.path));tr.append(name,element('td',row.count.toLocaleString()));body.append(tr);}
   }
+  function renderCountries(){
+    const body=$('statistics-locations');body.replaceChildren();
+    const view=countryView(countries,{query:$('statistics-country-search').value,sort:$('statistics-country-sort').value,page:countryPage,pageSize:$('statistics-country-size').value});countryPage=view.page;
+    const unavailable=countries===null;
+    $('statistics-country-summary').textContent=unavailable?'Country data is temporarily unavailable. Refresh to try again.':view.countries.toLocaleString()+' '+(view.countries===1?'country':'countries')+' recorded in this period · '+view.total.toLocaleString()+' total country counts';
+    $('statistics-country-export').disabled=unavailable||!countries.length;
+    if(!view.rows.length){const tr=element('tr'),td=element('td',unavailable?'Country data is unavailable.':countries.length?'No countries match your search.':'No country visits recorded for this period.','statistics-empty');td.colSpan=3;tr.append(td);body.append(tr);}
+    for(const row of view.rows){
+      const tr=element('tr'),country=element('td'),label=element('span',undefined,'statistics-country-name');
+      if(row.code){const badge=element('span',row.code,'statistics-country-code');badge.setAttribute('aria-hidden','true');label.append(badge);}
+      label.append(element('span',row.name));country.append(label);
+      const percent=view.total?100*row.count/view.total:0,share=element('td'),bar=element('span',undefined,'statistics-country-track'),fill=element('span',undefined,'statistics-country-bar');bar.setAttribute('aria-hidden','true');fill.style.width=percent+'%';bar.append(fill);share.append(element('span',percent.toFixed(1)+'%'),bar);tr.append(country,element('td',row.count.toLocaleString()),share);body.append(tr);
+    }
+    const matches=view.filtered.length,start=matches?(view.page-1)*view.size+1:0,end=Math.min(view.page*view.size,matches);
+    $('statistics-country-showing').textContent=unavailable?'':matches?'Showing '+start+'–'+end+' of '+matches+' matching locations. All recorded countries are loaded.':'';
+    $('statistics-country-pagination').hidden=view.pages<=1;$('statistics-country-page').textContent='Page '+view.page+' of '+view.pages;$('statistics-country-previous').disabled=view.page<=1;$('statistics-country-next').disabled=view.page>=view.pages;
+  }
   function render(data,period){
     for(const key of ['visits','actions','activity'])dialog.querySelector('[data-stat-value="'+key+'"]').textContent=data[key].toLocaleString();
-    for(const key of ['pages','events','locations','referrers','browsers'])fillRows('statistics-'+key,data[key]);
+    for(const key of ['pages','events','referrers','browsers'])fillRows('statistics-'+key,data[key]);
+    countries=data.locations;countryPage=1;renderCountries();
     const chart=$('statistics-daily');chart.replaceChildren();
     const maximum=Math.max(1,...data.daily.map(row=>row.count));
     if(!data.daily.length)chart.append(element('p','No daily data returned for this period.','statistics-empty'));
@@ -154,7 +221,7 @@
       const hits=await client.get('stats/hits',{...parameters,limit:100,group:'day'},signal);
       const optional=[];let missing=false;
       for(const path of ['stats/locations','stats/toprefs','stats/browsers']){
-        try{optional.push(await client.get(path,{...parameters,limit:20},signal));}
+        try{optional.push(path==='stats/locations'?await loadCountries(client,parameters,signal):await client.get(path,{...parameters,limit:20},signal));}
         catch(error){if(error.name==='AbortError'||[401,403].includes(error.status))throw error;optional.push(null);missing=true;}
       }
       if(ticket!==run||signal.aborted)return;
@@ -178,6 +245,13 @@
     const token=device.read();
     if(token){client=createClient(token,root.fetch.bind(root));load();}else $('statistics-api-key').focus();
   }
+  for(const id of ['statistics-country-search','statistics-country-sort','statistics-country-size'])$(id).addEventListener(id==='statistics-country-search'?'input':'change',()=>{countryPage=1;renderCountries();});
+  $('statistics-country-previous').addEventListener('click',()=>{countryPage--;renderCountries();});
+  $('statistics-country-next').addEventListener('click',()=>{countryPage++;renderCountries();});
+  $('statistics-country-export').addEventListener('click',()=>{
+    if(!countries?.length)return;
+    const url=root.URL.createObjectURL(new Blob([countryCSV(countries)],{type:'text/csv;charset=utf-8;'})),link=element('a');link.href=url;link.download='website-countries-'+$('statistics-start').value+'-to-'+$('statistics-end').value+'.csv';doc.body.append(link);link.click();link.remove();setTimeout(()=>root.URL.revokeObjectURL(url),1000);
+  });
   $('show-statistics')?.addEventListener('click',openStatistics);
   $('statistics-auth').addEventListener('submit',event=>{
     event.preventDefault();if(busy)return;
