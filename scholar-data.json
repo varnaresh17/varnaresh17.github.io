@@ -2,20 +2,20 @@
   "version": 1,
   "status": "ready",
   "profileUrl": "https://scholar.google.com/citations?user=GbwKoHsAAAAJ",
-  "updatedAt": "2026-11-22T12:01:27.477232+00:00",
-  "previousUpdatedAt": "2026-11-21T12:04:09.504403+00:00",
+  "updatedAt": "2026-11-23T12:19:53.720447+00:00",
+  "previousUpdatedAt": "2026-11-22T12:01:27.477232+00:00",
   "source": "Google Scholar via SerpApi",
   "author": {
     "name": "Varnakavi Naresh"
   },
   "metrics": {
     "citations": {
-      "all": 4297,
-      "recent": 3815
+      "all": 4304,
+      "recent": 3823
     },
     "h_index": {
       "all": 26,
-      "recent": 23
+      "recent": 24
     },
     "i10_index": {
       "all": 34,
@@ -58,23 +58,23 @@
     },
     {
       "year": 2022,
-      "citations": 439
+      "citations": 442
     },
     {
       "year": 2023,
-      "citations": 596
+      "citations": 597
     },
     {
       "year": 2024,
-      "citations": 795
+      "citations": 796
     },
     {
       "year": 2025,
-      "citations": 1021
+      "citations": 1020
     },
     {
       "year": 2026,
-      "citations": 748
+      "citations": 753
     }
   ],
   "articles": [
@@ -84,11 +84,11 @@
       "authors": "V Naresh, N Lee",
       "publication": "Sensors 21 (4), 1109, 2021",
       "year": "2021",
-      "citations": 2613,
+      "citations": 2616,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:4DMP91E08xMC",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5947667453332017906",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 4
+      "change": 3
     },
     {
       "id": "GbwKoHsAAAAJ:Se3iqnhoufwC",
@@ -244,7 +244,7 @@
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:iH-uZ7U-co4C",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17022196460609566211",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 1
+      "change": 0
     },
     {
       "id": "GbwKoHsAAAAJ:maZDTaKrznsC",
@@ -264,11 +264,11 @@
       "authors": "V Naresh, N Lee",
       "publication": "Materials Research Bulletin 142, 111381, 2021",
       "year": "2021",
-      "citations": 48,
+      "citations": 49,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:Wp0gIr-vW9MC",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7696041415715722192",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 0
+      "change": 1
     },
     {
       "id": "GbwKoHsAAAAJ:qjMakFHDy7sC",
@@ -304,7 +304,7 @@
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:MXK_kJrjxJIC",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=478237852974281836",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 1
+      "change": 0
     },
     {
       "id": "GbwKoHsAAAAJ:r0BpntZqJG4C",
@@ -312,11 +312,11 @@
       "authors": "V Naresh, MK Cho, PR Cha, N Lee",
       "publication": "ACS Applied Nano Materials 6 (6), 4693-4706, 2023",
       "year": "2023",
-      "citations": 38,
+      "citations": 39,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:r0BpntZqJG4C",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16346442563963703206",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 0
+      "change": 1
     },
     {
       "id": "GbwKoHsAAAAJ:Y0pCki6q_DkC",
@@ -384,11 +384,11 @@
       "authors": "V Naresh, N Lee",
       "publication": "Journal of Luminescence 214, 116565, 2019",
       "year": "2019",
-      "citations": 26,
+      "citations": 27,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:Zph67rFs4hoC",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2024827000260976677",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 0
+      "change": 1
     },
     {
       "id": "GbwKoHsAAAAJ:isC4tDSrTZIC",
@@ -420,11 +420,11 @@
       "authors": "V Naresh, N Lee",
       "publication": "Materials Science and Engineering: B 271, 115306, 2021",
       "year": "2021",
-      "citations": 21,
+      "citations": 22,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:mVmsd5A6BfQC",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18347043187798433808",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 0
+      "change": 1
     },
     {
       "id": "GbwKoHsAAAAJ:0EnyYjriUFMC",
