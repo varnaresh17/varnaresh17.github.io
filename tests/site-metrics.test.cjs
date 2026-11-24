@@ -24,7 +24,7 @@ test('Analytics strips query data and sends only named actions',()=>{
 });
 test('Tracking and Scholar assets are installed once on their intended pages',()=>{
   let pages=0;for(const file of fs.readdirSync('.').filter(f=>f.endsWith('.html'))){const html=fs.readFileSync(file,'utf8');if(html.includes('site-navigation.js?')&&file!=='statistics.html'){pages++;assert.equal((html.match(/src="site-analytics.js/g)||[]).length,1);}else assert.ok(!html.includes('src="site-analytics.js'));}
-  assert.equal(pages,16);
+  assert.equal(pages,17);
   const html=fs.readFileSync('publications.html','utf8');assert.ok(html.includes('id="scholar-impact"'));assert.ok(html.includes('scholar.js?'));assert.ok(html.includes('scholar.css?'));
 });
 test('Public pages cannot display or fetch aggregate visitor totals',()=>{

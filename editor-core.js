@@ -1,7 +1,7 @@
 /* Pure helpers for the visual editor. No credentials or browser storage. */
 (function(root,factory){'use strict';const core=factory();if(typeof module==='object'&&module.exports)module.exports=core;else root.WebsiteEditorCore=core;})(typeof globalThis!=='undefined'?globalThis:this,function(){
   'use strict';
-  const PAGES=['index.html', 'research.html', 'publications.html', 'expertise.html', 'synthesis.html', 'characterization.html', 'softwares.html', 'xrd.html', 'ftir.html', 'colorimetry.html', 'plqy.html', 'experience.html', 'achievements.html', 'contact.html', 'resume.html', 'stories.html'];
+  const PAGES=['index.html', 'research.html', 'publications.html', 'blog.html', 'expertise.html', 'synthesis.html', 'characterization.html', 'softwares.html', 'xrd.html', 'ftir.html', 'colorimetry.html', 'plqy.html', 'experience.html', 'achievements.html', 'contact.html', 'resume.html', 'stories.html'];
   const enc=new TextEncoder();
   const bytes=value=>typeof value==='string'?enc.encode(value):value;
   function resizeStyles(width,height){
