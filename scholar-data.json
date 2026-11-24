@@ -2,8 +2,8 @@
   "version": 1,
   "status": "ready",
   "profileUrl": "https://scholar.google.com/citations?user=GbwKoHsAAAAJ",
-  "updatedAt": "2026-11-23T12:19:53.720447+00:00",
-  "previousUpdatedAt": "2026-11-22T12:01:27.477232+00:00",
+  "updatedAt": "2026-11-24T12:21:08.900559+00:00",
+  "previousUpdatedAt": "2026-11-23T12:19:53.720447+00:00",
   "source": "Google Scholar via SerpApi",
   "author": {
     "name": "Varnakavi Naresh"
@@ -88,7 +88,7 @@
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:4DMP91E08xMC",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5947667453332017906",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 3
+      "change": 0
     },
     {
       "id": "GbwKoHsAAAAJ:Se3iqnhoufwC",
@@ -268,7 +268,7 @@
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:Wp0gIr-vW9MC",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7696041415715722192",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 1
+      "change": 0
     },
     {
       "id": "GbwKoHsAAAAJ:qjMakFHDy7sC",
@@ -316,7 +316,7 @@
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:r0BpntZqJG4C",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16346442563963703206",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 1
+      "change": 0
     },
     {
       "id": "GbwKoHsAAAAJ:Y0pCki6q_DkC",
@@ -388,7 +388,7 @@
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:Zph67rFs4hoC",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2024827000260976677",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 1
+      "change": 0
     },
     {
       "id": "GbwKoHsAAAAJ:isC4tDSrTZIC",
@@ -424,7 +424,7 @@
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:mVmsd5A6BfQC",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18347043187798433808",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 1
+      "change": 0
     },
     {
       "id": "GbwKoHsAAAAJ:0EnyYjriUFMC",
