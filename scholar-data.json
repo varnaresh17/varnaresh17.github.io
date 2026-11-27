@@ -2,8 +2,8 @@
   "version": 1,
   "status": "ready",
   "profileUrl": "https://scholar.google.com/citations?user=GbwKoHsAAAAJ",
-  "updatedAt": "2026-11-26T12:22:37.064262+00:00",
-  "previousUpdatedAt": "2026-11-25T12:24:47.264072+00:00",
+  "updatedAt": "2026-11-27T12:19:26.059695+00:00",
+  "previousUpdatedAt": "2026-11-26T12:22:37.064262+00:00",
   "source": "Google Scholar via SerpApi",
   "author": {
     "name": "Varnakavi Naresh"
@@ -11,7 +11,7 @@
   "metrics": {
     "citations": {
       "all": 4306,
-      "recent": 3825
+      "recent": 3824
     },
     "h_index": {
       "all": 26,
@@ -58,11 +58,11 @@
     },
     {
       "year": 2022,
-      "citations": 442
+      "citations": 443
     },
     {
       "year": 2023,
-      "citations": 597
+      "citations": 595
     },
     {
       "year": 2024,
@@ -70,11 +70,11 @@
     },
     {
       "year": 2025,
-      "citations": 1021
+      "citations": 1020
     },
     {
       "year": 2026,
-      "citations": 754
+      "citations": 755
     }
   ],
   "articles": [
@@ -84,11 +84,11 @@
       "authors": "V Naresh, N Lee",
       "publication": "Sensors 21 (4), 1109, 2021",
       "year": "2021",
-      "citations": 2618,
+      "citations": 2620,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:4DMP91E08xMC",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5947667453332017906",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 0
+      "change": 2
     },
     {
       "id": "GbwKoHsAAAAJ:Se3iqnhoufwC",
@@ -108,11 +108,11 @@
       "authors": "V Naresh, N Lee",
       "publication": "ACS Applied Nano Materials 3 (8), 7621-7632, 2020",
       "year": "2020",
-      "citations": 126,
+      "citations": 125,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:4TOpqqG69KYC",
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1437030354563017279",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 0
+      "change": -1
     },
     {
       "id": "GbwKoHsAAAAJ:u5HHmVD_uO8C",
@@ -427,18 +427,6 @@
       "change": 0
     },
     {
-      "id": "GbwKoHsAAAAJ:0EnyYjriUFMC",
-      "title": "Emission analysis of Pr3+ & Dy3+ ions doped Li2O-LiF-B2O3-ZnO glasses",
-      "authors": "L Vijayalakshmi, V Naresh, BH Rudramadevi, S Buddhudu",
-      "publication": "Int. J. Eng. Sci 4 (9), 19-25, 2014",
-      "year": "2014",
-      "citations": 15,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:0EnyYjriUFMC",
-      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3192299180517768686",
-      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
-      "change": 0
-    },
-    {
       "id": "GbwKoHsAAAAJ:8k81kl-MbHgC",
       "title": "Optical and spectral analysis of Pr3+ doped lithium zinc fluoro telluro phosphate glasses",
       "authors": "CP Reddy, V Naresh, KTR Reddy",
@@ -449,6 +437,18 @@
       "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3862805122408586155",
       "firstSeen": "2026-11-20T04:57:43.753551+00:00",
       "change": 0
+    },
+    {
+      "id": "GbwKoHsAAAAJ:0EnyYjriUFMC",
+      "title": "Emission analysis of Pr3+ & Dy3+ ions doped Li2O-LiF-B2O3-ZnO glasses",
+      "authors": "L Vijayalakshmi, V Naresh, BH Rudramadevi, S Buddhudu",
+      "publication": "Int. J. Eng. Sci 4 (9), 19-25, 2014",
+      "year": "2014",
+      "citations": 14,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GbwKoHsAAAAJ&pagesize=100&citation_for_view=GbwKoHsAAAAJ:0EnyYjriUFMC",
+      "citingUrl": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3192299180517768686",
+      "firstSeen": "2026-11-20T04:57:43.753551+00:00",
+      "change": -1
     },
     {
       "id": "GbwKoHsAAAAJ:hMod-77fHWUC",
